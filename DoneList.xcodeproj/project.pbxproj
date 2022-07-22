@@ -20,6 +20,7 @@
 		94272A5F288AC8B80010BC10 /* DefaultQuotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A5E288AC8B80010BC10 /* DefaultQuotesRepository.swift */; };
 		94272A64288ACB560010BC10 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A63288ACB560010BC10 /* Quote.swift */; };
 		94272A67288ACBE70010BC10 /* QuoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A66288ACBE70010BC10 /* QuoteRepository.swift */; };
+		94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		94272A5E288AC8B80010BC10 /* DefaultQuotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultQuotesRepository.swift; sourceTree = "<group>"; };
 		94272A63288ACB560010BC10 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		94272A66288ACBE70010BC10 /* QuoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepository.swift; sourceTree = "<group>"; };
+		94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQuoteUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		94272A46288AA31C0010BC10 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				94272A4D288AAF200010BC10 /* Storage.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
+				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* DefaultQuotesRepository.swift in Sources */,
