@@ -24,6 +24,7 @@
 		94272A76288AD8A30010BC10 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A75288AD8A30010BC10 /* Typealias.swift */; };
 		94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A77288AD9620010BC10 /* DoneRepositoryType.swift */; };
 		94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A79288ADA050010BC10 /* DoneRepository.swift */; };
+		94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		94272A75288AD8A30010BC10 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		94272A77288AD9620010BC10 /* DoneRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryType.swift; sourceTree = "<group>"; };
 		94272A79288ADA050010BC10 /* DoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepository.swift; sourceTree = "<group>"; };
+		94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */,
+				94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
+				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
