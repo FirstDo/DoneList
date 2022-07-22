@@ -1,5 +1,5 @@
 //
-//  Storage.swift
+//  StorageType.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/22.
@@ -7,14 +7,14 @@
 
 import Combine
 
-protocol Storage {
+protocol StorageType {
     func create(_ item: Done)
     func read() -> AnyPublisher<[Done], Never>
     func update(_ item: Done)
     func delete(_ item: Done)
 }
 
-final class MemoryStorage: Storage {
+final class MemoryStorage: StorageType {
     @Published private var items = [Done]()
     
     func create(_ item: Done) {

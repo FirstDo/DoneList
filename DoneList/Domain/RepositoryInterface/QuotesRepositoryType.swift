@@ -7,6 +7,6 @@
 
 import Combine
 
-protocol QuotesRepository {
+protocol QuotesRepositoryType {
     func fetchQuote() -> AnyPublisher<Quote, Error>
 }

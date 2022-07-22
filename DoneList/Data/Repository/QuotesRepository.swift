@@ -1,5 +1,5 @@
 //
-//  Repository.swift
+//  QuotesRepository.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/22.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class DefaultQuotesRepository: QuotesRepository {
+final class QuotesRepository: QuotesRepositoryType {
     
     private let apiProvider: APIProvider
     

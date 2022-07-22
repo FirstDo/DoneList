@@ -14,9 +14,9 @@ protocol FetchQuoteUseCaseType {
 
 final class FetchQuoteUsecase: FetchQuoteUseCaseType {
     
-    private let repository: QuotesRepository
+    private let repository: QuotesRepositoryType
     
-    init(repository: QuotesRepository) {
+    init(repository: QuotesRepositoryType) {
         self.repository = repository
     }
     
