@@ -9,44 +9,90 @@ import UIKit
 
 import SnapKit
 
+fileprivate enum Const {
+    enum BaseStack {
+        static let spcaing: CGFloat = 20
+        static let inset: CGFloat = 10
+    }
+    
+    enum DateStack {
+        static let spacing: CGFloat = 20
+    }
+    
+    enum Image {
+        static let yesterDay = "chevron.left.square"
+        static let tomorrow = "chevron.right.square"
+        static let add = "plus.app"
+    }
+    
+    enum Title {
+        static let doneList = "✅ Done List"
+    }
+}
+
 final class DoneListView: UIView {
+    
+    private let baseStackView: UIStackView = {
+        let stackview = UIStackView()
+        stackview.spacing = Const.BaseStack.spcaing
+        stackview.alignment = .center
+        stackview.axis = .vertical
+        
+        return stackview
+    }()
 
     private let dateStackView: UIStackView = {
         let stackview = UIStackView()
+        stackview.spacing = Const.DateStack.spacing
+        stackview.distribution = .fillProportionally
         
         return stackview
     }()
     
     let yesterDayButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "chevron.left.square"), for: .normal)
+        button.setImage(UIImage(systemName: Const.Image.yesterDay), for: .normal)
         
         return button
     }()
     
     let tomorrowButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "chevron.right.square"), for: .normal)
+        button.setImage(UIImage(systemName: Const.Image.tomorrow), for: .normal)
         
         return button
     }()
     
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.text = Date.now.description(with: .current)
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.text = "2022.07.31"
         
         return label
     }()
     
-    let listTitle: UILabel = {
+    let quoteLabel: UILabel = {
         let label = UILabel()
-        label.text = "Done List!"
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .body)
+        label.numberOfLines = .zero
+        
+        return label
+    }()
+    
+    let doneListTitle: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = Const.Title.doneList
+        label.font = .preferredFont(forTextStyle: .title2)
         
         return label
     }()
     
     private let doneCollectionView: UICollectionView = {
-        let layout = UICollectionViewCompositionalLayout.list(using: .init(appearance: .sidebarPlain))
+        let listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
+        let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         return collectionView
@@ -54,7 +100,7 @@ final class DoneListView: UIView {
     
     let addDoneButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "plus.app"), for: .normal)
+        button.setImage(UIImage(systemName: Const.Image.add), for: .normal)
         
         return button
     }()
@@ -77,27 +123,21 @@ final class DoneListView: UIView {
     }
     
     private func setupLayout() {
-        addSubViews(dateStackView, listTitle, doneCollectionView)
+        addSubview(baseStackView)
+        baseStackView.addArrangedSubviews(dateStackView, quoteLabel, doneListTitle, doneCollectionView)
         dateStackView.addArrangedSubviews(yesterDayButton, dateLabel, tomorrowButton)
         
-        dateStackView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(safeAreaLayoutGuide).inset(20)
-        }
-        
-        listTitle.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(dateStackView.snp.bottom)
+        baseStackView.snp.makeConstraints {
+            $0.edges.equalTo(safeAreaLayoutGuide).inset(Const.BaseStack.inset)
         }
         
         doneCollectionView.snp.makeConstraints {
-            $0.top.equalTo(listTitle.snp.bottom)
-            $0.bottom.leading.trailing.equalTo(safeAreaLayoutGuide).inset(20)
+            $0.width.equalToSuperview()
         }
     }
     
     private func setupView() {
-        self.backgroundColor = .systemBackground
+        backgroundColor = .systemBackground
     }
     
     private func setupCollectionView() {
