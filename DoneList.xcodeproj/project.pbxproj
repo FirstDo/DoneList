@@ -22,6 +22,8 @@
 		94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A66288ACBE70010BC10 /* QuotesRepositoryType.swift */; };
 		94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */; };
 		94272A76288AD8A30010BC10 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A75288AD8A30010BC10 /* Typealias.swift */; };
+		94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A77288AD9620010BC10 /* DoneRepositoryType.swift */; };
+		94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A79288ADA050010BC10 /* DoneRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		94272A66288ACBE70010BC10 /* QuotesRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRepositoryType.swift; sourceTree = "<group>"; };
 		94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQuoteUseCase.swift; sourceTree = "<group>"; };
 		94272A75288AD8A30010BC10 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		94272A77288AD9620010BC10 /* DoneRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryType.swift; sourceTree = "<group>"; };
+		94272A79288ADA050010BC10 /* DoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A5E288AC8B80010BC10 /* QuotesRepository.swift */,
+				94272A79288ADA050010BC10 /* DoneRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 		94272A65288ACBCC0010BC10 /* RepositoryInterface */ = {
 			isa = PBXGroup;
 			children = (
+				94272A77288AD9620010BC10 /* DoneRepositoryType.swift */,
 				94272A66288ACBE70010BC10 /* QuotesRepositoryType.swift */,
 			);
 			path = RepositoryInterface;
@@ -311,6 +317,8 @@
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
+				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
+				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
 			);
