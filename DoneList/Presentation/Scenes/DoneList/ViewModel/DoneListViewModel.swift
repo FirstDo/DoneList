@@ -14,7 +14,7 @@ protocol DoneListViewModelInput {
     func didTapYesterDayButton()
     func didTapTomorrowButton()
     func didTapDateLabel()
-    func didTapCell()
+    func didTapCell(with item: Done)
     func didTapAddButton()
 }
 
@@ -69,11 +69,47 @@ final class DoneListViewModel:  DoneListViewModelType {
 // MARK: - Input
 
 extension DoneListViewModel {
-    func didTapChartButton() {}
-    func didTapSettingButton() {}
-    func didTapYesterDayButton() {}
-    func didTapTomorrowButton() {}
-    func didTapDateLabel() {}
-    func didTapCell() {}
-    func didTapAddButton() {}
+    func didTapChartButton() {
+        showChartView.send(())
+    }
+    
+    func didTapSettingButton() {
+        showSettingView.send(())
+    }
+    
+    func didTapYesterDayButton() {
+        guard let dayBefore = currentDate.value.dayBefore else { return }
+        
+        currentDate.send(dayBefore)
+    }
+    
+    func didTapTomorrowButton() {
+        guard let dayAfter = currentDate.value.dayAfter else { return }
+        
+        currentDate.send(dayAfter)
+    }
+    
+    func didTapDateLabel() {
+        showCalendarView.send(currentDate.value)
+    }
+    
+    func didTapCell(with item: Done) {
+        showDoneEditView.send(item)
+    }
+    
+    func didTapAddButton() {
+        showDoneCreateView.send(())
+    }
+}
+
+// MARK: - Logic
+
+fileprivate extension Date {
+    var dayBefore: Date? {
+        return Calendar.current.date(byAdding: .day, value: -1, to: self)
+    }
+    
+    var dayAfter: Date? {
+        return Calendar.current.date(byAdding: .day, value: 1, to: self)
+    }
 }
