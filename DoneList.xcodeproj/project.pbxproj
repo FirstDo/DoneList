@@ -25,6 +25,7 @@
 		94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A77288AD9620010BC10 /* DoneRepositoryType.swift */; };
 		94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A79288ADA050010BC10 /* DoneRepository.swift */; };
 		94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */; };
+		94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		94272A77288AD9620010BC10 /* DoneRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryType.swift; sourceTree = "<group>"; };
 		94272A79288ADA050010BC10 /* DoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepository.swift; sourceTree = "<group>"; };
 		94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneUseCase.swift; sourceTree = "<group>"; };
+		94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A43288AA2E90010BC10 /* Coordinator */,
+				94272A81288ADD660010BC10 /* Scenes */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -239,6 +242,22 @@
 			path = Combine;
 			sourceTree = "<group>";
 		};
+		94272A81288ADD660010BC10 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				94272A82288ADD7D0010BC10 /* DoneList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		94272A82288ADD7D0010BC10 /* DoneList */ = {
+			isa = PBXGroup;
+			children = (
+				94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */,
+			);
+			path = DoneList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +332,7 @@
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
