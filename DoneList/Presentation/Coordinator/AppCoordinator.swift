@@ -24,7 +24,7 @@ final class AppCoordinator: Coordinator {
     weak var parentCoordinator: Coordinator?
     var childCoordinator: [Coordinator] = []
     
-    private let dependency: AppDIContainer
+    private unowned let dependency: AppDIContainer
     
     init(navigationController: UINavigationController, dependency: AppDIContainer) {
         self.navigationController = navigationController
