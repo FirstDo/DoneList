@@ -11,6 +11,7 @@ struct DoneContentConfiguration: UIContentConfiguration {
     
     var title: String?
     var image: UIImage?
+    var tintColor: UIColor?
     
     func makeContentView() -> UIView & UIContentView {
         return DoneContentView(configuration: self)

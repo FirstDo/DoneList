@@ -83,5 +83,6 @@ final class DoneContentView: UIView, UIContentView {
         
         doneTitleLabel.text = doneConfiguration.title
         doneImageView.image = doneConfiguration.image
+        doneImageView.tintColor = doneConfiguration.tintColor
     }
 }
