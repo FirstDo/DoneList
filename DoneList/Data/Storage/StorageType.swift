@@ -15,7 +15,7 @@ enum StorageError: LocalizedError {
     case deleteFail
 }
 
-protocol StorageType {
+protocol StorageType: AnyObject {
     func create(_ item: Done) -> Completable<StorageError>
     func read() -> AnyPublisher<[Done], Never>
     func update(_ item: Done) -> Completable<StorageError>
