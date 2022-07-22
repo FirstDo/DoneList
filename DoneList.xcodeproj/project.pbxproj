@@ -14,6 +14,7 @@
 		94272A4B288AAE880010BC10 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4A288AAE870010BC10 /* Done.swift */; };
 		94272A4D288AAF200010BC10 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4C288AAF200010BC10 /* Storage.swift */; };
 		94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A52288AB15D0010BC10 /* HTTPMethod.swift */; };
+		94272A59288AB2420010BC10 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A58288AB2410010BC10 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		94272A4A288AAE870010BC10 /* Done.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
 		94272A4C288AAF200010BC10 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		94272A52288AB15D0010BC10 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		94272A58288AB2410010BC10 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A52288AB15D0010BC10 /* HTTPMethod.swift */,
+				94272A58288AB2410010BC10 /* EndPoint.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				94272A4D288AAF200010BC10 /* Storage.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
