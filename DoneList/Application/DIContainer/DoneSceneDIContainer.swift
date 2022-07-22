@@ -5,6 +5,8 @@
 //  Created by dudu on 2022/07/22.
 //
 
+import UIKit
+
 final class DoneSceneDIContainer {
     struct Dependencies {
         unowned let doneStorage: StorageType
@@ -16,6 +18,13 @@ final class DoneSceneDIContainer {
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
+    
+    // MARK: - Coordiantor
+    
+    func makeDoneSceneCoordinator(_ navigationController: UINavigationController) -> DoneSceneCoordiantor {
+        return DoneSceneCoordiantor(navigationController: navigationController, dependency: self)
+    }
+    
     
     // MARK: - ViewController
     
