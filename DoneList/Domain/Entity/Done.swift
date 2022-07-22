@@ -27,7 +27,7 @@ extension Done {
             Done(taskName: "유튜브를 봤다", imageName: "play.rectangle.fill"),
             Done(taskName: "운동을 했다", imageName: "heart.fill"),
             Done(taskName: "게임을 했다!!", imageName: "gamecontroller.fill"),
-            Done(taskName: "회사에 갔다", imageName: "building.2"),
+            Done(taskName: "회사에 갔다!! 그리고 매우매우 매우 매우 긴 레이블입니다", imageName: "building.2"),
         ]
     }
 }
