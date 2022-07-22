@@ -26,6 +26,7 @@
 		94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A79288ADA050010BC10 /* DoneRepository.swift */; };
 		94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */; };
 		94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */; };
+		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		94272A79288ADA050010BC10 /* DoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepository.swift; sourceTree = "<group>"; };
 		94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneUseCase.swift; sourceTree = "<group>"; };
 		94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
+		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */,
+				94272A85288ADE690010BC10 /* DoneListViewController.swift */,
 			);
 			path = DoneList;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
