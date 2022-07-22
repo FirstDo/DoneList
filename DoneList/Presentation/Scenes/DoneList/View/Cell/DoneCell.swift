@@ -20,5 +20,6 @@ final class DoneCell: UICollectionViewListCell {
         configuration.image = UIImage(systemName: done.imageName)
         
         contentConfiguration = configuration
+        backgroundConfiguration = .listAccompaniedSidebarCell()
     }
 }
