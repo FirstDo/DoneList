@@ -31,6 +31,7 @@
 		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
 		94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A87288AE0620010BC10 /* AppCoordinator.swift */; };
 		94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */; };
+		94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A97288AFD3E0010BC10 /* UIStackView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
 		94272A87288AE0620010BC10 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneCoordinator.swift; sourceTree = "<group>"; };
+		94272A97288AFD3E0010BC10 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		94272A41288AA2A90010BC10 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				94272A96288AFD250010BC10 /* Extension */,
 				94272A74288AD8930010BC10 /* Combine */,
 			);
 			path = Utils;
@@ -273,6 +276,14 @@
 			path = DoneList;
 			sourceTree = "<group>";
 		};
+		94272A96288AFD250010BC10 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				94272A97288AFD3E0010BC10 /* UIStackView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +360,7 @@
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
