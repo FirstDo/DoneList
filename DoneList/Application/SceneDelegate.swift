@@ -8,6 +8,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    private let appDIContainer = AppDIContainer()
+    private var appCoordinator: AppCoordinator?
     
     var window: UIWindow?
 
@@ -16,8 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let rootNavigationController = UINavigationController()
+        
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = rootNavigationController
+        window?.makeKeyAndVisible()
+        
+        appCoordinator = AppCoordinator(navigationController: rootNavigationController, dependency: appDIContainer)
+        appCoordinator?.start()
     }
 }
 
