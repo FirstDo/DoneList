@@ -50,7 +50,7 @@ final class DoneListViewController: UIViewController {
         
         viewModel.currentDate
             .sink { [weak self] date in
-                self?.mainView.dateLabel.text = "20xx.0x.0x"
+                self?.mainView.dateLabel.text = "\(date.description)"
             }
             .store(in: &cancelBag)
         
@@ -121,6 +121,8 @@ final class DoneListViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapDateLabel))
         mainView.dateLabel.addGestureRecognizer(tapGesture)
+        
+        mainView.doneCollectionView.delegate = self
     }
     
     @objc
@@ -141,5 +143,16 @@ final class DoneListViewController: UIViewController {
                 self?.viewModel.didTapSettingButton()
             }
         )
+    }
+}
+
+extension DoneListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dataSource = collectionView.dataSource as? DoneListView.DataSource,
+              let item = dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        
+        viewModel.didTapCell(with: item)
     }
 }

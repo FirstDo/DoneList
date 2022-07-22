@@ -90,7 +90,7 @@ final class DoneListView: UIView {
         return label
     }()
     
-    private let doneCollectionView: UICollectionView = {
+    let doneCollectionView: UICollectionView = {
         let listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
         let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
