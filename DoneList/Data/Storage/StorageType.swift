@@ -26,6 +26,12 @@ final class MemoryStorage: StorageType {
     
     @Published private var items = [Done]()
     
+    #if DEBUG
+    init() {
+        items.append(contentsOf: Done.dummy())
+    }
+    #endif
+    
     func create(_ item: Done) -> Completable<StorageError> {
         items.append(item)
         
