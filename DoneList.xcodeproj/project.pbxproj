@@ -53,6 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				94272A3D288AA0B70010BC10 /* Application */,
+				94272A3E288AA2770010BC10 /* Presentation */,
+				94272A3F288AA2970010BC10 /* Domain */,
+				94272A40288AA2A10010BC10 /* Data */,
+				94272A41288AA2A90010BC10 /* Utils */,
 				94272A3C288AA0A60010BC10 /* Resource */,
 			);
 			path = DoneList;
@@ -73,8 +77,92 @@
 			children = (
 				94272A28288AA0480010BC10 /* AppDelegate.swift */,
 				94272A2A288AA0480010BC10 /* SceneDelegate.swift */,
+				94272A42288AA2DF0010BC10 /* DIContainer */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		94272A3E288AA2770010BC10 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				94272A43288AA2E90010BC10 /* Coordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		94272A3F288AA2970010BC10 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				94272A45288AA3160010BC10 /* Entity */,
+				94272A46288AA31C0010BC10 /* UseCase */,
+				94272A47288AA3210010BC10 /* RepositoryInterface */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		94272A40288AA2A10010BC10 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				94272A48288AA32D0010BC10 /* Repository */,
+				94272A49288AA3340010BC10 /* Storage */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		94272A41288AA2A90010BC10 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		94272A42288AA2DF0010BC10 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		94272A43288AA2E90010BC10 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		94272A45288AA3160010BC10 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		94272A46288AA31C0010BC10 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		94272A47288AA3210010BC10 /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		94272A48288AA32D0010BC10 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		94272A49288AA3340010BC10 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
