@@ -31,8 +31,11 @@
 		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
 		94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A87288AE0620010BC10 /* AppCoordinator.swift */; };
 		94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */; };
+		94272A95288AFB860010BC10 /* DoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A94288AFB860010BC10 /* DoneCell.swift */; };
 		94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A97288AFD3E0010BC10 /* UIStackView+.swift */; };
 		94272A9B288AFDF20010BC10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 94272A9A288AFDF20010BC10 /* SnapKit */; };
+		94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A9C288AFFE80010BC10 /* DoneContentConfiguration.swift */; };
+		94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A9E288AFFF20010BC10 /* DoneContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +65,10 @@
 		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
 		94272A87288AE0620010BC10 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneCoordinator.swift; sourceTree = "<group>"; };
+		94272A94288AFB860010BC10 /* DoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCell.swift; sourceTree = "<group>"; };
 		94272A97288AFD3E0010BC10 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		94272A9C288AFFE80010BC10 /* DoneContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneContentConfiguration.swift; sourceTree = "<group>"; };
+		94272A9E288AFFF20010BC10 /* DoneContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,10 +278,37 @@
 		94272A82288ADD7D0010BC10 /* DoneList */ = {
 			isa = PBXGroup;
 			children = (
-				94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */,
-				94272A85288ADE690010BC10 /* DoneListViewController.swift */,
+				94272A8F288AFAE90010BC10 /* View */,
+				94272A90288AFAEE0010BC10 /* ViewModel */,
 			);
 			path = DoneList;
+			sourceTree = "<group>";
+		};
+		94272A8F288AFAE90010BC10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94272A85288ADE690010BC10 /* DoneListViewController.swift */,
+				94272A93288AFB450010BC10 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94272A90288AFAEE0010BC10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94272A93288AFB450010BC10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				94272A94288AFB860010BC10 /* DoneCell.swift */,
+				94272A9C288AFFE80010BC10 /* DoneContentConfiguration.swift */,
+				94272A9E288AFFF20010BC10 /* DoneContentView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		94272A96288AFD250010BC10 /* Extension */ = {
@@ -362,12 +395,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
+				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
