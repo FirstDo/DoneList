@@ -11,7 +11,7 @@ import SnapKit
 
 fileprivate enum Const {
     enum BaseStack {
-        static let spcaing: CGFloat = 20
+        static let spcaing: CGFloat = 30
         static let inset: CGFloat = 10
     }
     
@@ -75,7 +75,7 @@ final class DoneListView: UIView {
     let quoteLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .body)
+        label.font = .preferredFont(forTextStyle: .title3)
         label.numberOfLines = .zero
         
         return label
@@ -85,7 +85,7 @@ final class DoneListView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.text = Const.Title.doneList
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = .preferredFont(forTextStyle: .title1)
         
         return label
     }()
