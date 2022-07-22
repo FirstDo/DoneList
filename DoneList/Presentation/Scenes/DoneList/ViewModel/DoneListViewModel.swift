@@ -22,6 +22,7 @@ protocol DoneListViewModelOutput {
     var doneItems: AnyPublisher<[Done], Never> { get }
     var quote: AnyPublisher<Quote, Never> { get }
     var currentDate: CurrentValueSubject<Date, Never> { get }
+    var dateTitle: AnyPublisher<String, Never> { get }
     
     var showErrorAlert: PassthroughSubject<String, Never> { get }
     var showChartView: PassthroughSubject<Void, Never> { get }
@@ -38,10 +39,24 @@ final class DoneListViewModel:  DoneListViewModelType {
     private let fetchQuoteUseCase: FetchQuoteUseCaseType
     private var cancelBag = Set<AnyCancellable>()
     
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "YYYY.MM.dd"
+        
+        return formatter
+    }()
+    
     // MARK: - OutPut
     
     var doneItems: AnyPublisher<[Done], Never> {
         return doneUseCase.fetchAllItem()
+    }
+    
+    var dateTitle: AnyPublisher<String, Never> {
+        return currentDate
+            .map { self.dateFormatter.string(from: $0) }
+            .eraseToAnyPublisher()
     }
     
     var quote: AnyPublisher<Quote, Never> {

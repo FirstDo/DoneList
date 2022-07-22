@@ -48,9 +48,9 @@ final class DoneListViewController: UIViewController {
             }
             .store(in: &cancelBag)
         
-        viewModel.currentDate
-            .sink { [weak self] date in
-                self?.mainView.dateLabel.text = "\(date.description)"
+        viewModel.dateTitle
+            .sink { [weak self] formattedDate in
+                self?.mainView.dateLabel.text = formattedDate
             }
             .store(in: &cancelBag)
         
