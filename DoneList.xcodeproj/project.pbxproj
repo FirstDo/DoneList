@@ -13,6 +13,7 @@
 		94272A35288AA04A0010BC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94272A33288AA04A0010BC10 /* LaunchScreen.storyboard */; };
 		94272A4B288AAE880010BC10 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4A288AAE870010BC10 /* Done.swift */; };
 		94272A4D288AAF200010BC10 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4C288AAF200010BC10 /* Storage.swift */; };
+		94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A52288AB15D0010BC10 /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		94272A36288AA04A0010BC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94272A4A288AAE870010BC10 /* Done.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
 		94272A4C288AAF200010BC10 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		94272A52288AB15D0010BC10 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				94272A3E288AA2770010BC10 /* Presentation */,
 				94272A3F288AA2970010BC10 /* Domain */,
 				94272A40288AA2A10010BC10 /* Data */,
+				94272A4F288AB0990010BC10 /* Network */,
 				94272A41288AA2A90010BC10 /* Utils */,
 				94272A3C288AA0A60010BC10 /* Resource */,
 			);
@@ -171,6 +174,30 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		94272A4F288AB0990010BC10 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94272A55288AB1D40010BC10 /* APIProvider */,
+				94272A54288AB1C90010BC10 /* EndPoint */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		94272A54288AB1C90010BC10 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				94272A52288AB15D0010BC10 /* HTTPMethod.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		94272A55288AB1D40010BC10 /* APIProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIProvider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,6 +271,7 @@
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				94272A4D288AAF200010BC10 /* Storage.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
+				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
