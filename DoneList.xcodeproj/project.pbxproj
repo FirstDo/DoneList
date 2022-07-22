@@ -36,6 +36,7 @@
 		94272A9B288AFDF20010BC10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 94272A9A288AFDF20010BC10 /* SnapKit */; };
 		94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A9C288AFFE80010BC10 /* DoneContentConfiguration.swift */; };
 		94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A9E288AFFF20010BC10 /* DoneContentView.swift */; };
+		94272AA3288B052C0010BC10 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AA2288B052C0010BC10 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		94272A97288AFD3E0010BC10 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		94272A9C288AFFE80010BC10 /* DoneContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneContentConfiguration.swift; sourceTree = "<group>"; };
 		94272A9E288AFFF20010BC10 /* DoneContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneContentView.swift; sourceTree = "<group>"; };
+		94272AA2288B052C0010BC10 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A85288ADE690010BC10 /* DoneListViewController.swift */,
+				94272AA0288B01460010BC10 /* DoneListView.swift */,
 				94272A93288AFB450010BC10 /* Cell */,
 			);
 			path = View;
@@ -315,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A97288AFD3E0010BC10 /* UIStackView+.swift */,
+				94272AA2288B052C0010BC10 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -411,6 +415,7 @@
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
+				94272AA3288B052C0010BC10 /* UIView+.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
