@@ -10,6 +10,7 @@ import Combine
 
 final class DoneListViewController: UIViewController {
     
+    weak var coordinator: DoneSceneCoordiantor?
     private let viewModel: DoneListViewModelType
     private var cancelBag = Set<AnyCancellable>()
 

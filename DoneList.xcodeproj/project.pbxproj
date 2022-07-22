@@ -29,6 +29,7 @@
 		94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */; };
 		94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */; };
 		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
+		94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneDIContainer.swift; sourceTree = "<group>"; };
 		94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
+		94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		94272A43288AA2E90010BC10 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
 				94272A7E288ADB6E0010BC10 /* AppDIContainer.swift in Sources */,
 				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
+				94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
