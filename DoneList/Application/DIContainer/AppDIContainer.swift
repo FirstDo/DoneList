@@ -1,0 +1,19 @@
+//
+//  AppDIContainer.swift
+//  DoneList
+//
+//  Created by dudu on 2022/07/22.
+//
+
+final class AppDIContainer {
+    private let apiProvider: APIProvider = APIProvider()
+    private let storage: StorageType = MemoryStorage()
+    
+    func makeDoneSceneDIContainer() -> DoneSceneDIContainer {
+        DoneSceneDIContainer(
+            dependencies: DoneSceneDIContainer.Dependencies(
+                doneStorage: storage, apiProvider: apiProvider
+            )
+        )
+    }
+}

@@ -25,6 +25,7 @@
 		94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A77288AD9620010BC10 /* DoneRepositoryType.swift */; };
 		94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A79288ADA050010BC10 /* DoneRepository.swift */; };
 		94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */; };
+		94272A7E288ADB6E0010BC10 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7D288ADB6E0010BC10 /* AppDIContainer.swift */; };
 		94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */; };
 		94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */; };
 		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
@@ -51,6 +52,7 @@
 		94272A77288AD9620010BC10 /* DoneRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryType.swift; sourceTree = "<group>"; };
 		94272A79288ADA050010BC10 /* DoneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepository.swift; sourceTree = "<group>"; };
 		94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneUseCase.swift; sourceTree = "<group>"; };
+		94272A7D288ADB6E0010BC10 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneDIContainer.swift; sourceTree = "<group>"; };
 		94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		94272A42288AA2DF0010BC10 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
+				94272A7D288ADB6E0010BC10 /* AppDIContainer.swift */,
 				94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */,
 			);
 			path = DIContainer;
@@ -348,6 +351,7 @@
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
+				94272A7E288ADB6E0010BC10 /* AppDIContainer.swift in Sources */,
 				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
