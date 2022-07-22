@@ -20,7 +20,7 @@ protocol DoneListViewModelInput {
 
 protocol DoneListViewModelOutput {
     var doneItems: AnyPublisher<[Done], Never> { get }
-    var quote: AnyPublisher<Quote, Error> { get }
+    var quote: AnyPublisher<Quote, Never> { get }
     var currentDate: CurrentValueSubject<Date, Never> { get }
     
     var showErrorAlert: PassthroughSubject<String, Never> { get }
@@ -44,8 +44,11 @@ final class DoneListViewModel:  DoneListViewModelType {
         return doneUseCase.fetchAllItem()
     }
     
-    var quote: AnyPublisher<Quote, Error> {
-        return fetchQuoteUseCase.fetchQuote()
+    var quote: AnyPublisher<Quote, Never> {
+        return fetchQuoteUseCase
+            .fetchQuote()
+            .replaceError(with: Quote(quote: "인터넷에 연결해주세요 :("))
+            .eraseToAnyPublisher()
     }
     
     let currentDate = CurrentValueSubject<Date, Never>(Date.now)
