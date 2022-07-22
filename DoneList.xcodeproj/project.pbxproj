@@ -29,6 +29,7 @@
 		94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */; };
 		94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */; };
 		94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A85288ADE690010BC10 /* DoneListViewController.swift */; };
+		94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A87288AE0620010BC10 /* AppCoordinator.swift */; };
 		94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneDIContainer.swift; sourceTree = "<group>"; };
 		94272A83288ADD8C0010BC10 /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 		94272A85288ADE690010BC10 /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
+		94272A87288AE0620010BC10 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSceneCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 		94272A43288AA2E90010BC10 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				94272A87288AE0620010BC10 /* AppCoordinator.swift */,
 				94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -350,6 +353,7 @@
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
+				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
