@@ -67,7 +67,7 @@ final class DoneListView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .preferredFont(forTextStyle: .largeTitle)
-        label.text = "2022.07.31"
+        label.isUserInteractionEnabled = true
         
         return label
     }()

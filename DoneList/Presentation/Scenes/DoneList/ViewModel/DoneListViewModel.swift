@@ -24,11 +24,11 @@ protocol DoneListViewModelOutput {
     var currentDate: CurrentValueSubject<Date, Never> { get }
     
     var showErrorAlert: PassthroughSubject<String, Never> { get }
-    var showChartView: PassthroughSubject<String, Never> { get }
-    var showSettingView: PassthroughSubject<String, Never> { get }
-    var showCalendarView: PassthroughSubject<String, Never> { get }
-    var showDoneEditView: PassthroughSubject<String, Never> { get }
-    var showDoneCreateView: PassthroughSubject<String, Never> { get }
+    var showChartView: PassthroughSubject<Void, Never> { get }
+    var showSettingView: PassthroughSubject<Void, Never> { get }
+    var showCalendarView: PassthroughSubject<Date, Never> { get }
+    var showDoneEditView: PassthroughSubject<Done, Never> { get }
+    var showDoneCreateView: PassthroughSubject<Void, Never> { get }
 }
 
 protocol DoneListViewModelType: DoneListViewModelInput, DoneListViewModelOutput {}
@@ -54,11 +54,11 @@ final class DoneListViewModel:  DoneListViewModelType {
     let currentDate = CurrentValueSubject<Date, Never>(Date.now)
     
     let showErrorAlert = PassthroughSubject<String, Never>()
-    let showChartView = PassthroughSubject<String, Never>()
-    let showSettingView = PassthroughSubject<String, Never>()
-    let showCalendarView = PassthroughSubject<String, Never>()
-    let showDoneEditView = PassthroughSubject<String, Never>()
-    let showDoneCreateView = PassthroughSubject<String, Never>()
+    let showChartView = PassthroughSubject<Void, Never>()
+    let showSettingView = PassthroughSubject<Void, Never>()
+    let showCalendarView = PassthroughSubject<Date, Never>()
+    let showDoneEditView = PassthroughSubject<Done, Never>()
+    let showDoneCreateView = PassthroughSubject<Void, Never>()
     
     init(doneUseCase: DoneUseCaseType, fetchQuoteUseCase: FetchQuoteUseCaseType) {
         self.doneUseCase = doneUseCase
