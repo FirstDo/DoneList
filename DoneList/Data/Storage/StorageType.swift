@@ -15,6 +15,7 @@ protocol StorageType {
 }
 
 final class MemoryStorage: StorageType {
+    
     @Published private var items = [Done]()
     
     func create(_ item: Done) {
