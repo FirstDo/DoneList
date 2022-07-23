@@ -85,11 +85,11 @@ final class DoneListViewModel:  DoneListViewModelType {
 
 extension DoneListViewModel {
     func didTapChartButton() {
-        showChartView.send(())
+        showChartView.send()
     }
     
     func didTapSettingButton() {
-        showSettingView.send(())
+        showSettingView.send()
     }
     
     func didTapYesterDayButton() {
@@ -113,7 +113,7 @@ extension DoneListViewModel {
     }
     
     func didTapAddButton() {
-        showDoneCreateView.send(())
+        showDoneCreateView.send()
     }
     
     func didChangeTargetDate(to date: Date) {
