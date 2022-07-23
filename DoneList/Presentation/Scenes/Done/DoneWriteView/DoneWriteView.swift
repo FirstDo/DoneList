@@ -24,7 +24,7 @@ final class DoneWriteView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "임시"
+        label.text = "한 일 추가하기"
         
         return label
     }()
@@ -65,8 +65,8 @@ final class DoneWriteView: UIView {
     
     let doneButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(.systemRed, for: .normal)
-        button.setTitle("임시이름", for: .normal)
+        button.setTitleColor(.systemGreen, for: .normal)
+        button.setTitleColor(.systemGray, for: .disabled)
         
         return button
     }()
