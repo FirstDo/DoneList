@@ -13,6 +13,7 @@ protocol CalendarViewModelInput {
 }
 
 protocol CalendarViewModelOutput {
+    var selectedDate: CurrentValueSubject<Date, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
@@ -20,17 +21,17 @@ protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput 
 
 final class CalendarViewModel: CalendarViewModelType {
     
-    private let date: Date
+    private let changedTargetDate: (Date) -> ()
     private var cancelBag = Set<AnyCancellable>()
     
     // MARK: - Output
     
+    let selectedDate: CurrentValueSubject<Date, Never>
     let dismissView = PassthroughSubject<Void, Never>()
-    let changedTargetDate: (Date) -> ()
     
     init(date: Date, changedTargetDate: @escaping (Date) -> ()) {
-        self.date = date
         self.changedTargetDate = changedTargetDate
+        self.selectedDate = CurrentValueSubject<Date, Never>(date)
     }
 }
 
@@ -39,5 +40,6 @@ final class CalendarViewModel: CalendarViewModelType {
 extension CalendarViewModel {
     func didTapCell(_ date: Date) {
         changedTargetDate(date)
+        dismissView.send()
     }
 }
