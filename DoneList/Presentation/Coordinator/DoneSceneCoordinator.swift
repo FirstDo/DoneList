@@ -44,9 +44,8 @@ final class DoneSceneCoordiantor: Coordinator {
     }
     
     func dismissCalendar() {
-        guard let currentViewController = navigationController?.topViewController as? CalendarViewController else { return }
-        
-        currentViewController.dismiss(animated: true)
+        let currentViewController = navigationController?.presentedViewController as? CalendarViewController
+        currentViewController?.dismiss(animated: true)
     }
     
     // MARK: DoneCreateViewController
@@ -65,8 +64,7 @@ final class DoneSceneCoordiantor: Coordinator {
     }
     
     func dismissDoneCreate() {
-        guard let currentViewController = navigationController?.topViewController as? DoneCreateViewController else { return }
-        
-        currentViewController.dismiss(animated: true)
+        let currentViewController = navigationController?.presentedViewController as? DoneCreateViewController
+        currentViewController?.dismiss(animated: true)
     }
 }
