@@ -42,6 +42,7 @@
 		94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AAC288BB28B0010BC10 /* CalendarViewModel.swift */; };
 		94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AAE288BB4490010BC10 /* CalendarViewController.swift */; };
 		94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */; };
+		94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		94272AAC288BB28B0010BC10 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		94272AAE288BB4490010BC10 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWriteView.swift; sourceTree = "<group>"; };
+		94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,8 +373,8 @@
 		94272AB0288BEF7B0010BC10 /* DoneWriteView */ = {
 			isa = PBXGroup;
 			children = (
-				94272AB1288BEF910010BC10 /* DoneCreateView */,
 				94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */,
+				94272AB1288BEF910010BC10 /* DoneCreateView */,
 			);
 			path = DoneWriteView;
 			sourceTree = "<group>";
@@ -389,6 +391,7 @@
 		94272AB2288BEF9D0010BC10 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
 				94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
+				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
