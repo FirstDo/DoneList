@@ -87,8 +87,8 @@ final class DoneListViewController: UIViewController {
             .store(in: &cancelBag)
         
         viewModel.showDoneCreateView
-            .sink { [weak self] _ in
-                self?.coordinator?.showDoneCreate()
+            .sink { [weak self] date in
+                self?.coordinator?.showDoneCreate(date: date)
             }
             .store(in: &cancelBag)
     }

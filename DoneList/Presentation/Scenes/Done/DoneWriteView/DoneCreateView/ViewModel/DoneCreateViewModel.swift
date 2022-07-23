@@ -5,7 +5,7 @@
 //  Created by dudu on 2022/07/23.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 protocol DoneCreateViewModelInput {
@@ -26,6 +26,7 @@ protocol DoneCreateViewModelType: DoneCreateViewModelInput, DoneCreateViewModelO
 final class DoneCreateViewModel: DoneCreateViewModelType {
 
     private let doneUseCase: DoneUseCaseType
+    private let targetDate: Date
     private var cancelBag = Set<AnyCancellable>()
     
     @Published var doneTitle: String = ""
@@ -46,8 +47,9 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
     let category = CurrentValueSubject<Category, Never>(.empty)
     let dismissView = PassthroughSubject<Void, Never>()
     
-    init(doneUseCase: DoneUseCaseType) {
+    init(doneUseCase: DoneUseCaseType, date: Date) {
         self.doneUseCase = doneUseCase
+        self.targetDate = date
     }
 }
 
@@ -64,8 +66,7 @@ extension DoneCreateViewModel {
     }
     
     func didTapCreateButton() {
-        print(#function)
-        doneUseCase.createNewItem(Done(createdAt: Date.now, taskName: doneTitle, imageName: category.value.name))
+        _ = doneUseCase.createNewItem(Done(createdAt: targetDate, taskName: doneTitle, imageName: category.value.name))
         dismissView.send()
     }
 }

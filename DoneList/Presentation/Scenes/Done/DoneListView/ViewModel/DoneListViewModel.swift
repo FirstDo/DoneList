@@ -29,7 +29,7 @@ protocol DoneListViewModelOutput {
     var showSettingView: PassthroughSubject<Void, Never> { get }
     var showCalendarView: PassthroughSubject<Date, Never> { get }
     var showDoneEditView: PassthroughSubject<Done, Never> { get }
-    var showDoneCreateView: PassthroughSubject<Void, Never> { get }
+    var showDoneCreateView: PassthroughSubject<Date, Never> { get }
 }
 
 protocol DoneListViewModelType: DoneListViewModelInput, DoneListViewModelOutput {}
@@ -80,7 +80,7 @@ final class DoneListViewModel:  DoneListViewModelType {
     let showSettingView = PassthroughSubject<Void, Never>()
     let showCalendarView = PassthroughSubject<Date, Never>()
     let showDoneEditView = PassthroughSubject<Done, Never>()
-    let showDoneCreateView = PassthroughSubject<Void, Never>()
+    let showDoneCreateView = PassthroughSubject<Date, Never>()
     
     init(doneUseCase: DoneUseCaseType, fetchQuoteUseCase: FetchQuoteUseCaseType) {
         self.doneUseCase = doneUseCase
@@ -120,7 +120,7 @@ extension DoneListViewModel {
     }
     
     func didTapAddButton() {
-        showDoneCreateView.send()
+        showDoneCreateView.send(currentDate)
     }
     
     func didChangeTargetDate(to date: Date) {

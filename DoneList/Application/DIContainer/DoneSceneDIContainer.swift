@@ -43,8 +43,8 @@ final class DoneSceneDIContainer {
     
     // MARK: - DoneCreateViewController
     
-    func makeDoneCreateViewController() -> DoneCreateViewController {
-        let viewModel = DoneCreateViewModel(doneUseCase: makeDoneUseCase())
+    func makeDoneCreateViewController(_ date: Date) -> DoneCreateViewController {
+        let viewModel = DoneCreateViewModel(doneUseCase: makeDoneUseCase(), date: date)
         
         return DoneCreateViewController(viewModel)
     }

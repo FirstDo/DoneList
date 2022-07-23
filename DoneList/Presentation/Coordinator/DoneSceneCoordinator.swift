@@ -51,8 +51,8 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: DoneCreateViewController
     
-    func showDoneCreate() {
-        let doneCreateViewController = dependency.makeDoneCreateViewController()
+    func showDoneCreate(date: Date) {
+        let doneCreateViewController = dependency.makeDoneCreateViewController(date)
         doneCreateViewController.coordinator = self
         
         guard let sheet = doneCreateViewController.sheetPresentationController else { return }
