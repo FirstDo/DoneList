@@ -72,7 +72,7 @@ final class DoneListViewModel:  DoneListViewModelType {
     var quote: AnyPublisher<Quote, Never> {
         return fetchQuoteUseCase
             .fetchQuote()
-            .replaceError(with: Quote(quote: "인터넷에 연결해주세요 :("))
+            .replaceError(with: Quote(content: "화이팅!", person: "나"))
             .eraseToAnyPublisher()
     }
     

@@ -44,7 +44,7 @@ final class DoneListViewController: UIViewController {
         viewModel.quote
             .receive(on: DispatchQueue.main)
             .sink { [weak self] quote in
-                self?.mainView.quoteLabel.text = quote.quote
+                self?.mainView.quoteLabel.text = quote.content + "\n" + "- " + quote.person + " -"
             }
             .store(in: &cancelBag)
         
