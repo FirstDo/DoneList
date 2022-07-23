@@ -44,6 +44,7 @@
 		94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */; };
 		94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */; };
 		94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */; };
+		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWriteView.swift; sourceTree = "<group>"; };
 		94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewModel.swift; sourceTree = "<group>"; };
 		94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewController.swift; sourceTree = "<group>"; };
+		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				94272A4A288AAE870010BC10 /* Done.swift */,
 				94272A63288ACB560010BC10 /* Quote.swift */,
+				94272ABC288BFD460010BC10 /* Category.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
 				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
+				94272ABD288BFD460010BC10 /* Category.swift in Sources */,
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
