@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */; };
 		941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */; };
+		941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */; };
 		94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A28288AA0480010BC10 /* AppDelegate.swift */; };
 		94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A2A288AA0480010BC10 /* SceneDelegate.swift */; };
 		94272A32288AA04A0010BC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94272A31288AA04A0010BC10 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UITextField.swift"; sourceTree = "<group>"; };
 		941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIButton.swift"; sourceTree = "<group>"; };
+		941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneEditViewModel.swift; sourceTree = "<group>"; };
 		94272A25288AA0480010BC10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94272A28288AA0480010BC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94272A2A288AA0480010BC10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		941D7D08288C96CA0071C2C7 /* DoneEditView */ = {
+			isa = PBXGroup;
+			children = (
+				941D7D0A288C96DB0071C2C7 /* View */,
+				941D7D09288C96D20071C2C7 /* ViewModel */,
+			);
+			path = DoneEditView;
+			sourceTree = "<group>";
+		};
+		941D7D09288C96D20071C2C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		941D7D0A288C96DB0071C2C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		94272A1C288AA0480010BC10 = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +416,7 @@
 				94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */,
 				94272ABF288BFD9A0010BC10 /* CategoryCell.swift */,
 				94272AB1288BEF910010BC10 /* DoneCreateView */,
+				941D7D08288C96CA0071C2C7 /* DoneEditView */,
 			);
 			path = DoneWriteView;
 			sourceTree = "<group>";
@@ -517,6 +544,7 @@
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
+				941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
 				941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */,
 				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
