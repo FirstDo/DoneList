@@ -40,10 +40,17 @@ final class DoneCreateViewController: UIViewController {
                 self?.mainView.applySnapshot(items)
             }
             .store(in: &cancelBag)
+        
+        viewModel.doneImageName
+            .sink { [weak self] category in
+                self?.mainView.doneImageView.image = UIImage(systemName: category.name)
+            }
+            .store(in: &cancelBag)
     }
     
     private func setup() {
         setupLayout()
+        setupCollectionView()
     }
     
     private func setupLayout() {
@@ -54,7 +61,7 @@ final class DoneCreateViewController: UIViewController {
         }
     }
     
-    private func setupView() {
+    private func setupCollectionView() {
         mainView.doneCollectionView.delegate = self
     }
 }
