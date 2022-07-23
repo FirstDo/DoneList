@@ -43,11 +43,6 @@ final class DoneSceneCoordiantor: Coordinator {
         navigationController?.topViewController?.present(calendarViewController, animated: true)
     }
     
-    func dismissCalendar() {
-        let currentViewController = navigationController?.presentedViewController as? CalendarViewController
-        currentViewController?.dismiss(animated: true)
-    }
-    
     // MARK: DoneCreateViewController
     
     func showDoneCreate(date: Date) {
@@ -61,11 +56,6 @@ final class DoneSceneCoordiantor: Coordinator {
         sheet.preferredCornerRadius = 20
         
         navigationController?.topViewController?.present(doneCreateViewController, animated: true)
-    }
-    
-    func dismissDoneCreate() {
-        let currentViewController = navigationController?.presentedViewController as? DoneCreateViewController
-        currentViewController?.dismiss(animated: true)
     }
     
     // MARK: DoneEditViewController
@@ -83,8 +73,7 @@ final class DoneSceneCoordiantor: Coordinator {
         navigationController?.topViewController?.present(doneEditViewController, animated: true)
     }
     
-    func dismissDoneEdit() {
-        let currentViewController = navigationController?.presentedViewController as? DoneEditViewController
-        currentViewController?.dismiss(animated: true)
+    func dismiss(target view: UIViewController?) {
+        view?.dismiss(animated: true)
     }
 }

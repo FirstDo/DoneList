@@ -34,6 +34,12 @@ final class DoneCreateViewController: UIViewController {
         bind()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        coordinator?.dismiss(target: self)
+    }
+    
     private func bind() {
         viewModel.cellItems
             .sink { [weak self] items in
@@ -62,7 +68,7 @@ final class DoneCreateViewController: UIViewController {
         
         viewModel.dismissView
             .sink { [weak self] _ in
-                self?.coordinator?.dismissDoneCreate()
+                self?.coordinator?.dismiss(target: self)
             }
             .store(in: &cancelBag)
         

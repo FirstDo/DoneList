@@ -54,10 +54,16 @@ class CalendarViewController: UIViewController {
         bind()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        coordinator?.dismiss(target: self)
+    }
+    
     private func bind() {
         viewModel.dismissView
             .sink { [weak self] _ in
-                self?.coordinator?.dismissCalendar()
+                self?.coordinator?.dismiss(target: self)
             }
             .store(in: &cancelBag)
         

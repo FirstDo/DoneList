@@ -34,6 +34,12 @@ final class DoneEditViewController: UIViewController {
         bind()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        coordinator?.dismiss(target: self)
+    }
+    
     private func bind() {
         viewModel.cellItems
             .sink { [weak self] items in
@@ -42,7 +48,6 @@ final class DoneEditViewController: UIViewController {
             .store(in: &cancelBag)
         
         viewModel.taskTitle
-            .print()
             .sink { [weak self] title in
                 self?.mainView.doneTextField.text = title
             }
@@ -69,7 +74,7 @@ final class DoneEditViewController: UIViewController {
         
         viewModel.dismissView
             .sink { [weak self] _ in
-                // TODO
+                self?.coordinator?.dismiss(target: self)
             }
             .store(in: &cancelBag)
         
@@ -80,7 +85,6 @@ final class DoneEditViewController: UIViewController {
             .store(in: &cancelBag)
         
         mainView.doneTextField.textPublisher
-            .print()
             .sink { [weak self] text in
                 self?.viewModel.didEditTextField(text)
             }
