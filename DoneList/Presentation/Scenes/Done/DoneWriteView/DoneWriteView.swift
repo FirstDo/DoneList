@@ -38,8 +38,9 @@ final class DoneWriteView: UIView {
         return textField
     }()
     
-    private let doneCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero)
+    private lazy var doneCollectionView: UICollectionView = {
+        let layout = makeCollectionLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         return collectionView
     }()
@@ -50,6 +51,11 @@ final class DoneWriteView: UIView {
         return button
     }()
     
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, Category>
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Category>
+    
+    private var dataSource: DataSource?
+    
     convenience init() {
         self.init(frame: .zero)
         
@@ -58,6 +64,8 @@ final class DoneWriteView: UIView {
     
     private func setup() {
         setupLayout()
+        setupView()
+        setupCollectionView()
     }
     
     private func setupLayout() {
@@ -72,5 +80,34 @@ final class DoneWriteView: UIView {
     
     private func setupView() {
         backgroundColor = .systemBackground
+    }
+    
+    private func makeCollectionLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    private func setupCollectionView() {
+        let cellRegistraion = UICollectionView.CellRegistration<CategoryCell, Category> { cell, indexPath, item in
+            cell.setup(with: item)
+        }
+        
+        dataSource = DataSource(collectionView: doneCollectionView) { collectionView, indexPath, item in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistraion, for: indexPath, item: item)
+        }
+    }
+    
+    func applySnapshot(_ items: [Category]) {
+        var snapshot = SnapShot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(items)
+        dataSource?.apply(snapshot)
     }
 }
