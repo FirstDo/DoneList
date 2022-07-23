@@ -41,6 +41,7 @@
 		94272AA6288B31E50010BC10 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 94272AA5288B31E50010BC10 /* FSCalendar */; };
 		94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AAC288BB28B0010BC10 /* CalendarViewModel.swift */; };
 		94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AAE288BB4490010BC10 /* CalendarViewController.swift */; };
+		94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		94272AA2288B052C0010BC10 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		94272AAC288BB28B0010BC10 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		94272AAE288BB4490010BC10 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 			children = (
 				94272A82288ADD7D0010BC10 /* DoneListView */,
 				94272AA8288B32220010BC10 /* CalendarView */,
+				94272AB0288BEF7B0010BC10 /* DoneWriteView */,
 			);
 			path = Done;
 			sourceTree = "<group>";
@@ -363,6 +366,38 @@
 				94272AAC288BB28B0010BC10 /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94272AB0288BEF7B0010BC10 /* DoneWriteView */ = {
+			isa = PBXGroup;
+			children = (
+				94272AB1288BEF910010BC10 /* DoneCreateView */,
+				94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */,
+			);
+			path = DoneWriteView;
+			sourceTree = "<group>";
+		};
+		94272AB1288BEF910010BC10 /* DoneCreateView */ = {
+			isa = PBXGroup;
+			children = (
+				94272AB3288BEFA40010BC10 /* View */,
+				94272AB2288BEF9D0010BC10 /* ViewModel */,
+			);
+			path = DoneCreateView;
+			sourceTree = "<group>";
+		};
+		94272AB2288BEF9D0010BC10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94272AB3288BEFA40010BC10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +484,7 @@
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
+				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
