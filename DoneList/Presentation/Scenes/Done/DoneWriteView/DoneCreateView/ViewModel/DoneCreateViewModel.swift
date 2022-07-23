@@ -8,19 +8,19 @@
 import Foundation
 import Combine
 
-protocol DoneViewModelInput {
+protocol DoneCreateViewModelInput {
     func didTapCreateButton(_ imageName: String?, _ taskName: String?)
     func didTapCell(_ imageName: String)
 }
 
-protocol DoneViewModelOutput {
+protocol DoneCreateViewModelOutput {
     var doneImageName: PassthroughSubject<String, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
-protocol DoneViewModelType: DoneViewModelInput, DoneViewModelOutput {}
+protocol DoneCreateViewModelType: DoneCreateViewModelInput, DoneCreateViewModelOutput {}
 
-final class DoneViewModel: DoneViewModelType {
+final class DoneCreateViewModel: DoneCreateViewModelType {
    
     private let doneUseCase: DoneUseCaseType
     private var cancelBag = Set<AnyCancellable>()
@@ -37,7 +37,7 @@ final class DoneViewModel: DoneViewModelType {
 
 // MARK: - Input
 
-extension DoneViewModel {
+extension DoneCreateViewModel {
     func didTapCreateButton(_ imageName: String?, _ taskName: String?) {
         guard let imageName = imageName, let taskName = taskName else { return }
         
