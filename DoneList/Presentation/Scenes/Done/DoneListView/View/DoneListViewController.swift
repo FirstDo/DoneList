@@ -88,7 +88,7 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showDoneCreateView
             .sink { [weak self] _ in
-                // TODO: showDoneCreateView
+                self?.coordinator?.showDoneCreate()
             }
             .store(in: &cancelBag)
     }
@@ -117,6 +117,13 @@ final class DoneListViewController: UIViewController {
         mainView.tomorrowButton.addAction(
             UIAction { [weak self] _ in
                 self?.viewModel.didTapTomorrowButton()
+            },
+            for: .touchUpInside
+        )
+        
+        mainView.addDoneButton.addAction(
+            UIAction { [weak self] _ in
+                self?.viewModel.didTapAddButton()
             },
             for: .touchUpInside
         )
