@@ -26,7 +26,7 @@ protocol DoneEditViewModelOutput {
 
 protocol DoneEditViewModelType: DoneEditViewModelInput, DoneEditViewModelOutput {}
 
-final class DonEditViewModel: DoneEditViewModelType {
+final class DoneEditViewModel: DoneEditViewModelType {
 
     private let doneUseCase: DoneUseCaseType
     private let done: Done
@@ -63,7 +63,7 @@ final class DonEditViewModel: DoneEditViewModelType {
 
 // MARK: - Input
 
-extension DonEditViewModel {
+extension DoneEditViewModel {
 
     func didTapCell(_ item: Category) {
         category.send(item)
