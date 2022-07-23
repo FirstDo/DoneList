@@ -69,4 +69,8 @@ final class DoneWriteView: UIView {
             $0.edges.equalTo(safeAreaLayoutGuide)
         }
     }
+    
+    private func setupView() {
+        backgroundColor = .systemBackground
+    }
 }

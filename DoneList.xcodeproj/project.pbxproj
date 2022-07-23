@@ -43,6 +43,7 @@
 		94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AAE288BB4490010BC10 /* CalendarViewController.swift */; };
 		94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */; };
 		94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */; };
+		94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		94272AAE288BB4490010BC10 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWriteView.swift; sourceTree = "<group>"; };
 		94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewModel.swift; sourceTree = "<group>"; };
+		94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +401,7 @@
 		94272AB3288BEFA40010BC10 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
+				94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
