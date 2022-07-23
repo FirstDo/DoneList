@@ -11,27 +11,43 @@ import SnapKit
 
 final class DoneWriteView: UIView {
     
-    private let baseStackView: UIStackView = {
+    let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.axis = .vertical
         stackview.spacing = 20
+        stackview.isLayoutMarginsRelativeArrangement = true
+        stackview.directionalLayoutMargins = .init(top: 30, leading: 30, bottom: .zero, trailing: 30)
         
         return stackview
+    }()
+    
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "임시"
+        
+        return label
     }()
     
     private let doneInputStackView: UIStackView = {
         let stackview = UIStackView()
+        stackview.spacing = 20
+        stackview.layer.cornerRadius = 10
+        stackview.backgroundColor = .systemBackground
         
         return stackview
     }()
     
-    private let doneImageView: UIImageView = {
+    let doneImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "plus.app")
+        imageView.contentMode = .scaleAspectFit
+        imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         return imageView
     }()
     
-    private let doneTextField: UITextField = {
+    let doneTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "오늘 한 일을 적어보세요 :)"
         
@@ -41,15 +57,21 @@ final class DoneWriteView: UIView {
     private(set) lazy var doneCollectionView: UICollectionView = {
         let layout = makeCollectionLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.layer.cornerRadius = 10
+        collectionView.backgroundColor = .systemBackground
         
         return collectionView
     }()
     
     private let doneButton: UIButton = {
         let button = UIButton()
+        button.setTitleColor(.systemRed, for: .normal)
+        button.setTitle("임시이름", for: .normal)
         
         return button
     }()
+    
+    private let dummyView = UIView()
     
     typealias DataSource = UICollectionViewDiffableDataSource<Int, Category>
     typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Category>
@@ -70,28 +92,39 @@ final class DoneWriteView: UIView {
     
     private func setupLayout() {
         addSubview(baseStackView)
-        baseStackView.addArrangedSubviews(doneInputStackView, doneCollectionView, doneButton)
+        baseStackView.addArrangedSubviews(titleLabel, doneInputStackView, doneCollectionView, doneButton, dummyView)
         doneInputStackView.addArrangedSubviews(doneImageView, doneTextField)
         
         baseStackView.snp.makeConstraints {
-            $0.edges.equalTo(safeAreaLayoutGuide)
+            $0.top.bottom.equalTo(safeAreaLayoutGuide)
+            $0.leading.trailing.equalTo(safeAreaLayoutGuide)
+        }
+        
+        doneImageView.snp.makeConstraints {
+            $0.width.height.equalTo(50)
+        }
+        
+        doneCollectionView.snp.makeConstraints {
+            $0.height.equalTo(200)
         }
     }
     
     private func setupView() {
-        backgroundColor = .systemBackground
+        backgroundColor = .systemGray6
     }
     
     private func makeCollectionLayout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        
-        return UICollectionViewCompositionalLayout(section: section)
+        return UICollectionViewCompositionalLayout { _, environment in
+            let width = environment.container.effectiveContentSize.width / 4
+            
+            let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(width))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            
+            return NSCollectionLayoutSection(group: group)
+        }
     }
     
     private func setupCollectionView() {
