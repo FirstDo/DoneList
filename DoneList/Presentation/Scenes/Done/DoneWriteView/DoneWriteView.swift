@@ -38,7 +38,7 @@ final class DoneWriteView: UIView {
         return textField
     }()
     
-    private lazy var doneCollectionView: UICollectionView = {
+    private(set) lazy var doneCollectionView: UICollectionView = {
         let layout = makeCollectionLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         

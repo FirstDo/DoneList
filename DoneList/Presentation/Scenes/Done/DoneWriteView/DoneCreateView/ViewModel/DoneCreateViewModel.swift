@@ -10,11 +10,12 @@ import Combine
 
 protocol DoneCreateViewModelInput {
     func didTapCreateButton(_ imageName: String?, _ taskName: String?)
-    func didTapCell(_ imageName: String)
+    func didTapCell(_ item: Category)
 }
 
 protocol DoneCreateViewModelOutput {
-    var doneImageName: PassthroughSubject<String, Never> { get }
+    var cellItems: AnyPublisher<[Category], Never> { get }
+    var doneImageName: PassthroughSubject<Category, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
@@ -26,8 +27,10 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
     private var cancelBag = Set<AnyCancellable>()
     
     // MARK: - Output
-    
-    var doneImageName = PassthroughSubject<String, Never>()
+    var cellItems: AnyPublisher<[Category], Never> {
+        return Just(Category.all).eraseToAnyPublisher()
+    }
+    let doneImageName = PassthroughSubject<Category, Never>()
     let dismissView = PassthroughSubject<Void, Never>()
     
     init(doneUseCase: DoneUseCaseType) {
@@ -45,7 +48,7 @@ extension DoneCreateViewModel {
         dismissView.send()
     }
     
-    func didTapCell(_ imageName: String) {
-        doneImageName.send(imageName)
+    func didTapCell(_ item: Category) {
+        doneImageName.send(item)
     }
 }
