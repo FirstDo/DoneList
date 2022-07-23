@@ -14,6 +14,7 @@ protocol DoneListViewModelInput {
     func didTapYesterDayButton()
     func didTapTomorrowButton()
     func didTapDateLabel()
+    func didCellSwipe(target item: Done)
     func didTapCell(with item: Done)
     func didTapAddButton()
     func didChangeTargetDate(to date: Date)
@@ -113,6 +114,10 @@ extension DoneListViewModel {
     
     func didTapDateLabel() {
         showCalendarView.send(currentDate)
+    }
+    
+    func didCellSwipe(target item: Done) {
+        doneUseCase.deleteItem(target: item)
     }
     
     func didTapCell(with item: Done) {
