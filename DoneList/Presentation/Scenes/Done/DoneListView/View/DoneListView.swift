@@ -109,11 +109,21 @@ final class DoneListView: UIView {
     }()
     
     let doneCollectionView: UICollectionView = {
-        let listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
-        let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
         
-        return collectionView
+        listConfiguration.trailingSwipeActionsConfigurationProvider = { indexPath in
+            
+            let action = UIContextualAction(style: .destructive, title: "삭제") { _, _, completion in
+                
+                completion(true)
+            }
+            
+            return UISwipeActionsConfiguration(actions: [action])
+        }
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
+        
+        return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
     
     let addDoneButton: UIButton = {
@@ -134,7 +144,6 @@ final class DoneListView: UIView {
 
     convenience init() {
         self.init(frame: .zero)
-        
         setup()
     }
     
