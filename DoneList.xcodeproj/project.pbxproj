@@ -45,6 +45,7 @@
 		94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */; };
 		94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */; };
 		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
+		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		94272AB8288BF27C0010BC10 /* DoneCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewModel.swift; sourceTree = "<group>"; };
 		94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewController.swift; sourceTree = "<group>"; };
 		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				94272AB4288BEFBC0010BC10 /* DoneWriteView.swift */,
+				94272ABF288BFD9A0010BC10 /* CategoryCell.swift */,
 				94272AB1288BEF910010BC10 /* DoneCreateView */,
 			);
 			path = DoneWriteView;
@@ -511,6 +514,7 @@
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
 				94272A7E288ADB6E0010BC10 /* AppDIContainer.swift in Sources */,
+				94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */,
 				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
 				94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
