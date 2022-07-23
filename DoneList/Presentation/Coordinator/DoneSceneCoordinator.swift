@@ -42,4 +42,8 @@ final class DoneSceneCoordiantor: Coordinator {
         
         navigationController?.topViewController?.present(calendarViewController, animated: true)
     }
+    
+    func dismissCalendar() {
+        navigationController?.topViewController?.dismiss(animated: true)
+    }
 }
