@@ -55,6 +55,12 @@ final class DoneSceneCoordiantor: Coordinator {
         let doneCreateViewController = dependency.makeDoneCreateViewController()
         doneCreateViewController.coordinator = self
         
+        guard let sheet = doneCreateViewController.sheetPresentationController else { return }
+        
+        sheet.detents = [.medium()]
+        sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+        sheet.preferredCornerRadius = 20
+        
         navigationController?.topViewController?.present(doneCreateViewController, animated: true)
     }
     
