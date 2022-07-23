@@ -49,6 +49,14 @@ final class DoneSceneDIContainer {
         return DoneCreateViewController(viewModel)
     }
     
+    // MARK: - DoneEditViewController
+    
+    func makeDoneEditViewController(_ item: Done) -> DoneEditViewController {
+        let viewModel = DoneEditViewModel(doneUseCase: makeDoneUseCase(), done: item)
+        
+        return DoneEditViewController(viewModel)
+    }
+    
     // MARK: - UseCase
     
     private func makeDoneUseCase() -> DoneUseCaseType {

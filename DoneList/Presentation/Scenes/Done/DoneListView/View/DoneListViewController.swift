@@ -82,7 +82,7 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showDoneEditView
             .sink { [weak self] done in
-                // TODO: showDoneEditView
+                self?.coordinator?.showDoneEdit(item: done)
             }
             .store(in: &cancelBag)
         

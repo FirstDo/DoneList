@@ -17,9 +17,10 @@ protocol DoneCreateViewModelInput {
 protocol DoneCreateViewModelOutput {
     var cellItems: AnyPublisher<[Category], Never> { get }
     var category: CurrentValueSubject<Category, Never> { get }
-    var dismissView: PassthroughSubject<Void, Never> { get }
     var doneButtonState: AnyPublisher<Bool, Never> { get }
     var doneButtonTitle: AnyPublisher<String, Never> { get }
+    
+    var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
 protocol DoneCreateViewModelType: DoneCreateViewModelInput, DoneCreateViewModelOutput {}
@@ -33,6 +34,7 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
     @Published var doneTitle: String = ""
     
     // MARK: - Output
+    
     var cellItems: AnyPublisher<[Category], Never> {
         return Just(Category.all).eraseToAnyPublisher()
     }

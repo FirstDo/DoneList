@@ -67,4 +67,24 @@ final class DoneSceneCoordiantor: Coordinator {
         let currentViewController = navigationController?.presentedViewController as? DoneCreateViewController
         currentViewController?.dismiss(animated: true)
     }
+    
+    // MARK: DoneEditViewController
+    
+    func showDoneEdit(item: Done) {
+        let doneEditViewController = dependency.makeDoneEditViewController(item)
+        doneEditViewController.coordinator = self
+        
+        guard let sheet = doneEditViewController.sheetPresentationController else { return }
+        
+        sheet.detents = [.medium()]
+        sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+        sheet.preferredCornerRadius = 20
+        
+        navigationController?.topViewController?.present(doneEditViewController, animated: true)
+    }
+    
+    func dismissDoneEdit() {
+        let currentViewController = navigationController?.presentedViewController as? DoneEditViewController
+        currentViewController?.dismiss(animated: true)
+    }
 }
