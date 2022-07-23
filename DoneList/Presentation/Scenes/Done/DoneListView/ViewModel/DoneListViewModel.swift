@@ -16,6 +16,7 @@ protocol DoneListViewModelInput {
     func didTapDateLabel()
     func didTapCell(with item: Done)
     func didTapAddButton()
+    func didChangeTargetDate(to date: Date)
 }
 
 protocol DoneListViewModelOutput {
@@ -113,6 +114,10 @@ extension DoneListViewModel {
     
     func didTapAddButton() {
         showDoneCreateView.send(())
+    }
+    
+    func didChangeTargetDate(to date: Date) {
+        currentDate = date
     }
 }
 
