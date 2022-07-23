@@ -35,7 +35,11 @@ final class DoneCreateViewController: UIViewController {
     }
     
     private func bind() {
-        
+        viewModel.cellItems
+            .sink { [weak self] items in
+                self?.mainView.applySnapshot(items)
+            }
+            .store(in: &cancelBag)
     }
     
     private func setup() {
@@ -48,5 +52,20 @@ final class DoneCreateViewController: UIViewController {
         mainView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func setupView() {
+        mainView.doneCollectionView.delegate = self
+    }
+}
+
+extension DoneCreateViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dataSource = collectionView.dataSource as? DoneWriteView.DataSource,
+              let item = dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        
+        viewModel.didTapCell(item)
     }
 }
