@@ -26,9 +26,11 @@ final class CalendarViewModel: CalendarViewModelType {
     // MARK: - Output
     
     let dismissView = PassthroughSubject<Void, Never>()
+    let changedTargetDate: (Date) -> ()
     
-    init(date: Date) {
+    init(date: Date, changedTargetDate: @escaping (Date) -> ()) {
         self.date = date
+        self.changedTargetDate = changedTargetDate
     }
 }
 
@@ -36,6 +38,6 @@ final class CalendarViewModel: CalendarViewModelType {
 
 extension CalendarViewModel {
     func didTapCell(_ date: Date) {
-        
+        changedTargetDate(date)
     }
 }

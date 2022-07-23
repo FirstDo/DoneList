@@ -27,4 +27,19 @@ final class DoneSceneCoordiantor: Coordinator {
         
         navigationController?.pushViewController(doneListViewController, animated: true)
     }
+    
+    // MARK: CalendarViewController
+    
+    func showCalendar(with date: Date, changedTargetDate: @escaping (Date) -> ()) {
+        let calendarViewController = dependency.makeCalendarViewController(date, changedTargetDate)
+        calendarViewController.coordinator = self
+        
+        guard let sheet = calendarViewController.sheetPresentationController else { return }
+        
+        sheet.detents = [.medium()]
+        sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+        sheet.preferredCornerRadius = 20
+        
+        navigationController?.topViewController?.present(calendarViewController, animated: true)
+    }
 }

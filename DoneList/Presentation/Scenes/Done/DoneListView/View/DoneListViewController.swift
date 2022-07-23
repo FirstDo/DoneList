@@ -62,7 +62,9 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showCalendarView
             .sink { [weak self] date in
-                // TODO: ShowCalendarView
+                guard let self = self else { return }
+                
+                self.coordinator?.showCalendar(with: date, changedTargetDate: self.viewModel.didChangeTargetDate(to:))
             }
             .store(in: &cancelBag)
         

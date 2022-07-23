@@ -13,6 +13,7 @@ import FSCalendar
 
 class CalendarViewController: UIViewController {
 
+    weak var coordinator: DoneSceneCoordiantor?
     private let viewModel: CalendarViewModelType
     private var cancelBag = Set<AnyCancellable>()
     
@@ -28,5 +29,6 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .systemBackground
     }
 }
