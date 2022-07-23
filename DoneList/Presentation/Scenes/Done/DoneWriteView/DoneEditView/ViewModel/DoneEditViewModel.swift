@@ -50,14 +50,17 @@ final class DoneEditViewModel: DoneEditViewModelType {
         return Just("수정하기").eraseToAnyPublisher()
     }
     
-    let taskTitle = CurrentValueSubject<String, Never>("")
-    let category = CurrentValueSubject<Category, Never>(.empty)
+    let taskTitle: CurrentValueSubject<String, Never>
+    let category: CurrentValueSubject<Category, Never>
     
     let dismissView = PassthroughSubject<Void, Never>()
     
     init(doneUseCase: DoneUseCaseType, done: Done) {
         self.doneUseCase = doneUseCase
         self.done = done
+        
+        self.taskTitle = CurrentValueSubject<String, Never>(done.taskName)
+        self.category = CurrentValueSubject<Category, Never>(done.category)
     }
 }
 
@@ -74,7 +77,7 @@ extension DoneEditViewModel {
     }
     
     func didTapEditButton() {
-        let newItem = Done(id: done.id, createdAt: done.createdAt, taskName: taskTitle.value, imageName: category.value.name)
+        let newItem = Done(id: done.id, createdAt: done.createdAt, taskName: taskTitle.value, category: category.value)
         _ = doneUseCase.editItem(to: newItem)
         dismissView.send()
     }

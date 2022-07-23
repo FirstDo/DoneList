@@ -11,6 +11,11 @@ struct Category: Hashable {
     let name: String
     let color: UIColor
     
+    init(name: String, color: UIColor = .tintColor) {
+        self.name = name
+        self.color = color
+    }
+    
     static let empty = Category(name: "plus", color: .systemGray)
     
     static let all: [Category] = [

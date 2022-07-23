@@ -73,7 +73,7 @@ extension DoneCreateViewModel {
     }
     
     func didTapCreateButton() {
-        _ = doneUseCase.createNewItem(Done(createdAt: targetDate, taskName: doneTitle, imageName: category.value.name))
+        _ = doneUseCase.createNewItem(Done(createdAt: targetDate, taskName: doneTitle, category: category.value))
         dismissView.send()
     }
 }

@@ -27,6 +27,10 @@ class CategoryCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
     private func setup() {
         setupLayout()
         setupView()
@@ -47,5 +51,6 @@ class CategoryCell: UICollectionViewCell {
     
     func setup(with item: Category) {
         doneImageView.image = UIImage(systemName: item.name)
+        doneImageView.tintColor = item.color
     }
 }

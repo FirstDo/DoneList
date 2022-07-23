@@ -56,6 +56,7 @@ final class DoneEditViewController: UIViewController {
         viewModel.category
             .sink { [weak self] category in
                 self?.mainView.doneImageView.image = UIImage(systemName: category.name)
+                self?.mainView.doneImageView.tintColor = category.color
             }
             .store(in: &cancelBag)
         

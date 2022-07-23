@@ -17,7 +17,8 @@ final class DoneCell: UICollectionViewListCell {
 
         var configuration = DoneContentConfiguration().updated(for: state)
         configuration.title = done.taskName
-        configuration.image = UIImage(systemName: done.imageName)
+        configuration.image = UIImage(systemName: done.category.name)
+        configuration.tintColor = done.category.color
         
         contentConfiguration = configuration
         backgroundConfiguration = .listAccompaniedSidebarCell()
