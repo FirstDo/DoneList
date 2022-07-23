@@ -75,7 +75,7 @@ class CalendarViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.addSubViews(calendarView)
+        view.addSubviews(calendarView)
         
         calendarView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
