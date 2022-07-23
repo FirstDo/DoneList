@@ -23,8 +23,9 @@ class CalendarViewController: UIViewController {
         calendar.placeholderType = .none
         
         calendar.appearance.headerDateFormat = "YYYY년 MM월"
-        calendar.appearance.headerMinimumDissolvedAlpha = 0.0
+        calendar.appearance.headerMinimumDissolvedAlpha = .zero
         calendar.appearance.headerTitleColor = .label
+        calendar.appearance.headerTitleFont = .preferredFont(forTextStyle: .title1)
         
         calendar.appearance.titleWeekendColor = .systemGray
         calendar.appearance.weekdayTextColor = .label
@@ -103,7 +104,6 @@ extension CalendarViewController: FSCalendarDelegate {
     }
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
         if calendar.selectedDate == date {
             cell.titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
         } else {
