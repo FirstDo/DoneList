@@ -17,6 +17,26 @@ class CalendarViewController: UIViewController {
     private let viewModel: CalendarViewModelType
     private var cancelBag = Set<AnyCancellable>()
     
+    private let calendarView: FSCalendar = {
+        let calendar = FSCalendar()
+        calendar.locale = .current
+        calendar.placeholderType = .none
+        
+        calendar.appearance.headerDateFormat = "YYYY년 MM월"
+        calendar.appearance.headerMinimumDissolvedAlpha = 0.0
+        calendar.appearance.headerTitleColor = .label
+        
+        calendar.appearance.titleWeekendColor = .systemGray
+        calendar.appearance.weekdayTextColor = .label
+        
+        calendar.appearance.eventDefaultColor = .systemRed
+        calendar.appearance.eventOffset = CGPoint(x: .zero, y: 5)
+        calendar.appearance.todayColor = .clear
+        calendar.appearance.titleTodayColor = .systemRed
+        
+        return calendar
+    }()
+    
     init(_ viewModel: CalendarViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -28,7 +48,66 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setup()
+        bind()
+    }
+    
+    private func bind() {
+        viewModel.dismissView
+            .sink { [weak self] _ in
+                self?.coordinator?.dismissCalendar()
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.selectedDate
+            .sink { [weak self] date in
+                self?.calendarView.select(date)
+            }
+            .store(in: &cancelBag)
+    }
+    
+    private func setup() {
+        setupLayout()
+        setupView()
+        setupCalendar()
+    }
+    
+    private func setupLayout() {
+        view.addSubViews(calendarView)
+        
+        calendarView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    private func setupView() {
         view.backgroundColor = .systemBackground
+    }
+    
+    private func setupCalendar() {
+        calendarView.delegate = self
+        calendarView.dataSource = self
+    }
+}
+
+extension CalendarViewController: FSCalendarDataSource {
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        return 1
+    }
+}
+
+extension CalendarViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        viewModel.didTapCell(date)
+    }
+    
+    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        if calendar.selectedDate == date {
+            cell.titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        } else {
+            cell.titleLabel.font = .systemFont(ofSize: 18)
+        }
     }
 }
