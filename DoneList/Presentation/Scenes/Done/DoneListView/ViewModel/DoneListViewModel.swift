@@ -21,7 +21,6 @@ protocol DoneListViewModelInput {
 protocol DoneListViewModelOutput {
     var doneItems: AnyPublisher<[Done], Never> { get }
     var quote: AnyPublisher<Quote, Never> { get }
-    var currentDate: CurrentValueSubject<Date, Never> { get }
     var dateTitle: AnyPublisher<String, Never> { get }
     
     var showErrorAlert: PassthroughSubject<String, Never> { get }
@@ -39,6 +38,8 @@ final class DoneListViewModel:  DoneListViewModelType {
     private let fetchQuoteUseCase: FetchQuoteUseCaseType
     private var cancelBag = Set<AnyCancellable>()
     
+    @Published private var currentDate: Date = .now
+    
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = .current
@@ -54,7 +55,7 @@ final class DoneListViewModel:  DoneListViewModelType {
     }
     
     var dateTitle: AnyPublisher<String, Never> {
-        return currentDate
+        return $currentDate
             .map { self.dateFormatter.string(from: $0) }
             .eraseToAnyPublisher()
     }
@@ -65,8 +66,6 @@ final class DoneListViewModel:  DoneListViewModelType {
             .replaceError(with: Quote(quote: "인터넷에 연결해주세요 :("))
             .eraseToAnyPublisher()
     }
-    
-    let currentDate = CurrentValueSubject<Date, Never>(Date.now)
     
     let showErrorAlert = PassthroughSubject<String, Never>()
     let showChartView = PassthroughSubject<Void, Never>()
@@ -93,19 +92,19 @@ extension DoneListViewModel {
     }
     
     func didTapYesterDayButton() {
-        guard let dayBefore = currentDate.value.dayBefore else { return }
+        guard let dayBefore = currentDate.dayBefore else { return }
         
-        currentDate.send(dayBefore)
+        currentDate = dayBefore
     }
     
     func didTapTomorrowButton() {
-        guard let dayAfter = currentDate.value.dayAfter else { return }
+        guard let dayAfter = currentDate.dayBefore else { return }
         
-        currentDate.send(dayAfter)
+        currentDate = dayAfter
     }
     
     func didTapDateLabel() {
-        showCalendarView.send(currentDate.value)
+        showCalendarView.send(currentDate)
     }
     
     func didTapCell(with item: Done) {
