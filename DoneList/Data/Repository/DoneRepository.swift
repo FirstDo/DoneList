@@ -9,7 +9,7 @@ import Combine
 
 final class DoneRepository: DoneRepositoryType {
     
-    private let storage: StorageType
+    private unowned let storage: StorageType
     
     init(storage: StorageType) {
         self.storage = storage

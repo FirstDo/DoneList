@@ -10,7 +10,7 @@ import Combine
 
 final class QuotesRepository: QuotesRepositoryType {
     
-    private let apiProvider: APIProvider
+    private unowned let apiProvider: APIProvider
     
     init(apiProvider: APIProvider) {
         self.apiProvider = apiProvider
