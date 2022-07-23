@@ -46,6 +46,7 @@
 		94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */; };
 		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
+		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		94272ABA288BF68A0010BC10 /* DoneCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCreateViewController.swift; sourceTree = "<group>"; };
 		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 		94272A74288AD8930010BC10 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				94272AC3288C39DF0010BC10 /* Publisher */,
 				94272A75288AD8A30010BC10 /* Typealias.swift */,
 			);
 			path = Combine;
@@ -412,6 +415,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		94272AC3288C39DF0010BC10 /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				94272AC1288C39B30010BC10 /* Combine+UIControl.swift */,
+			);
+			path = Publisher;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,6 +510,7 @@
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
 				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
 				94272ABD288BFD460010BC10 /* Category.swift in Sources */,
