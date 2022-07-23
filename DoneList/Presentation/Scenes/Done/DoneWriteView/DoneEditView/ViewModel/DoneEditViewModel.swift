@@ -16,6 +16,7 @@ protocol DoneEditViewModelInput {
 
 protocol DoneEditViewModelOutput {
     var cellItems: AnyPublisher<[Category], Never> { get }
+    var taskTitle: CurrentValueSubject<String, Never> { get }
     var category: CurrentValueSubject<Category, Never> { get }
     var doneButtonState: AnyPublisher<Bool, Never> { get }
     var doneButtonTitle: AnyPublisher<String, Never> { get }
@@ -31,8 +32,6 @@ final class DonEditViewModel: DoneEditViewModelType {
     private let done: Done
     private var cancelBag = Set<AnyCancellable>()
     
-    @Published var taskTitle: String = ""
-    
     // MARK: - Output
     
     var cellItems: AnyPublisher<[Category], Never> {
@@ -40,7 +39,7 @@ final class DonEditViewModel: DoneEditViewModelType {
     }
     
     var doneButtonState: AnyPublisher<Bool, Never> {
-        return $taskTitle.combineLatest(category)
+        return taskTitle.combineLatest(category)
             .map { doneTitle, category in
                 return !doneTitle.isEmpty && category != .empty
             }
@@ -51,7 +50,9 @@ final class DonEditViewModel: DoneEditViewModelType {
         return Just("수정하기").eraseToAnyPublisher()
     }
     
+    let taskTitle = CurrentValueSubject<String, Never>("")
     let category = CurrentValueSubject<Category, Never>(.empty)
+    
     let dismissView = PassthroughSubject<Void, Never>()
     
     init(doneUseCase: DoneUseCaseType, done: Done) {
@@ -69,11 +70,11 @@ extension DonEditViewModel {
     }
     
     func didEditTextField(_ text: String) {
-        taskTitle = text
+        taskTitle.send(text)
     }
     
     func didTapEditButton() {
-        let newItem = Done(id: done.id, createdAt: done.createdAt, taskName: taskTitle, imageName: category.value.name)
+        let newItem = Done(id: done.id, createdAt: done.createdAt, taskName: taskTitle.value, imageName: category.value.name)
         _ = doneUseCase.editItem(to: newItem)
         dismissView.send()
     }
