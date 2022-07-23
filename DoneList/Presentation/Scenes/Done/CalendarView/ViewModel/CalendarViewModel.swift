@@ -19,6 +19,7 @@ protocol CalendarViewModelOutput {
 protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput {}
 
 final class CalendarViewModel: CalendarViewModelType {
+    
     private let date: Date
     private var cancelBag = Set<AnyCancellable>()
     
