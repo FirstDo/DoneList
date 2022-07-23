@@ -53,6 +53,13 @@ final class DoneCreateViewController: UIViewController {
             }
             .store(in: &cancelBag)
         
+        viewModel.doneButtonTitle
+            .sink { [weak self] title in
+                self?.mainView.doneButton.setTitle(title, for: .normal)
+                self?.mainView.doneButton.setTitle(title, for: .disabled)
+            }
+            .store(in: &cancelBag)
+        
         viewModel.dismissView
             .sink { [weak self] _ in
                 self?.coordinator?.dismissDoneCreate()

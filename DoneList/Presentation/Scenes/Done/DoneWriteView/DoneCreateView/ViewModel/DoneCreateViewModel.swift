@@ -19,6 +19,7 @@ protocol DoneCreateViewModelOutput {
     var category: CurrentValueSubject<Category, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
     var doneButtonState: AnyPublisher<Bool, Never> { get }
+    var doneButtonTitle: AnyPublisher<String, Never> { get }
 }
 
 protocol DoneCreateViewModelType: DoneCreateViewModelInput, DoneCreateViewModelOutput {}
@@ -42,6 +43,10 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
                 return !doneTitle.isEmpty && category != .empty
             }
             .eraseToAnyPublisher()
+    }
+    
+    var doneButtonTitle: AnyPublisher<String, Never> {
+        return Just("만들기").eraseToAnyPublisher()
     }
     
     let category = CurrentValueSubject<Category, Never>(.empty)
