@@ -63,7 +63,7 @@ final class DoneWriteView: UIView {
         return collectionView
     }()
     
-    private let doneButton: UIButton = {
+    let doneButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.systemRed, for: .normal)
         button.setTitle("임시이름", for: .normal)

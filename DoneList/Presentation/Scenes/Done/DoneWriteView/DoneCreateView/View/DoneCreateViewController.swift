@@ -41,9 +41,33 @@ final class DoneCreateViewController: UIViewController {
             }
             .store(in: &cancelBag)
         
-        viewModel.doneImageName
+        viewModel.category
             .sink { [weak self] category in
                 self?.mainView.doneImageView.image = UIImage(systemName: category.name)
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.doneButtonState
+            .sink { [weak self] isEnable in
+                self?.mainView.doneButton.isEnabled = isEnable
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.dismissView
+            .sink { [weak self] _ in
+                self?.coordinator?.dismissDoneCreate()
+            }
+            .store(in: &cancelBag)
+        
+        mainView.doneButton.tapPublisher
+            .sink { [weak self] _ in
+                self?.viewModel.didTapCreateButton()
+            }
+            .store(in: &cancelBag)
+        
+        mainView.doneTextField.textPublisher
+            .sink { [weak self] text in
+                self?.viewModel.didEditTextField(text)
             }
             .store(in: &cancelBag)
     }
