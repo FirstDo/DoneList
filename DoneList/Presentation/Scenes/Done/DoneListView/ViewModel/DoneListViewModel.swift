@@ -53,6 +53,13 @@ final class DoneListViewModel:  DoneListViewModelType {
     
     var doneItems: AnyPublisher<[Done], Never> {
         return doneUseCase.fetchAllItem()
+            .combineLatest($currentDate)
+            .compactMap { items, date in
+                guard let startOfDay = date.startOfDay, let endOfDay = date.endOfDay else { return nil}
+                
+                return items.filter { (startOfDay...endOfDay) ~= $0.createdAt }
+            }
+            .eraseToAnyPublisher()
     }
     
     var dateTitle: AnyPublisher<String, Never> {
@@ -99,7 +106,7 @@ extension DoneListViewModel {
     }
     
     func didTapTomorrowButton() {
-        guard let dayAfter = currentDate.dayBefore else { return }
+        guard let dayAfter = currentDate.dayAfter else { return }
         
         currentDate = dayAfter
     }
@@ -130,5 +137,13 @@ fileprivate extension Date {
     
     var dayAfter: Date? {
         return Calendar.current.date(byAdding: .day, value: 1, to: self)
+    }
+    
+    var startOfDay: Date? {
+        return Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: self)
+    }
+    
+    var endOfDay: Date? {
+        return Calendar.current.date(bySettingHour: 23, minute: 59, second: 59, of: self)
     }
 }
