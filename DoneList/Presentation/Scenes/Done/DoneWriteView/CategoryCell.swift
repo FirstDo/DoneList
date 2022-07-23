@@ -29,14 +29,20 @@ class CategoryCell: UICollectionViewCell {
     
     private func setup() {
         setupLayout()
+        setupView()
     }
-    
+
     private func setupLayout() {
         contentView.addSubview(doneImageView)
         
         doneImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func setupView() {
+        contentView.layer.borderWidth = 1.0
+        contentView.layer.cornerRadius = 10
     }
     
     func setup(with item: Category) {
