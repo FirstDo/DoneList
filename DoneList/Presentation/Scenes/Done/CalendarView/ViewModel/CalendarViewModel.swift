@@ -15,6 +15,8 @@ protocol CalendarViewModelInput {
 protocol CalendarViewModelOutput {
     var selectedDate: CurrentValueSubject<Date, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
+    
+    func numberOfEvent(_ date: Date) -> Int
 }
 
 protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput {}
@@ -28,6 +30,10 @@ final class CalendarViewModel: CalendarViewModelType {
     
     let selectedDate: CurrentValueSubject<Date, Never>
     let dismissView = PassthroughSubject<Void, Never>()
+    
+    func numberOfEvent(_ date: Date) -> Int {
+        return 1
+    }
     
     init(date: Date, changedTargetDate: @escaping (Date) -> ()) {
         self.changedTargetDate = changedTargetDate

@@ -94,7 +94,7 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 1
+        return viewModel.numberOfEvent(date)
     }
 }
 
