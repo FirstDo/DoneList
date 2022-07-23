@@ -108,26 +108,24 @@ final class DoneListViewController: UIViewController {
     }
     
     private func setupView() {
-        mainView.yesterDayButton.addAction(
-            UIAction { [weak self] _ in
+        mainView.yesterDayButton.tapPublisher
+            .sink { [weak self] _ in
                 self?.viewModel.didTapYesterDayButton()
-            },
-            for: .touchUpInside
-        )
-        mainView.tomorrowButton.addAction(
-            UIAction { [weak self] _ in
+            }
+            .store(in: &cancelBag)
+        
+        mainView.tomorrowButton.tapPublisher
+            .sink { [weak self] _ in
                 self?.viewModel.didTapTomorrowButton()
-            },
-            for: .touchUpInside
-        )
+            }
+            .store(in: &cancelBag)
         
-        mainView.addDoneButton.addAction(
-            UIAction { [weak self] _ in
+        mainView.addDoneButton.tapPublisher
+            .sink { [weak self] _ in
                 self?.viewModel.didTapAddButton()
-            },
-            for: .touchUpInside
-        )
-        
+            }
+            .store(in: &cancelBag)
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapDateLabel))
         mainView.dateLabel.addGestureRecognizer(tapGesture)
         
@@ -146,6 +144,7 @@ final class DoneListViewController: UIViewController {
                 self?.viewModel.didTapChartButton()
             }
         )
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gearshape.fill"),
             primaryAction: UIAction { [weak self] _ in
