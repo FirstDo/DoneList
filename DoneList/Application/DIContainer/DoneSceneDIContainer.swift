@@ -25,24 +25,28 @@ final class DoneSceneDIContainer {
         return DoneSceneCoordiantor(navigationController: navigationController, dependency: self)
     }
     
-    // MARK: - ViewController
+    // MARK: - DoneListViewController
     
     func makeDoneListViewController() -> DoneListViewController {
-        return DoneListViewController(makeDoneListViewModel())
+        let viewModel = DoneListViewModel(doneUseCase: makeDoneUseCase(), fetchQuoteUseCase: makeFetchQuoteUseCase())
+        
+        return DoneListViewController(viewModel)
     }
+    
+    // MARK: - CalendarViewController
     
     func makeCalendarViewController(_ date: Date, _ changedTargetDate: @escaping (Date) -> ()) -> CalendarViewController {
-        return CalendarViewController(makeCalendarViewModel(date, changedTargetDate))
+        let viewModel = CalendarViewModel(date: date, changedTargetDate: changedTargetDate)
+        
+        return CalendarViewController(viewModel)
     }
     
-    // MARK: - ViewModel
+    // MARK: - DoneCreateViewController
     
-    private func makeDoneListViewModel() -> DoneListViewModelType {
-        return DoneListViewModel(doneUseCase: makeDoneUseCase(), fetchQuoteUseCase: makeFetchQuoteUseCase())
-    }
-    
-    private func makeCalendarViewModel(_ date: Date, _ changedTargetDate: @escaping (Date) -> ()) -> CalendarViewModelType {
-        return CalendarViewModel(date: date, changedTargetDate: changedTargetDate)
+    func makeDoneCreateViewController() -> DoneCreateViewController {
+        let viewModel = DoneCreateViewModel(doneUseCase: makeDoneUseCase())
+        
+        return DoneCreateViewController(viewModel)
     }
     
     // MARK: - UseCase
