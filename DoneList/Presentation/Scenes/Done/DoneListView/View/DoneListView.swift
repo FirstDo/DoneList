@@ -10,23 +10,33 @@ import UIKit
 import SnapKit
 
 fileprivate enum Const {
+    
     enum BaseStack {
         static let spcaing: CGFloat = 30
         static let inset: CGFloat = 10
     }
     
     enum DateStack {
-        static let spacing: CGFloat = 20
+        static let spcaing: CGFloat = 5
     }
     
-    enum Image {
-        static let yesterDay = "chevron.left.square"
-        static let tomorrow = "chevron.right.square"
-        static let add = "plus.app"
+    enum YesterDay {
+        static let imageName = "chevron.left.square"
+        static let font: UIFont = .preferredFont(forTextStyle: .title2)
     }
     
-    enum Title {
-        static let doneList = "✅ Done List"
+    enum Tomorrow {
+        static let imageName = "chevron.right.square"
+        static let font: UIFont = .preferredFont(forTextStyle: .title2)
+    }
+    
+    enum Add {
+        static let imageName = "plus.app"
+        static let font: UIFont = .preferredFont(forTextStyle: .title2)
+    }
+    
+    enum ListTitle {
+        static let text = "✅ Done List"
     }
 }
 
@@ -43,7 +53,7 @@ final class DoneListView: UIView {
 
     private let dateStackView: UIStackView = {
         let stackview = UIStackView()
-        stackview.spacing = Const.DateStack.spacing
+        stackview.spacing = Const.DateStack.spcaing
         stackview.distribution = .fillProportionally
         
         return stackview
@@ -51,14 +61,22 @@ final class DoneListView: UIView {
     
     let yesterDayButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: Const.Image.yesterDay), for: .normal)
+        
+        var configuration = UIButton.Configuration.plain()
+        configuration.image = UIImage(systemName: Const.YesterDay.imageName)
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
+        button.configuration = configuration
         
         return button
     }()
     
     let tomorrowButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: Const.Image.tomorrow), for: .normal)
+        
+        var configuration = UIButton.Configuration.plain()
+        configuration.image = UIImage(systemName: Const.Tomorrow.imageName)
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
+        button.configuration = configuration
         
         return button
     }()
@@ -84,7 +102,7 @@ final class DoneListView: UIView {
     let doneListTitle: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = Const.Title.doneList
+        label.text = Const.ListTitle.text
         label.font = .preferredFont(forTextStyle: .title1)
         
         return label
@@ -100,7 +118,11 @@ final class DoneListView: UIView {
     
     let addDoneButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: Const.Image.add), for: .normal)
+        
+        var configuration = UIButton.Configuration.plain()
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Add.font)
+        configuration.image = UIImage(systemName: Const.Add.imageName)
+        button.configuration = configuration
         
         return button
     }()
@@ -123,7 +145,7 @@ final class DoneListView: UIView {
     }
     
     private func setupLayout() {
-        addSubview(baseStackView)
+        addSubviews(baseStackView, addDoneButton)
         baseStackView.addArrangedSubviews(dateStackView, quoteLabel, doneListTitle, doneCollectionView)
         dateStackView.addArrangedSubviews(yesterDayButton, dateLabel, tomorrowButton)
         
@@ -133,6 +155,10 @@ final class DoneListView: UIView {
         
         doneCollectionView.snp.makeConstraints {
             $0.width.equalToSuperview()
+        }
+        
+        addDoneButton.snp.makeConstraints {
+            $0.trailing.bottom.equalTo(baseStackView.safeAreaLayoutGuide)
         }
     }
     
