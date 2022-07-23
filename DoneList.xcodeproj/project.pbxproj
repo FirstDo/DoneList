@@ -276,18 +276,18 @@
 		94272A81288ADD660010BC10 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				94272A82288ADD7D0010BC10 /* DoneList */,
+				94272AA7288B32090010BC10 /* Done */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		94272A82288ADD7D0010BC10 /* DoneList */ = {
+		94272A82288ADD7D0010BC10 /* DoneListView */ = {
 			isa = PBXGroup;
 			children = (
 				94272A8F288AFAE90010BC10 /* View */,
 				94272A90288AFAEE0010BC10 /* ViewModel */,
 			);
-			path = DoneList;
+			path = DoneListView;
 			sourceTree = "<group>";
 		};
 		94272A8F288AFAE90010BC10 /* View */ = {
@@ -325,6 +325,38 @@
 				94272AA2288B052C0010BC10 /* UIView+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		94272AA7288B32090010BC10 /* Done */ = {
+			isa = PBXGroup;
+			children = (
+				94272A82288ADD7D0010BC10 /* DoneListView */,
+				94272AA8288B32220010BC10 /* CalendarView */,
+			);
+			path = Done;
+			sourceTree = "<group>";
+		};
+		94272AA8288B32220010BC10 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				94272AA9288B32490010BC10 /* View */,
+				94272AAA288B324E0010BC10 /* ViewModel */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		94272AA9288B32490010BC10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94272AAA288B324E0010BC10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
