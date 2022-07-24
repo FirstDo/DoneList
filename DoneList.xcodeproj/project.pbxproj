@@ -54,6 +54,7 @@
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* DoneChartViewController.swift */; };
 		948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */; };
+		948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* DoneChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneDIContainer.swift; sourceTree = "<group>"; };
+		948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			children = (
 				94272A87288AE0620010BC10 /* AppCoordinator.swift */,
 				94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */,
+				948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
+				948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */,
 				941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */,
 				948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */,
 				94272AA3288B052C0010BC10 /* UIView+.swift in Sources */,

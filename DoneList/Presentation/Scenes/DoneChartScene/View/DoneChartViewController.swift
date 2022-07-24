@@ -12,6 +12,7 @@ import SnapKit
 
 final class DoneChartViewController: UIViewController {
     
+    weak var coordinator: DoneChartSceneCoordinator?
     private let viewModel: DoneChartViewModelType
     private var cancelBag = Set<AnyCancellable>()
     

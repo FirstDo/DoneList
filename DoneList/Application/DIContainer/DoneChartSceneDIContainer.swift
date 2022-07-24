@@ -9,7 +9,7 @@ import UIKit
 
 final class DoneChartSceneDIContainer {
     struct Dependencies {
-        unowned let doneStorage: MemoryStorage
+        unowned let doneStorage: StorageType
     }
     
     private let dependencies: Dependencies
@@ -20,7 +20,9 @@ final class DoneChartSceneDIContainer {
     
     // MARK: - Coordinator
     
-    // TODO
+    func makeDoneSceneChartCoordinator(_ navigationController: UINavigationController) -> DoneChartSceneCoordinator {
+        return DoneChartSceneCoordinator(navigationController: navigationController, dependency: self)
+    }
     
     // MARK: - ViewController
     
