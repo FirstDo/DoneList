@@ -55,6 +55,7 @@
 		948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* DoneChartViewController.swift */; };
 		948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */; };
 		948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */; };
+		948A2912288D45550055A031 /* WeekIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2911288D45550055A031 /* WeekIndexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		948A2907288D33BB0055A031 /* DoneChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneDIContainer.swift; sourceTree = "<group>"; };
 		948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneCoordinator.swift; sourceTree = "<group>"; };
+		948A2911288D45550055A031 /* WeekIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekIndexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				948A2907288D33BB0055A031 /* DoneChartViewController.swift */,
+				948A2911288D45550055A031 /* WeekIndexView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */,
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
+				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
