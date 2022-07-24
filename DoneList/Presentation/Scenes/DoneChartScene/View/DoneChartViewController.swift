@@ -31,6 +31,33 @@ final class DoneChartViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
+        bind()
+    }
+    
+    private func bind() {
+        viewModel.dateTitle
+            .sink { [weak self] title in
+                self?.mainView.dateLabel.text = title
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.weekIndexTitle
+            .sink { [weak self] dates in
+                self?.mainView.weekIndexView.setup(with: dates)
+            }
+            .store(in: &cancelBag)
+        
+        mainView.yesterDayButton.tapPublisher
+            .sink { [weak self] _ in
+                self?.viewModel.didTapYesterDayButton()
+            }
+            .store(in: &cancelBag)
+        
+        mainView.tomorrowButton.tapPublisher
+            .sink { [weak self] _ in
+                self?.viewModel.didTapTomorrowButton()
+            }
+            .store(in: &cancelBag)
     }
     
     private func setup() {

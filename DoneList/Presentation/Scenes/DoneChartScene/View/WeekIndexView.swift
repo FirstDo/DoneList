@@ -14,7 +14,7 @@ final class WeekIndexView: UIView {
     private let weekStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
-        stackView.spacing = 10
+        stackView.spacing = 5
         
         return stackView
     }()
@@ -80,13 +80,13 @@ final class WeekIndexView: UIView {
         }
     }
     
-    func setup(with week: [Date]) {
-        mondayLabel.text = week[0].description
-        tuesdayLabel.text = week[1].description
-        wednesdayLabel.text = week[2].description
-        thursdayLabel.text = week[3].description
-        fridayLabel.text = week[4].description
-        saturdayLabel.text = week[5].description
-        sundayLabel.text = week[6].description
+    func setup(with week: [String]) {
+        mondayLabel.text = week[0]
+        tuesdayLabel.text = week[1]
+        wednesdayLabel.text = week[2]
+        thursdayLabel.text = week[3]
+        fridayLabel.text = week[4]
+        saturdayLabel.text = week[5]
+        sundayLabel.text = week[6]
     }
 }

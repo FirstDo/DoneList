@@ -91,7 +91,6 @@ final class DoneChartView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .preferredFont(forTextStyle: .title1)
-        label.text = "1/1 ~ 12/31"
 
         return label
     }()
@@ -129,18 +128,17 @@ final class DoneChartView: UIView {
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
         }
         
-        lineChartView.backgroundColor = .systemRed
+        lineChartView.backgroundColor = .systemGray6
         
         lineChartView.snp.makeConstraints {
-            $0.width.height.equalTo(snp.width)
+            $0.width.height.equalTo(snp.width).inset(20)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(dateStackView.snp.bottom).offset(50)
         }
-        
-        weekIndexView.backgroundColor = .systemBlue
 
         weekIndexView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
+            $0.width.equalTo(snp.width).inset(20)
             $0.top.equalTo(lineChartView.snp.bottom)
         }
     }
