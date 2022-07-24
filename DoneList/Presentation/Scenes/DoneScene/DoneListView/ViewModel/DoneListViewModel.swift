@@ -26,7 +26,7 @@ protocol DoneListViewModelOutput {
     var dateTitle: AnyPublisher<String, Never> { get }
     
     var showErrorAlert: PassthroughSubject<String, Never> { get }
-    var showChartView: PassthroughSubject<Void, Never> { get }
+    var showChartView: PassthroughSubject<Date, Never> { get }
     var showSettingView: PassthroughSubject<Void, Never> { get }
     var showCalendarView: PassthroughSubject<Date, Never> { get }
     var showDoneEditView: PassthroughSubject<Done, Never> { get }
@@ -35,7 +35,7 @@ protocol DoneListViewModelOutput {
 
 protocol DoneListViewModelType: DoneListViewModelInput, DoneListViewModelOutput {}
 
-final class DoneListViewModel:  DoneListViewModelType {
+final class DoneListViewModel: DoneListViewModelType {
     private let doneUseCase: DoneUseCaseType
     private let fetchQuoteUseCase: FetchQuoteUseCaseType
     private var cancelBag = Set<AnyCancellable>()
@@ -77,7 +77,7 @@ final class DoneListViewModel:  DoneListViewModelType {
     }
     
     let showErrorAlert = PassthroughSubject<String, Never>()
-    let showChartView = PassthroughSubject<Void, Never>()
+    let showChartView = PassthroughSubject<Date, Never>()
     let showSettingView = PassthroughSubject<Void, Never>()
     let showCalendarView = PassthroughSubject<Date, Never>()
     let showDoneEditView = PassthroughSubject<Done, Never>()
@@ -93,7 +93,7 @@ final class DoneListViewModel:  DoneListViewModelType {
 
 extension DoneListViewModel {
     func didTapChartButton() {
-        showChartView.send()
+        showChartView.send(currentDate)
     }
     
     func didTapSettingButton() {

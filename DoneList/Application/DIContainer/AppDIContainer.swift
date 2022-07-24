@@ -12,8 +12,4 @@ final class AppDIContainer {
     func makeDoneSceneDIContainer() -> DoneSceneDIContainer {
         return DoneSceneDIContainer(dependencies: DoneSceneDIContainer.Dependencies(doneStorage: storage, apiProvider: apiProvider))
     }
-    
-    func makeDoneChartSceneDIContainer() -> DoneChartSceneDIContainer {
-        return DoneChartSceneDIContainer(dependencies: DoneChartSceneDIContainer.Dependencies(doneStorage: storage))
-    }
 }

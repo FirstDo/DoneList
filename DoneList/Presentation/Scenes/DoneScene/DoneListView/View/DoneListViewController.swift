@@ -69,8 +69,8 @@ final class DoneListViewController: UIViewController {
             .store(in: &cancelBag)
         
         viewModel.showChartView
-            .sink { [weak self] _ in
-                // TODO: ShowChartView
+            .sink { [weak self] date in
+                self?.coordinator?.showDoneChart(date)
             }
             .store(in: &cancelBag)
         

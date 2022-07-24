@@ -20,7 +20,7 @@ final class DoneChartSceneDIContainer {
     
     // MARK: - Coordinator
     
-    func makeDoneSceneChartCoordinator(_ navigationController: UINavigationController) -> DoneChartSceneCoordinator {
+    func makeDoneChartSceneCoordinator(_ navigationController: UINavigationController) -> DoneChartSceneCoordinator {
         return DoneChartSceneCoordinator(navigationController: navigationController, dependency: self)
     }
     

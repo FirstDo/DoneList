@@ -73,6 +73,19 @@ final class DoneSceneCoordiantor: Coordinator {
         navigationController?.topViewController?.present(doneEditViewController, animated: true)
     }
     
+    // MARK: DoneChartViewController
+    
+    func showDoneChart(_ date: Date) {
+        guard let navigationController = navigationController else { return }
+        
+        let doneChartSceneDIContainer = dependency.makeDoneChartSceneDIContainer()
+        let doneChartSceneCoordinator = doneChartSceneDIContainer.makeDoneChartSceneCoordinator(navigationController)
+        doneChartSceneCoordinator.parentCoordinator = self
+        childCoordinator.append(doneChartSceneCoordinator)
+        
+        doneChartSceneCoordinator.showDoneChart(date)
+    }
+    
     func dismiss(target view: UIViewController?) {
         view?.dismiss(animated: true)
     }
