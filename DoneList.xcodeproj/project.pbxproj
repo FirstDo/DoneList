@@ -52,6 +52,7 @@
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
+		948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* DoneChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
+		948A2907288D33BB0055A031 /* DoneChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		941D7D16288CAFFF0071C2C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				948A2907288D33BB0055A031 /* DoneChartViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
 				941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */,
+				948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */,
 				94272AA3288B052C0010BC10 /* UIView+.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
