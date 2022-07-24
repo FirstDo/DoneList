@@ -117,7 +117,7 @@ extension DoneListViewModel {
     }
     
     func didCellSwipe(target item: Done) {
-        doneUseCase.deleteItem(target: item)
+        _ = doneUseCase.deleteItem(target: item)
     }
     
     func didTapCell(with item: Done) {

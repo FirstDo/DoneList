@@ -51,6 +51,7 @@
 		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
+		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
+		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,30 @@
 				941D7D0D288C9A4C0071C2C7 /* DoneEditViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		941D7D13288CAFBD0071C2C7 /* DoneChartScene */ = {
+			isa = PBXGroup;
+			children = (
+				941D7D16288CAFFF0071C2C7 /* View */,
+				941D7D17288CB0040071C2C7 /* ViewModel */,
+			);
+			path = DoneChartScene;
+			sourceTree = "<group>";
+		};
+		941D7D16288CAFFF0071C2C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		941D7D17288CB0040071C2C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				948A2905288CB0850055A031 /* DoneChartViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		94272A1C288AA0480010BC10 = {
@@ -327,7 +353,8 @@
 		94272A81288ADD660010BC10 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				94272AA7288B32090010BC10 /* Done */,
+				941D7D13288CAFBD0071C2C7 /* DoneChartScene */,
+				94272AA7288B32090010BC10 /* DoneScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -378,14 +405,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		94272AA7288B32090010BC10 /* Done */ = {
+		94272AA7288B32090010BC10 /* DoneScene */ = {
 			isa = PBXGroup;
 			children = (
 				94272A82288ADD7D0010BC10 /* DoneListView */,
 				94272AA8288B32220010BC10 /* CalendarView */,
 				94272AB0288BEF7B0010BC10 /* DoneWriteView */,
 			);
-			path = Done;
+			path = DoneScene;
 			sourceTree = "<group>";
 		};
 		94272AA8288B32220010BC10 /* CalendarView */ = {
@@ -556,6 +583,7 @@
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
+				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
