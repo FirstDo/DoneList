@@ -13,11 +13,13 @@ import SnapKit
 final class DoneChartViewController: UIViewController {
     
     weak var coordinator: DoneChartSceneCoordinator?
+    private let mainView: DoneChartView
     private let viewModel: DoneChartViewModelType
     private var cancelBag = Set<AnyCancellable>()
     
     init(_ viewModel: DoneChartViewModelType) {
         self.viewModel = viewModel
+        self.mainView = DoneChartView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,6 +29,19 @@ final class DoneChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setup()
+    }
+    
+    private func setup() {
+        setupLayout()
+    }
+    
+    private func setupLayout() {
+        view.addSubview(mainView)
+        
+        mainView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
