@@ -19,11 +19,11 @@ protocol DoneChartViewModelOutput {
 protocol DoneChartViewModelType: DoneChartViewModelInput, DoneChartViewModelOutput {}
 
 final class DoneChartViewModel: DoneChartViewModelType {
-    private let doneUseCase: DoneUseCase
+    private let doneUseCase: DoneUseCaseType
     private let targetDate: Date
     private var cancelBag = Set<AnyCancellable>()
     
-    init(doneUseCase: DoneUseCase, targetDate: Date) {
+    init(doneUseCase: DoneUseCaseType, targetDate: Date) {
         self.doneUseCase = doneUseCase
         self.targetDate = targetDate
     }

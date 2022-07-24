@@ -53,6 +53,7 @@
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* DoneChartViewController.swift */; };
+		948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* DoneChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewController.swift; sourceTree = "<group>"; };
+		948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			children = (
 				94272A7D288ADB6E0010BC10 /* AppDIContainer.swift */,
 				94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */,
+				948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
+				948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
