@@ -56,6 +56,7 @@
 		948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */; };
 		948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */; };
 		948A2912288D45550055A031 /* WeekIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2911288D45550055A031 /* WeekIndexView.swift */; };
+		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneDIContainer.swift; sourceTree = "<group>"; };
 		948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneCoordinator.swift; sourceTree = "<group>"; };
 		948A2911288D45550055A031 /* WeekIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekIndexView.swift; sourceTree = "<group>"; };
+		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				948A2907288D33BB0055A031 /* DoneChartViewController.swift */,
 				948A2911288D45550055A031 /* WeekIndexView.swift */,
+				948A2913288D47D20055A031 /* LineChartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
 				941D7D0E288C9A4C0071C2C7 /* DoneEditViewController.swift in Sources */,
 				941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */,
