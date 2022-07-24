@@ -55,6 +55,7 @@
 		948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* DoneChartViewController.swift */; };
 		948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */; };
 		948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */; };
+		948A2910288D40D90055A031 /* DoneChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290F288D40D90055A031 /* DoneChartView.swift */; };
 		948A2912288D45550055A031 /* WeekIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2911288D45550055A031 /* WeekIndexView.swift */; };
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		948A2907288D33BB0055A031 /* DoneChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* DoneChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneDIContainer.swift; sourceTree = "<group>"; };
 		948A290D288D36280055A031 /* DoneChartSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartSceneCoordinator.swift; sourceTree = "<group>"; };
+		948A290F288D40D90055A031 /* DoneChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartView.swift; sourceTree = "<group>"; };
 		948A2911288D45550055A031 /* WeekIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekIndexView.swift; sourceTree = "<group>"; };
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				948A2907288D33BB0055A031 /* DoneChartViewController.swift */,
+				948A290F288D40D90055A031 /* DoneChartView.swift */,
 				948A2911288D45550055A031 /* WeekIndexView.swift */,
 				948A2913288D47D20055A031 /* LineChartView.swift */,
 			);
@@ -603,6 +606,7 @@
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
+				948A2910288D40D90055A031 /* DoneChartView.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
 				948A290E288D36280055A031 /* DoneChartSceneCoordinator.swift in Sources */,
