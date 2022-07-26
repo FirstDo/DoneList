@@ -60,6 +60,7 @@
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
 		948A2925289001570055A031 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2924289001570055A031 /* Date+.swift */; };
+		948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292C2890531C0055A031 /* DoneSettingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		948A2924289001570055A031 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		948A292C2890531C0055A031 /* DoneSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 		94272A81288ADD660010BC10 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				948A2929289052F40055A031 /* DoneSettingScene */,
 				941D7D13288CAFBD0071C2C7 /* DoneChartScene */,
 				94272AA7288B32090010BC10 /* DoneScene */,
 			);
@@ -518,6 +521,30 @@
 			path = LineChart;
 			sourceTree = "<group>";
 		};
+		948A2929289052F40055A031 /* DoneSettingScene */ = {
+			isa = PBXGroup;
+			children = (
+				948A292B289053020055A031 /* View */,
+				948A292A289052FA0055A031 /* ViewModel */,
+			);
+			path = DoneSettingScene;
+			sourceTree = "<group>";
+		};
+		948A292A289052FA0055A031 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				948A292C2890531C0055A031 /* DoneSettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		948A292B289053020055A031 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -601,6 +628,7 @@
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
 				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
+				948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
