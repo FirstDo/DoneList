@@ -58,6 +58,7 @@
 		948A2910288D40D90055A031 /* DoneChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A290F288D40D90055A031 /* DoneChartView.swift */; };
 		948A2912288D45550055A031 /* WeekIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2911288D45550055A031 /* WeekIndexView.swift */; };
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
+		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		948A290F288D40D90055A031 /* DoneChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartView.swift; sourceTree = "<group>"; };
 		948A2911288D45550055A031 /* WeekIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekIndexView.swift; sourceTree = "<group>"; };
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +169,7 @@
 				948A2907288D33BB0055A031 /* DoneChartViewController.swift */,
 				948A290F288D40D90055A031 /* DoneChartView.swift */,
 				948A2911288D45550055A031 /* WeekIndexView.swift */,
-				948A2913288D47D20055A031 /* LineChartView.swift */,
+				948A29212890007F0055A031 /* LineChart */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +506,15 @@
 			path = Publisher;
 			sourceTree = "<group>";
 		};
+		948A29212890007F0055A031 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				948A2913288D47D20055A031 /* LineChartView.swift */,
+				948A2922289000940055A031 /* LineView.swift */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,6 +637,7 @@
 				948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
+				948A2923289000940055A031 /* LineView.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
 				94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */,

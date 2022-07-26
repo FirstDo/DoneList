@@ -1,57 +1,13 @@
 //
-//  LineChartView.swift
+//  LineView.swift
 //  DoneList
 //
-//  Created by dudu on 2022/07/24.
+//  Created by dudu on 2022/07/26.
 //
 
 import UIKit
 
-import SnapKit
-
-final class LineChartView: UIView {
-    private let baseStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        return stackView
-    }()
-    
-    private let firstLineView = LineView()
-    private let secondLineView = LineView()
-    private let thirdLineView = LineView()
-    private let fourLineView = LineView()
-    private let fiveLineView = LineView()
-    private let sixLineView = LineView()
-    private let sevenLineView = LineView()
-    
-    init() {
-        super.init(frame: .zero)
-        
-        setup()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setup() {
-        setupLayout()
-    }
-    
-    private func setupLayout() {
-        addSubview(baseStackView)
-       
-        baseStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        baseStackView.addArrangedSubviews(firstLineView, secondLineView, thirdLineView, fourLineView, fiveLineView, sixLineView, sevenLineView)
-    }
-    
-    func setup(with values: [CGFloat]) {
-        
-    }
-}
+import Combine
 
 final class LineView: UIView {
     
@@ -77,15 +33,13 @@ final class LineView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // TODO
     }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
-        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount)
+        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
         
         let path = UIBezierPath()
         let zeroPath = UIBezierPath()
@@ -117,5 +71,10 @@ final class LineView: UIView {
         graphLayer.add(animation, forKey: "path")
         
         layer.addSublayer(graphLayer)
+    }
+    
+    func setup(_ taskCount: Int, _ totalTaskCount: Int) {
+        self.taskCount = taskCount
+        self.totalTaskCount = totalTaskCount
     }
 }

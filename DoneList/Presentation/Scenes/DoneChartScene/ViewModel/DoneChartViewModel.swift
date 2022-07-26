@@ -16,6 +16,7 @@ protocol DoneChartViewModelInput {
 protocol DoneChartViewModelOutput {
     var dateTitle: AnyPublisher<String, Never> { get }
     var weekIndexTitle: AnyPublisher<[String], Never> { get }
+    var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> { get }
 }
 
 protocol DoneChartViewModelType: DoneChartViewModelInput, DoneChartViewModelOutput {}
@@ -46,6 +47,11 @@ final class DoneChartViewModel: DoneChartViewModelType {
         return $targetDate
             .map (findWeeks(_:))
             .map { $0.map { self.dateFormatter.string(from: $0) }}
+            .eraseToAnyPublisher()
+    }
+    
+    var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> {
+        Just([(7, 10), (1, 10), (0, 10), (8, 10), (1, 10), (4, 10), (3, 10)])
             .eraseToAnyPublisher()
     }
     
