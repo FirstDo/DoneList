@@ -33,6 +33,18 @@ final class LineView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
+        
+        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
+        let graphHeight = frame.height * (1 - percentage) - 40
+        
+        countLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().inset(graphHeight)
+        }
+        
+        countLabel.text = "\(taskCount)"
     }
     
     override func draw(_ rect: CGRect) {
@@ -48,11 +60,11 @@ final class LineView: UIView {
         let yPosition = frame.height
         let graphHeight = frame.height * (1 - percentage)
         
-        path.move(to: .init(x: xPosition, y: yPosition))
-        path.addLine(to: .init(x: xPosition, y: graphHeight))
+        path.move(to: .init(x: xPosition, y: yPosition - 10))
+        path.addLine(to: .init(x: xPosition, y: graphHeight - 10))
         
-        zeroPath.move(to: .init(x: xPosition, y: yPosition))
-        zeroPath.addLine(to: .init(x: xPosition, y: yPosition))
+        zeroPath.move(to: .init(x: xPosition, y: yPosition - 10))
+        zeroPath.addLine(to: .init(x: xPosition, y: yPosition - 10))
         
         let startPath = zeroPath.cgPath
         let endPath = path.cgPath
