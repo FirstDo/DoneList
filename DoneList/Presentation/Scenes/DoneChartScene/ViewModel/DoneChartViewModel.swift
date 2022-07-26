@@ -11,12 +11,14 @@ import Combine
 protocol DoneChartViewModelInput {
     func didTapYesterDayButton()
     func didTapTomorrowButton()
+    func didTapCloseButton()
 }
 
 protocol DoneChartViewModelOutput {
     var dateTitle: AnyPublisher<String, Never> { get }
     var weekIndexTitle: AnyPublisher<[String], Never> { get }
     var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> { get }
+    var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
 protocol DoneChartViewModelType: DoneChartViewModelInput, DoneChartViewModelOutput {}
@@ -66,6 +68,8 @@ final class DoneChartViewModel: DoneChartViewModelType {
             .eraseToAnyPublisher()
     }
     
+    let dismissView = PassthroughSubject<Void, Never>()
+    
     init(doneUseCase: DoneUseCaseType, targetDate: Date) {
         self.doneUseCase = doneUseCase
         self.targetDate = targetDate
@@ -81,5 +85,9 @@ extension DoneChartViewModel {
     
     func didTapTomorrowButton() {
         targetDate.addTimeInterval(86400 * 7)
+    }
+    
+    func didTapCloseButton() {
+        dismissView.send()
     }
 }

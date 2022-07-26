@@ -54,6 +54,12 @@ final class DoneChartViewController: UIViewController {
             }
             .store(in: &cancelBag)
         
+        viewModel.dismissView
+            .sink { [weak self] _ in
+                self?.coordinator?.dismiss(target: self)
+            }
+            .store(in: &cancelBag)
+        
         mainView.yesterDayButton.tapPublisher
             .sink { [weak self] _ in
                 self?.viewModel.didTapYesterDayButton()
@@ -65,6 +71,13 @@ final class DoneChartViewController: UIViewController {
                 self?.viewModel.didTapTomorrowButton()
             }
             .store(in: &cancelBag)
+        
+        mainView.closeButton.tapPublisher
+            .sink { [weak self] _  in
+                self?.viewModel.didTapCloseButton()
+            }
+            .store(in: &cancelBag)
+            
     }
     
     private func setup() {

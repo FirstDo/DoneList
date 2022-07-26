@@ -46,7 +46,7 @@ final class DoneChartView: UIView {
         return label
     }()
     
-    private let closeButton: UIButton = {
+    let closeButton: UIButton = {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
