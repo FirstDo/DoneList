@@ -18,8 +18,9 @@ final class LineView: UIView {
         return label
     }()
     
-    var taskCount: Int?
-    var totalTaskCount: Int?
+    private var taskCount: Int?
+    private var totalTaskCount: Int?
+    private var graphLayer: CAShapeLayer!
     
     convenience init() {
         self.init(frame: .zero)
@@ -34,8 +35,11 @@ final class LineView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
+        countLabel.removeFromSuperview()
+        addSubview(countLabel)
         
+        guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
+
         let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
         let graphHeight = frame.height * (1 - percentage) - 40
         
@@ -48,11 +52,15 @@ final class LineView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
         guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
         let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
         
+        if let graphLayer = graphLayer {
+            graphLayer.removeFromSuperlayer()
+        }
+        
+        graphLayer = CAShapeLayer()
+
         let path = UIBezierPath()
         let zeroPath = UIBezierPath()
         
@@ -74,7 +82,6 @@ final class LineView: UIView {
         animation.fromValue = startPath
         animation.toValue = endPath
         
-        let graphLayer = CAShapeLayer()
         graphLayer.strokeColor = UIColor.systemRed.cgColor
         graphLayer.lineWidth = 20
         graphLayer.lineCap = .round

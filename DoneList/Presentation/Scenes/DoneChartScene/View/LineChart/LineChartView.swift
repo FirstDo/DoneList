@@ -56,6 +56,8 @@ final class LineChartView: UIView {
     func setup(with values: [(taskCount: Int, totalTaskCount: Int)]) {
         zip(lineViews, values).forEach { view, count in
             view.setup(count.taskCount, count.totalTaskCount)
+            view.setNeedsDisplay()
+            view.setNeedsLayout()
         }
     }
 }

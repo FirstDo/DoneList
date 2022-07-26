@@ -48,9 +48,9 @@ final class DoneChartViewController: UIViewController {
             .store(in: &cancelBag)
         
         viewModel.graphValues
-            .print()
             .sink { [weak self] values in
                 self?.mainView.lineChartView.setup(with: values)
+                self?.mainView.lineChartView.setNeedsDisplay()
             }
             .store(in: &cancelBag)
         
