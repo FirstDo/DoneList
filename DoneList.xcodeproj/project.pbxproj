@@ -61,6 +61,7 @@
 		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
 		948A2925289001570055A031 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2924289001570055A031 /* Date+.swift */; };
 		948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292C2890531C0055A031 /* DoneSettingViewModel.swift */; };
+		948A292F289055360055A031 /* DoneSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292E289055360055A031 /* DoneSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		948A2924289001570055A031 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		948A292C2890531C0055A031 /* DoneSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingViewModel.swift; sourceTree = "<group>"; };
+		948A292E289055360055A031 /* DoneSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +543,7 @@
 		948A292B289053020055A031 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				948A292E289055360055A031 /* DoneSettingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
 				948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
+				948A292F289055360055A031 /* DoneSettingViewController.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
