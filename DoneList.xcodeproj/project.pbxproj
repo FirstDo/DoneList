@@ -59,6 +59,7 @@
 		948A2912288D45550055A031 /* WeekIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2911288D45550055A031 /* WeekIndexView.swift */; };
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
+		948A2925289001570055A031 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2924289001570055A031 /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		948A2911288D45550055A031 /* WeekIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekIndexView.swift; sourceTree = "<group>"; };
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		948A2924289001570055A031 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +423,7 @@
 			children = (
 				94272A97288AFD3E0010BC10 /* UIStackView+.swift */,
 				94272AA2288B052C0010BC10 /* UIView+.swift */,
+				948A2924289001570055A031 /* Date+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948A2925289001570055A031 /* Date+.swift in Sources */,
 				94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */,
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,

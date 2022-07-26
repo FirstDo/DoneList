@@ -38,20 +38,31 @@ final class DoneChartViewModel: DoneChartViewModelType {
     
     var dateTitle: AnyPublisher<String, Never> {
         return $targetDate
-            .map { findWeeks($0) }
+            .map { date in
+                date.findWeeks
+            }
             .map { self.dateFormatter.string(from: $0.first!) + "~" + self.dateFormatter.string(from: $0.last!) }
             .eraseToAnyPublisher()
     }
     
     var weekIndexTitle: AnyPublisher<[String], Never> {
         return $targetDate
-            .map (findWeeks(_:))
+            .map { date in
+                date.findWeeks
+            }
             .map { $0.map { self.dateFormatter.string(from: $0) }}
             .eraseToAnyPublisher()
     }
     
     var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> {
-        Just([(7, 10), (1, 10), (0, 10), (8, 10), (1, 10), (4, 10), (3, 10)])
+        return $targetDate
+            .flatMap { date in
+                self.doneUseCase.fetchItmes(for: date.findWeeks)
+                    .compactMap { dicts -> [(taskCount: Int, totalTaskCount: Int)] in
+                        let maxValue = dicts.values.map { $0.count }.max()!
+                        return date.findWeeks.map { (dicts[$0]!.count, maxValue) }
+                    }
+            }
             .eraseToAnyPublisher()
     }
     
@@ -71,16 +82,4 @@ extension DoneChartViewModel {
     func didTapTomorrowButton() {
         targetDate.addTimeInterval(86400 * 7)
     }
-}
-
-fileprivate func findWeeks(_ date: Date) -> [Date] {
-    let calendar = Calendar.current
-    let date = calendar.startOfDay(for: date)
-    let weekIndex = calendar.dateComponents([.weekday], from: date).weekday!
-    
-    let interval = Double((weekIndex + 7 - 2) % 7)
-    let monday = Date(timeInterval: -86400 * interval, since: date)
-    
-    return (0..<7).map {Double($0 * 86400)}
-        .compactMap(monday.addingTimeInterval)
 }

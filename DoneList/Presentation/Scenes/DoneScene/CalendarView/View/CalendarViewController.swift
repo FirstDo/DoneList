@@ -100,13 +100,13 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return viewModel.numberOfEvent(date)
+        return viewModel.numberOfEvent(date.startOfDay)
     }
 }
 
 extension CalendarViewController: FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        viewModel.didTapCell(date)
+        viewModel.didTapCell(date.startOfDay)
     }
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {

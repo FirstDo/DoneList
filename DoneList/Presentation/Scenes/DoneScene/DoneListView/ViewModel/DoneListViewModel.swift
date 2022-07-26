@@ -56,9 +56,10 @@ final class DoneListViewModel: DoneListViewModelType {
         return doneUseCase.fetchAllItem()
             .combineLatest($currentDate)
             .compactMap { items, date in
-                guard let startOfDay = date.startOfDay, let endOfDay = date.endOfDay else { return nil}
+                let startOfDay = date.startOfDay
+                let startOfNextDay = date.dayAfter.startOfDay
                 
-                return items.filter { (startOfDay...endOfDay) ~= $0.createdAt }
+                return items.filter { (startOfDay..<startOfNextDay) ~= $0.createdAt }
             }
             .eraseToAnyPublisher()
     }
@@ -101,15 +102,11 @@ extension DoneListViewModel {
     }
     
     func didTapYesterDayButton() {
-        guard let dayBefore = currentDate.dayBefore else { return }
-        
-        currentDate = dayBefore
+        currentDate = currentDate.dayBefore
     }
     
     func didTapTomorrowButton() {
-        guard let dayAfter = currentDate.dayAfter else { return }
-        
-        currentDate = dayAfter
+        currentDate = currentDate.dayAfter
     }
     
     func didTapDateLabel() {
@@ -130,25 +127,5 @@ extension DoneListViewModel {
     
     func didChangeTargetDate(to date: Date) {
         currentDate = date
-    }
-}
-
-// MARK: - Logic
-
-fileprivate extension Date {
-    var dayBefore: Date? {
-        return Calendar.current.date(byAdding: .day, value: -1, to: self)
-    }
-    
-    var dayAfter: Date? {
-        return Calendar.current.date(byAdding: .day, value: 1, to: self)
-    }
-    
-    var startOfDay: Date? {
-        return Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: self)
-    }
-    
-    var endOfDay: Date? {
-        return Calendar.current.date(bySettingHour: 23, minute: 59, second: 59, of: self)
     }
 }
