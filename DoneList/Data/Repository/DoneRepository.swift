@@ -9,13 +9,13 @@ import Combine
 
 final class DoneRepository: DoneRepositoryType {
     
-    private unowned let storage: StorageType
+    private unowned let storage: DoneStorageType
     
-    init(storage: StorageType) {
+    init(storage: DoneStorageType) {
         self.storage = storage
     }
     
-    func createItem(_ item: Done) -> Completable<StorageError> {
+    func createItem(_ item: Done) -> Completable<DoneStorageError> {
         return storage.create(item)
     }
     
@@ -23,11 +23,11 @@ final class DoneRepository: DoneRepositoryType {
         return storage.read()
     }
     
-    func updateItem(to item: Done) -> Completable<StorageError> {
+    func updateItem(to item: Done) -> Completable<DoneStorageError> {
         return storage.update(item)
     }
     
-    func deleteItem(target item: Done) -> Completable<StorageError> {
+    func deleteItem(target item: Done) -> Completable<DoneStorageError> {
         return storage.delete(item)
     }
 }

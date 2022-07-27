@@ -16,7 +16,7 @@
 		94272A32288AA04A0010BC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94272A31288AA04A0010BC10 /* Assets.xcassets */; };
 		94272A35288AA04A0010BC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94272A33288AA04A0010BC10 /* LaunchScreen.storyboard */; };
 		94272A4B288AAE880010BC10 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4A288AAE870010BC10 /* Done.swift */; };
-		94272A4D288AAF200010BC10 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4C288AAF200010BC10 /* StorageType.swift */; };
+		94272A4D288AAF200010BC10 /* DoneStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A4C288AAF200010BC10 /* DoneStorageType.swift */; };
 		94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A52288AB15D0010BC10 /* HTTPMethod.swift */; };
 		94272A59288AB2420010BC10 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A58288AB2410010BC10 /* EndPoint.swift */; };
 		94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A5A288AB9F70010BC10 /* QuoteAPI.swift */; };
@@ -82,7 +82,7 @@
 		94272A34288AA04A0010BC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94272A36288AA04A0010BC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94272A4A288AAE870010BC10 /* Done.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
-		94272A4C288AAF200010BC10 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		94272A4C288AAF200010BC10 /* DoneStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneStorageType.swift; sourceTree = "<group>"; };
 		94272A52288AB15D0010BC10 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		94272A58288AB2410010BC10 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		94272A5A288AB9F70010BC10 /* QuoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteAPI.swift; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 		94272A49288AA3340010BC10 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				94272A4C288AAF200010BC10 /* StorageType.swift */,
+				94272A4C288AAF200010BC10 /* DoneStorageType.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -684,7 +684,7 @@
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
-				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
+				94272A4D288AAF200010BC10 /* DoneStorageType.swift in Sources */,
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,

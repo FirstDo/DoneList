@@ -9,7 +9,7 @@ import UIKit
 
 final class DoneChartSceneDIContainer {
     struct Dependencies {
-        unowned let doneStorage: StorageType
+        unowned let doneStorage: DoneStorageType
     }
     
     private let dependencies: Dependencies

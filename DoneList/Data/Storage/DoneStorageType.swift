@@ -1,5 +1,5 @@
 //
-//  StorageType.swift
+//  DoneStorageType.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/22.
@@ -8,21 +8,21 @@
 import Combine
 import Foundation
 
-enum StorageError: LocalizedError {
+enum DoneStorageError: LocalizedError {
     case createFail
     case readFail
     case updateFail
     case deleteFail
 }
 
-protocol StorageType: AnyObject {
-    func create(_ item: Done) -> Completable<StorageError>
+protocol DoneStorageType: AnyObject {
+    func create(_ item: Done) -> Completable<DoneStorageError>
     func read() -> AnyPublisher<[Done], Never>
-    func update(_ item: Done) -> Completable<StorageError>
-    func delete(_ item: Done) -> Completable<StorageError>
+    func update(_ item: Done) -> Completable<DoneStorageError>
+    func delete(_ item: Done) -> Completable<DoneStorageError>
 }
 
-final class MemoryStorage: StorageType {
+final class DoneMemoryStorage: DoneStorageType {
     
     @Published private var items = [Done]()
     
@@ -32,7 +32,7 @@ final class MemoryStorage: StorageType {
     }
     #endif
     
-    func create(_ item: Done) -> Completable<StorageError> {
+    func create(_ item: Done) -> Completable<DoneStorageError> {
         items.append(item)
         
         return Empty().eraseToAnyPublisher()
@@ -42,7 +42,7 @@ final class MemoryStorage: StorageType {
         return $items.eraseToAnyPublisher()
     }
     
-    func update(_ item: Done) -> Completable<StorageError> {
+    func update(_ item: Done) -> Completable<DoneStorageError> {
         if let index = items.firstIndex(where: {$0.id == item.id }) {
             items[index] = item
         }
@@ -50,7 +50,7 @@ final class MemoryStorage: StorageType {
         return Empty().eraseToAnyPublisher()
     }
     
-    func delete(_ item: Done) -> Completable<StorageError> {
+    func delete(_ item: Done) -> Completable<DoneStorageError> {
         items.removeAll { $0.id == item.id }
         
         return Empty().eraseToAnyPublisher()

@@ -15,7 +15,6 @@ final class DoneSettingViewController: UITableViewController {
     
     weak var coordinator: DoneSettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType
-    
     private var dataSource: DataSource?
     
     init(_ viewModel: DoneSettingViewModelType) {
@@ -29,12 +28,31 @@ final class DoneSettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setup()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         coordinator?.dismiss()
+    }
+    
+    private func setup() {
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        dataSource = DataSource(tableView: tableView) { tableView, indexPath, itemIdentifier in
+            fatalError()
+        }
+    }
+    
+    private func applySnapshot(_ items: [Item]) {
+        var snapshot = SnapShot()
+        snapshot.appendSections([.appSetting, .other])
+        
+        dataSource?.apply(snapshot)
     }
     
     deinit {

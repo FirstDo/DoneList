@@ -9,11 +9,11 @@ import Foundation
 import Combine
 
 protocol DoneUseCaseType {
-    func createNewItem(_ item: Done) -> Completable<StorageError>
+    func createNewItem(_ item: Done) -> Completable<DoneStorageError>
     func fetchAllItem() -> AnyPublisher<[Done], Never>
     func fetchItmes(for weeks: [Date]) -> AnyPublisher<[Date: [Done]], Never>
-    func editItem(to item: Done) -> Completable<StorageError>
-    func deleteItem(target item: Done) -> Completable<StorageError>
+    func editItem(to item: Done) -> Completable<DoneStorageError>
+    func deleteItem(target item: Done) -> Completable<DoneStorageError>
 }
 
 final class DoneUseCase: DoneUseCaseType {
@@ -24,7 +24,7 @@ final class DoneUseCase: DoneUseCaseType {
         self.repository = repository
     }
     
-    func createNewItem(_ item: Done) -> Completable<StorageError> {
+    func createNewItem(_ item: Done) -> Completable<DoneStorageError> {
         return repository.createItem(item)
     }
     
@@ -51,11 +51,11 @@ final class DoneUseCase: DoneUseCaseType {
             .eraseToAnyPublisher()
     }
     
-    func editItem(to item: Done) -> Completable<StorageError> {
+    func editItem(to item: Done) -> Completable<DoneStorageError> {
         return repository.updateItem(to: item)
     }
     
-    func deleteItem(target item: Done) -> Completable<StorageError> {
+    func deleteItem(target item: Done) -> Completable<DoneStorageError> {
         return repository.deleteItem(target: item)
     }
 }

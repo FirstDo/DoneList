@@ -9,7 +9,7 @@ import UIKit
 
 final class DoneSceneDIContainer {
     struct Dependencies {
-        unowned let doneStorage: StorageType
+        unowned let doneStorage: DoneStorageType
         unowned let apiProvider: APIProvider
     }
     
