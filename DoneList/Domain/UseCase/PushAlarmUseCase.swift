@@ -25,6 +25,6 @@ final class PushAlarmUseCase: PushAlarmUseCaseType {
     }
     
     func removePushNotification() {
-        notificationManager.removeNotification()
+        notificationManager.removeAllNotification()
     }
 }
