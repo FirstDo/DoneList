@@ -18,5 +18,9 @@ protocol DoneSettingViewModelOutput {
 protocol DoneSettingViewModelType: DoneSettingViewModelInput, DoneSettingViewModelOutput { }
 
 final class DoneSettingViewModel: DoneSettingViewModelType {
+    private let pushAlarmUseCase: PushAlarmUseCaseType
     
+    init(pushAlarmUseCase: PushAlarmUseCaseType) {
+        self.pushAlarmUseCase = pushAlarmUseCase
+    }
 }

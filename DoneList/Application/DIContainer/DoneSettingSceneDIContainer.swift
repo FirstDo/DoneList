@@ -18,8 +18,12 @@ final class DoneSettingSceneDIContainer {
     // MARK: - ViewController
     
     func makeDoneSettingViewController() -> DoneSettingViewController {
-        let viewModel = DoneSettingViewModel()
+        let viewModel = DoneSettingViewModel(pushAlarmUseCase: makePushAlarmUseCase())
         
         return DoneSettingViewController(viewModel)
+    }
+    
+    func makePushAlarmUseCase() -> PushAlarmUseCaseType {
+        return PushAlarmUseCase(notificationManager: LocalNotificationManager())
     }
 }
