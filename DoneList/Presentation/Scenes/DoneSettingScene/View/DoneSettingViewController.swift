@@ -10,8 +10,8 @@ import Combine
 
 final class DoneSettingViewController: UITableViewController {
     
-    private typealias DataSource = UITableViewDiffableDataSource<Int, Int>
-    private typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Int>
+    private typealias DataSource = UITableViewDiffableDataSource<Section, Item>
+    private typealias SnapShot = NSDiffableDataSourceSnapshot<Section, Item>
     
     weak var coordinator: DoneSettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType

@@ -67,6 +67,7 @@
 		948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29952891A9660055A031 /* PushAlarmUseCase.swift */; };
 		948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29982891AA520055A031 /* LocalNotificationManager.swift */; };
 		948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */; };
+		948A29A22891BFBE0055A031 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29A12891BFBD0055A031 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		948A29952891A9660055A031 /* PushAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmUseCase.swift; sourceTree = "<group>"; };
 		948A29982891AA520055A031 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIDatePicker.swift"; sourceTree = "<group>"; };
+		948A29A12891BFBD0055A031 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		94272A45288AA3160010BC10 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				948A29A02891BFB50055A031 /* Setting */,
 				94272A4A288AAE870010BC10 /* Done.swift */,
 				94272A63288ACB560010BC10 /* Quote.swift */,
 				94272ABC288BFD460010BC10 /* Category.swift */,
@@ -571,6 +574,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		948A29A02891BFB50055A031 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				948A29A12891BFBD0055A031 /* Setting.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -684,6 +695,7 @@
 				941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */,
 				948A2908288D33BB0055A031 /* DoneChartViewController.swift in Sources */,
 				94272AA3288B052C0010BC10 /* UIView+.swift in Sources */,
+				948A29A22891BFBE0055A031 /* Setting.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
