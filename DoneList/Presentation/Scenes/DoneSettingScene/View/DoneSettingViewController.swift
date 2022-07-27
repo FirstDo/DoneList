@@ -13,9 +13,10 @@ final class DoneSettingViewController: UITableViewController {
     private typealias DataSource = UITableViewDiffableDataSource<Int, Int>
     private typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Int>
     
-    private var dataSource: DataSource?
-    
+    weak var coordinator: DoneSettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType
+    
+    private var dataSource: DataSource?
     
     init(_ viewModel: DoneSettingViewModelType) {
         self.viewModel = viewModel
@@ -28,5 +29,15 @@ final class DoneSettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        coordinator?.dismiss()
+    }
+    
+    deinit {
+        print(#function)
     }
 }

@@ -34,6 +34,12 @@ final class DoneChartViewController: UIViewController {
         bind()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        coordinator?.dismiss(target: self)
+    }
+    
     private func bind() {
         viewModel.dateTitle
             .sink { [weak self] title in
@@ -77,7 +83,6 @@ final class DoneChartViewController: UIViewController {
                 self?.viewModel.didTapCloseButton()
             }
             .store(in: &cancelBag)
-            
     }
     
     private func setup() {

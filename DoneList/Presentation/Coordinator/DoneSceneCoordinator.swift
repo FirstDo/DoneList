@@ -86,6 +86,20 @@ final class DoneSceneCoordiantor: Coordinator {
         doneChartSceneCoordinator.showDoneChart(date)
     }
     
+    // MARK: DoneSettingViewController
+    
+    func showDoneSetting() {
+        guard let navigationController = navigationController else { return }
+        
+        let doneSettingSceneDIContainer = dependency.makeDoneSettingSceneDIContainer()
+        let doneSettingSceneCoordinator = doneSettingSceneDIContainer.makeDoneSettingSceneCoordinator(navigationController)
+        
+        doneSettingSceneCoordinator.parentCoordinator = self
+        childCoordinator.append(doneSettingSceneCoordinator)
+        
+        doneSettingSceneCoordinator.showDoneSetting()
+    }
+    
     func dismiss(target view: UIViewController?) {
         view?.dismiss(animated: true)
     }

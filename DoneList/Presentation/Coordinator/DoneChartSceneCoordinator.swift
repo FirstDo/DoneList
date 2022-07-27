@@ -19,7 +19,7 @@ final class DoneChartSceneCoordinator: Coordinator {
         self.dependency = dependency
     }
     
-    // MARK: DoneListViewController
+    // MARK: DoneChartViewController
     
     func showDoneChart(_ date: Date) {
         let doneChartViewController = dependency.makeDoneChartViewController(date)
@@ -31,5 +31,9 @@ final class DoneChartSceneCoordinator: Coordinator {
     func dismiss(target view: UIViewController?) {
         view?.dismiss(animated: true)
         parentCoordinator?.removeChild(self)
+    }
+    
+    deinit {
+        print(#function)
     }
 }

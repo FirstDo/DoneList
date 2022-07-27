@@ -76,7 +76,7 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showSettingView
             .sink { [weak self] _ in
-                // TODO: showSettingView
+                self?.coordinator?.showDoneSetting()
             }
             .store(in: &cancelBag)
         
