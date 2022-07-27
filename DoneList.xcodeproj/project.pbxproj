@@ -66,6 +66,7 @@
 		948A299428919A190055A031 /* DoneSettingSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299328919A190055A031 /* DoneSettingSceneCoordinator.swift */; };
 		948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29952891A9660055A031 /* PushAlarmUseCase.swift */; };
 		948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29982891AA520055A031 /* LocalNotificationManager.swift */; };
+		948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		948A299328919A190055A031 /* DoneSettingSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingSceneCoordinator.swift; sourceTree = "<group>"; };
 		948A29952891A9660055A031 /* PushAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmUseCase.swift; sourceTree = "<group>"; };
 		948A29982891AA520055A031 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIDatePicker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +524,7 @@
 				94272AC1288C39B30010BC10 /* Combine+UIControl.swift */,
 				941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */,
 				941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */,
+				948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */,
 			);
 			path = Publisher;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				948A290A288D34390055A031 /* DoneChartSceneDIContainer.swift in Sources */,
+				948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */,
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				948A2992289199BB0055A031 /* DoneSettingSceneDIContainer.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,

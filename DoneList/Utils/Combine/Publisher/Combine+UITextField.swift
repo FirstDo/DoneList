@@ -11,8 +11,7 @@ import Combine
 extension UITextField {
     var textPublisher: AnyPublisher<String, Never> {
         return controlPublisher(for: .editingChanged)
-            .compactMap { $0 as? UITextField }
-            .compactMap { $0.text ?? ""}
+            .map { _ in self.text ?? ""}
             .eraseToAnyPublisher()
     }
 }
