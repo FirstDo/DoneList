@@ -27,6 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appCoordinator = AppCoordinator(navigationController: rootNavigationController, dependency: appDIContainer)
         appCoordinator?.start()
+        
+        LocalNotificationManager().requestAuthorization()
     }
 }
 

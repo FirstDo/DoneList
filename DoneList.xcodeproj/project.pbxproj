@@ -64,6 +64,7 @@
 		948A292F289055360055A031 /* DoneSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292E289055360055A031 /* DoneSettingViewController.swift */; };
 		948A2992289199BB0055A031 /* DoneSettingSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2991289199BB0055A031 /* DoneSettingSceneDIContainer.swift */; };
 		948A299428919A190055A031 /* DoneSettingSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299328919A190055A031 /* DoneSettingSceneCoordinator.swift */; };
+		948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29982891AA520055A031 /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		948A292E289055360055A031 /* DoneSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingViewController.swift; sourceTree = "<group>"; };
 		948A2991289199BB0055A031 /* DoneSettingSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingSceneDIContainer.swift; sourceTree = "<group>"; };
 		948A299328919A190055A031 /* DoneSettingSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingSceneCoordinator.swift; sourceTree = "<group>"; };
+		948A29982891AA520055A031 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		94272A41288AA2A90010BC10 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				948A29972891AA430055A031 /* Common */,
 				94272A96288AFD250010BC10 /* Extension */,
 				94272A74288AD8930010BC10 /* Combine */,
 			);
@@ -554,6 +557,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		948A29972891AA430055A031 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				948A29982891AA520055A031 /* LocalNotificationManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -654,6 +665,7 @@
 				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
 				94272ABD288BFD460010BC10 /* Category.swift in Sources */,
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
+				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* StorageType.swift in Sources */,
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
