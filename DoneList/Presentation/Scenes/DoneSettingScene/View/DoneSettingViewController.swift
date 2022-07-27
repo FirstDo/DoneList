@@ -9,13 +9,8 @@ import UIKit
 import Combine
 
 final class DoneSettingViewController: UITableViewController {
-    
-    private typealias DataSource = UITableViewDiffableDataSource<Section, Item>
-    private typealias SnapShot = NSDiffableDataSourceSnapshot<Section, Item>
-    
     weak var coordinator: DoneSettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType
-    private var dataSource: DataSource?
     
     init(_ viewModel: DoneSettingViewModelType) {
         self.viewModel = viewModel
@@ -43,19 +38,61 @@ final class DoneSettingViewController: UITableViewController {
     }
     
     private func setupTableView() {
-        dataSource = DataSource(tableView: tableView) { tableView, indexPath, itemIdentifier in
-            fatalError()
-        }
-    }
-    
-    private func applySnapshot(_ items: [Item]) {
-        var snapshot = SnapShot()
-        snapshot.appendSections([.appSetting, .other])
-        
-        dataSource?.apply(snapshot)
+        tableView.register(PushAlarmCell.self, forCellReuseIdentifier: "push")
     }
     
     deinit {
         print(#function)
     }
 }
+
+// MARK: - UITableViewDataSource
+
+extension DoneSettingViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 2
+        case 1:
+            return 2
+        default:
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "push", for: indexPath) as! PushAlarmCell
+            let viewModel = PushAlarmCellViewModel(pushAlarmUseCase: PushAlarmUseCase(notificationManager: LocalNotificationManager()), switchState: true, alarmDate: .now)
+            cell.bind(viewModel)
+            
+            return cell
+        case (0, 1):
+            return UITableViewCell()
+        case (_, _):
+            return UITableViewCell()
+        }
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension DoneSettingViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            break
+        default:
+            break
+        }
+    }
+}
+
