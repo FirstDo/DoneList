@@ -39,6 +39,7 @@ final class DoneSettingViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.register(PushAlarmCell.self, forCellReuseIdentifier: "push")
+        tableView.register(DefaultSettingCell.self, forCellReuseIdentifier: "default")
     }
     
     deinit {
@@ -75,7 +76,13 @@ extension DoneSettingViewController {
             return cell
         case (0, 1):
             return UITableViewCell()
-        case (_, _):
+        case (1, _):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath) as! DefaultSettingCell
+            let viewModel = DefaultSettingCellViewModel(row: indexPath.row)
+            cell.bind(viewModel)
+            
+            return cell
+        default:
             return UITableViewCell()
         }
     }
@@ -84,6 +91,11 @@ extension DoneSettingViewController {
 // MARK: - UITableViewDelegate
 
 extension DoneSettingViewController {
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return indexPath.section == 1 ? indexPath : nil
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:

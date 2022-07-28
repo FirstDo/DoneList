@@ -70,6 +70,9 @@
 		948A29A82891C6C40055A031 /* PushAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29A72891C6C40055A031 /* PushAlarmCell.swift */; };
 		948A29AD2891C9EB0055A031 /* PushAlarmCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */; };
 		948A29B12891D1820055A031 /* Combine+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B02891D1820055A031 /* Combine+UISwitch.swift */; };
+		948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B2289252C90055A031 /* DefaultSettingCell.swift */; };
+		948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */; };
+		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +139,9 @@
 		948A29A72891C6C40055A031 /* PushAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCell.swift; sourceTree = "<group>"; };
 		948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCellViewModel.swift; sourceTree = "<group>"; };
 		948A29B02891D1820055A031 /* Combine+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UISwitch.swift"; sourceTree = "<group>"; };
+		948A29B2289252C90055A031 /* DefaultSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCell.swift; sourceTree = "<group>"; };
+		948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCellViewModel.swift; sourceTree = "<group>"; };
+		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				94272A4A288AAE870010BC10 /* Done.swift */,
+				948A29CF2892A9C20055A031 /* Content.swift */,
 				94272A63288ACB560010BC10 /* Quote.swift */,
 				94272ABC288BFD460010BC10 /* Category.swift */,
 			);
@@ -583,7 +590,6 @@
 			isa = PBXGroup;
 			children = (
 				948A29AE2891C9F50055A031 /* View */,
-				948A29A72891C6C40055A031 /* PushAlarmCell.swift */,
 				948A29AF2891C9F90055A031 /* ViewModel */,
 			);
 			path = Cell;
@@ -592,6 +598,8 @@
 		948A29AE2891C9F50055A031 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				948A29A72891C6C40055A031 /* PushAlarmCell.swift */,
+				948A29B2289252C90055A031 /* DefaultSettingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */,
+				948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -691,6 +700,7 @@
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				948A292F289055360055A031 /* DoneSettingViewController.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
+				948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */,
 				948A29A82891C6C40055A031 /* PushAlarmCell.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
@@ -698,6 +708,7 @@
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
+				948A29D02892A9C20055A031 /* Content.swift in Sources */,
 				941D7D0E288C9A4C0071C2C7 /* DoneEditViewController.swift in Sources */,
 				941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
@@ -736,6 +747,7 @@
 				94272A76288AD8A30010BC10 /* Typealias.swift in Sources */,
 				948A2992289199BB0055A031 /* DoneSettingSceneDIContainer.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
+				948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */,
 				948A2923289000940055A031 /* LineView.swift in Sources */,
 				948A299428919A190055A031 /* DoneSettingSceneCoordinator.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
