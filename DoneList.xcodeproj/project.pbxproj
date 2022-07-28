@@ -75,7 +75,7 @@
 		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
 		948A29D72892B7A20055A031 /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */; };
 		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
-		948A29DB2892BB130055A031 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceViewController.swift */; };
+		948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,7 +147,7 @@
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
-		948A29DA2892BB130055A031 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
+		948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,7 +563,8 @@
 			isa = PBXGroup;
 			children = (
 				948A29D12892B7580055A031 /* DoneSettingView */,
-				948A29D22892B7680055A031 /* OpenSoureListView */,
+				948A29D22892B7680055A031 /* OpenSourceListView */,
+				94F36F742892F358003CEFCB /* OpenSourceView */,
 			);
 			path = DoneSettingScene;
 			sourceTree = "<group>";
@@ -629,13 +630,13 @@
 			path = DoneSettingView;
 			sourceTree = "<group>";
 		};
-		948A29D22892B7680055A031 /* OpenSoureListView */ = {
+		948A29D22892B7680055A031 /* OpenSourceListView */ = {
 			isa = PBXGroup;
 			children = (
 				948A29D52892B7900055A031 /* View */,
 				948A29D42892B78A0055A031 /* ViewModel */,
 			);
-			path = OpenSoureListView;
+			path = OpenSourceListView;
 			sourceTree = "<group>";
 		};
 		948A29D42892B78A0055A031 /* ViewModel */ = {
@@ -649,9 +650,16 @@
 		948A29D52892B7900055A031 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				948A29DA2892BB130055A031 /* OpenSourceViewController.swift */,
+				948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		94F36F742892F358003CEFCB /* OpenSourceView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OpenSourceView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,7 +755,7 @@
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
-				948A29DB2892BB130055A031 /* OpenSourceViewController.swift in Sources */,
+				948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,

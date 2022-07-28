@@ -31,8 +31,8 @@ final class DoneSettingSceneCoordinator: Coordinator {
     // MARK: - OpenSourceViewController
     
     func showOpenSourceViewController() {
-        let viewModel = OpenSoureViewModel(openSources: OpenSource.allOpenSources)
-        let viewController = OpenSourceViewController(viewModel)
+        let viewModel = OpenSoureListViewModel(openSources: OpenSource.allOpenSources)
+        let viewController = OpenSourceListViewController(viewModel)
         viewController.coordinator = self
         
         navigationController?.pushViewController(viewController, animated: true)

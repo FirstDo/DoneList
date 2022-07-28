@@ -1,5 +1,5 @@
 //
-//  OpenSourceViewController.swift
+//  OpenSourceListViewController.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/28.
@@ -9,10 +9,10 @@ import UIKit
 
 import Combine
 
-class OpenSourceViewController: UITableViewController {
+class OpenSourceListViewController: UITableViewController {
     
     weak var coordinator: DoneSettingSceneCoordinator?
-    private let viewModel: OpenSoureViewModelType
+    private let viewModel: OpenSourceListViewModelType
     private var cancellableBag = Set<AnyCancellable>()
     
     private typealias DataSource = UITableViewDiffableDataSource<Int, OpenSource>
@@ -20,7 +20,7 @@ class OpenSourceViewController: UITableViewController {
     
     private var dataSource: DataSource?
     
-    init(_ viewModel: OpenSoureViewModelType) {
+    init(_ viewModel: OpenSourceListViewModelType) {
         self.viewModel = viewModel
         super.init(style: .grouped)
     }
@@ -37,7 +37,7 @@ class OpenSourceViewController: UITableViewController {
     }
     
     private func bind() {
-        viewModel.showOpenSourceModalView
+        viewModel.showOpenSourceView
             .sink { [weak self] openSource in
                 // TODO
             }
@@ -68,7 +68,7 @@ class OpenSourceViewController: UITableViewController {
 
 // MARK: - UITableViewDelegate
 
-extension OpenSourceViewController {
+extension OpenSourceListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didTapCell(index: indexPath.row)
     }
