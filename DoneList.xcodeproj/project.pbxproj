@@ -73,6 +73,8 @@
 		948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B2289252C90055A031 /* DefaultSettingCell.swift */; };
 		948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */; };
 		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
+		948A29D72892B7A20055A031 /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */; };
+		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,7 @@
 		948A29B2289252C90055A031 /* DefaultSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCell.swift; sourceTree = "<group>"; };
 		948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCellViewModel.swift; sourceTree = "<group>"; };
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -557,8 +560,7 @@
 		948A2929289052F40055A031 /* DoneSettingScene */ = {
 			isa = PBXGroup;
 			children = (
-				948A292B289053020055A031 /* View */,
-				948A292A289052FA0055A031 /* ViewModel */,
+				948A29D12892B7580055A031 /* DoneSettingView */,
 				948A29D22892B7680055A031 /* OpenSoureListView */,
 			);
 			path = DoneSettingScene;
@@ -614,6 +616,39 @@
 				948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		948A29D12892B7580055A031 /* DoneSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				948A292B289053020055A031 /* View */,
+				948A292A289052FA0055A031 /* ViewModel */,
+			);
+			path = DoneSettingView;
+			sourceTree = "<group>";
+		};
+		948A29D22892B7680055A031 /* OpenSoureListView */ = {
+			isa = PBXGroup;
+			children = (
+				948A29D52892B7900055A031 /* View */,
+				948A29D42892B78A0055A031 /* ViewModel */,
+			);
+			path = OpenSoureListView;
+			sourceTree = "<group>";
+		};
+		948A29D42892B78A0055A031 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		948A29D52892B7900055A031 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,6 +757,7 @@
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
+				948A29D72892B7A20055A031 /* OpenSourceViewModel.swift in Sources */,
 				94272A4D288AAF200010BC10 /* DoneStorageType.swift in Sources */,
 				948A29AD2891C9EB0055A031 /* PushAlarmCellViewModel.swift in Sources */,
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,

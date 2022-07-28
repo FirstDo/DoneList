@@ -1,8 +1,11 @@
 //
-//  OpenSoure.swift
+//  OpenSource.swift
 //  DoneList
 //
-//  Created by 김도연 on 2022/07/28.
+//  Created by dudu on 2022/07/28.
 //
 
-import Foundation
+struct OpenSource {
+    let name: String
+    let content: String
+}
