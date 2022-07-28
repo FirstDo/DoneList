@@ -76,6 +76,7 @@
 		948A29D72892B7A20055A031 /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */; };
 		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
 		948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */; };
+		94F36F7B2892F4EF003CEFCB /* OpenSoureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F36F7A2892F4EF003CEFCB /* OpenSoureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
 		948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewController.swift; sourceTree = "<group>"; };
+		94F36F7A2892F4EF003CEFCB /* OpenSoureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSoureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -658,8 +660,17 @@
 		94F36F742892F358003CEFCB /* OpenSourceView */ = {
 			isa = PBXGroup;
 			children = (
+				94F36F792892F4D7003CEFCB /* ViewModel */,
 			);
 			path = OpenSourceView;
+			sourceTree = "<group>";
+		};
+		94F36F792892F4D7003CEFCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94F36F7A2892F4EF003CEFCB /* OpenSoureViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -775,6 +786,7 @@
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
+				94F36F7B2892F4EF003CEFCB /* OpenSoureViewModel.swift in Sources */,
 				948A2910288D40D90055A031 /* DoneChartView.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
