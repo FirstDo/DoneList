@@ -329,9 +329,9 @@
 		94272A45288AA3160010BC10 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				948A29D82892B8300055A031 /* OpenSource.swift */,
 				94272A4A288AAE870010BC10 /* Done.swift */,
 				948A29CF2892A9C20055A031 /* Content.swift */,
-				948A29D82892B8300055A031 /* OpenSource.swift */,
 				94272A63288ACB560010BC10 /* Quote.swift */,
 				94272ABC288BFD460010BC10 /* Category.swift */,
 			);
