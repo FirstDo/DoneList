@@ -40,6 +40,13 @@ final class DoneSettingSceneCoordinator: Coordinator {
     
     // MARK: - OpenSourceViewController
     
+    func showOpenSoureViewController(with item: OpenSource) {
+        let viewModel = OpenSourceViewModel(item: item)
+        let viewController = OpenSourceViewController(viewModel)
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func pop(target viewController: UIViewController?) {
         if navigationController?.topViewController == viewController {
             navigationController?.popViewController(animated: true)

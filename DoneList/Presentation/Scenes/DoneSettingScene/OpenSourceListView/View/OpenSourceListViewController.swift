@@ -39,7 +39,7 @@ class OpenSourceListViewController: UITableViewController {
     private func bind() {
         viewModel.showOpenSourceView
             .sink { [weak self] openSource in
-                // TODO
+                self?.coordinator?.showOpenSoureViewController(with: openSource)
             }
             .store(in: &cancellableBag)
         

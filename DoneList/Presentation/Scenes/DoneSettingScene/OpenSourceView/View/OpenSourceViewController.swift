@@ -35,10 +35,14 @@ final class OpenSourceViewController: UIViewController {
     
     private func bind() {
         openSourceContentTextView.text = viewModel.item.content
+        title = viewModel.item.name
+        
+        openSourceContentTextView.layoutIfNeeded()
     }
     
     private func setup() {
         setupLayout()
+        setupView()
     }
     
     private func setupLayout() {
@@ -46,5 +50,9 @@ final class OpenSourceViewController: UIViewController {
         openSourceContentTextView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide).inset(10)
         }
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
     }
 }
