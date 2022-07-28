@@ -21,22 +21,24 @@ final class DoneSettingSceneCoordinator: Coordinator {
     
     // MARK: - DoneSettingViewController
     
-    func showDoneSetting() {
+    func showDoneSettingViewController() {
         let doneSettingViewController = dependency.makeDoneSettingViewController()
         doneSettingViewController.coordinator = self
         
         navigationController?.pushViewController(doneSettingViewController, animated: true)
     }
     
-    // MARK: - OpenSourceViewController
+    // MARK: - OpenSourceListViewController
     
-    func showOpenSourceViewController() {
+    func showOpenSourceListViewController() {
         let viewModel = OpenSourceListViewModel(openSources: OpenSource.allOpenSources)
         let viewController = OpenSourceListViewController(viewModel)
         viewController.coordinator = self
         
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    // MARK: - OpenSourceViewController
     
     func pop(target viewController: UIViewController?) {
         if navigationController?.topViewController == viewController {

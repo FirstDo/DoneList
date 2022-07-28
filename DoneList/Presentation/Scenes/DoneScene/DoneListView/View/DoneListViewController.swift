@@ -64,31 +64,31 @@ final class DoneListViewController: UIViewController {
             .sink { [weak self] date in
                 guard let self = self else { return }
                 
-                self.coordinator?.showCalendar(with: date, changedTargetDate: self.viewModel.didChangeTargetDate(to:))
+                self.coordinator?.showCalendarViewController(with: date, changedTargetDate: self.viewModel.didChangeTargetDate(to:))
             }
             .store(in: &cancelBag)
         
         viewModel.showChartView
             .sink { [weak self] date in
-                self?.coordinator?.showDoneChart(date)
+                self?.coordinator?.showDoneChartViewController(date)
             }
             .store(in: &cancelBag)
         
         viewModel.showSettingView
             .sink { [weak self] _ in
-                self?.coordinator?.showDoneSetting()
+                self?.coordinator?.showDoneSettingViewController()
             }
             .store(in: &cancelBag)
         
         viewModel.showDoneEditView
             .sink { [weak self] done in
-                self?.coordinator?.showDoneEdit(item: done)
+                self?.coordinator?.showDoneEditViewController(item: done)
             }
             .store(in: &cancelBag)
         
         viewModel.showDoneCreateView
             .sink { [weak self] date in
-                self?.coordinator?.showDoneCreate(date: date)
+                self?.coordinator?.showDoneCreateViewController(date: date)
             }
             .store(in: &cancelBag)
     }

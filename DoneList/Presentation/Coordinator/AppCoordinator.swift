@@ -39,6 +39,6 @@ final class AppCoordinator: Coordinator {
         doneSceneCoordinator.parentCoordinator = self
         childCoordinator.append(doneSceneCoordinator)
         
-        doneSceneCoordinator.showDoneList()
+        doneSceneCoordinator.showDoneListViewController()
     }
 }

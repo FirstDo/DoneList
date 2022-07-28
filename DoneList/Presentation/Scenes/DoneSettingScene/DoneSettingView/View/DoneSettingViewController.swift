@@ -33,7 +33,7 @@ final class DoneSettingViewController: UITableViewController {
     func bind() {
         viewModel.showOpenSourceViewController
             .sink { [weak self] _ in
-                self?.coordinator?.showOpenSourceViewController()
+                self?.coordinator?.showOpenSourceListViewController()
             }
             .store(in: &cancellableBag)
     }

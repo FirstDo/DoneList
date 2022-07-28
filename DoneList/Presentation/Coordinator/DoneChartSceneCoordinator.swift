@@ -21,7 +21,7 @@ final class DoneChartSceneCoordinator: Coordinator {
     
     // MARK: DoneChartViewController
     
-    func showDoneChart(_ date: Date) {
+    func showDoneChartViewController(_ date: Date) {
         let doneChartViewController = dependency.makeDoneChartViewController(date)
         doneChartViewController.coordinator = self
         

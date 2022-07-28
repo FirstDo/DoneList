@@ -21,7 +21,7 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: DoneListViewController
     
-    func showDoneList() {
+    func showDoneListViewController() {
         let doneListViewController = dependency.makeDoneListViewController()
         doneListViewController.coordinator = self
         
@@ -30,7 +30,7 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: CalendarViewController
     
-    func showCalendar(with date: Date, changedTargetDate: @escaping (Date) -> ()) {
+    func showCalendarViewController(with date: Date, changedTargetDate: @escaping (Date) -> ()) {
         let calendarViewController = dependency.makeCalendarViewController(date, changedTargetDate)
         calendarViewController.coordinator = self
         
@@ -45,7 +45,7 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: DoneCreateViewController
     
-    func showDoneCreate(date: Date) {
+    func showDoneCreateViewController(date: Date) {
         let doneCreateViewController = dependency.makeDoneCreateViewController(date)
         doneCreateViewController.coordinator = self
         
@@ -60,7 +60,7 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: DoneEditViewController
     
-    func showDoneEdit(item: Done) {
+    func showDoneEditViewController(item: Done) {
         let doneEditViewController = dependency.makeDoneEditViewController(item)
         doneEditViewController.coordinator = self
         
@@ -75,7 +75,7 @@ final class DoneSceneCoordiantor: Coordinator {
     
     // MARK: DoneChartViewController
     
-    func showDoneChart(_ date: Date) {
+    func showDoneChartViewController(_ date: Date) {
         guard let navigationController = navigationController else { return }
         
         let doneChartSceneDIContainer = dependency.makeDoneChartSceneDIContainer()
@@ -83,12 +83,12 @@ final class DoneSceneCoordiantor: Coordinator {
         doneChartSceneCoordinator.parentCoordinator = self
         childCoordinator.append(doneChartSceneCoordinator)
         
-        doneChartSceneCoordinator.showDoneChart(date)
+        doneChartSceneCoordinator.showDoneChartViewController(date)
     }
     
     // MARK: DoneSettingViewController
     
-    func showDoneSetting() {
+    func showDoneSettingViewController() {
         guard let navigationController = navigationController else { return }
         
         let doneSettingSceneDIContainer = dependency.makeDoneSettingSceneDIContainer()
@@ -97,10 +97,10 @@ final class DoneSceneCoordiantor: Coordinator {
         doneSettingSceneCoordinator.parentCoordinator = self
         childCoordinator.append(doneSettingSceneCoordinator)
         
-        doneSettingSceneCoordinator.showDoneSetting()
+        doneSettingSceneCoordinator.showDoneSettingViewController()
     }
     
-    func dismiss(target view: UIViewController?) {
-        view?.dismiss(animated: true)
+    func dismiss(target viewController: UIViewController?) {
+        viewController?.dismiss(animated: true)
     }
 }
