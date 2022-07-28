@@ -1,5 +1,5 @@
 //
-//  DoneSettingViewController.swift
+//  SettingViewController.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/27.
@@ -8,9 +8,9 @@
 import UIKit
 import Combine
 
-final class DoneSettingViewController: UITableViewController {
+final class SettingViewController: UITableViewController {
     
-    weak var coordinator: DoneSettingSceneCoordinator?
+    weak var coordinator: SettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType
     private var cancellableBag = Set<AnyCancellable>()
     
@@ -21,6 +21,11 @@ final class DoneSettingViewController: UITableViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print(self, #function)
+        coordinator?.pop(target: self)
     }
     
     override func viewDidLoad() {
@@ -46,16 +51,11 @@ final class DoneSettingViewController: UITableViewController {
         tableView.register(PushAlarmCell.self, forCellReuseIdentifier: "push")
         tableView.register(DefaultSettingCell.self, forCellReuseIdentifier: "default")
     }
-    
-    deinit {
-        print(self, #function)
-        coordinator?.pop(target: self)
-    }
 }
 
 // MARK: - UITableViewDataSource
 
-extension DoneSettingViewController {
+extension SettingViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
     }
@@ -86,7 +86,7 @@ extension DoneSettingViewController {
 
 // MARK: - UITableViewDelegate
 
-extension DoneSettingViewController {
+extension SettingViewController {
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         viewModel.willSelectRowAt(indexPath)

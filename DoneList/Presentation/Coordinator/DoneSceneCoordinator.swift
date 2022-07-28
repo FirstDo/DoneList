@@ -73,34 +73,39 @@ final class DoneSceneCoordiantor: Coordinator {
         navigationController?.topViewController?.present(doneEditViewController, animated: true)
     }
     
-    // MARK: DoneChartViewController
+    // MARK: ChartViewController
     
-    func showDoneChartViewController(_ date: Date) {
+    func showChartViewController(with date: Date) {
         guard let navigationController = navigationController else { return }
         
-        let doneChartSceneDIContainer = dependency.makeDoneChartSceneDIContainer()
-        let doneChartSceneCoordinator = doneChartSceneDIContainer.makeDoneChartSceneCoordinator(navigationController)
-        doneChartSceneCoordinator.parentCoordinator = self
-        childCoordinator.append(doneChartSceneCoordinator)
+        let chartSceneDIContainer = dependency.chartSceneDIContainer
+        let chartSceneCoordinator = chartSceneDIContainer.makeChartSceneCoordinator(navigationController)
         
-        doneChartSceneCoordinator.showDoneChartViewController(date)
+        chartSceneCoordinator.parentCoordinator = self
+        chartSceneCoordinator.showChartViewController(date)
+        
+        childCoordinator.append(chartSceneCoordinator)
     }
     
-    // MARK: DoneSettingViewController
+    // MARK: SettingViewController
     
-    func showDoneSettingViewController() {
+    func showSettingViewController() {
         guard let navigationController = navigationController else { return }
         
-        let doneSettingSceneDIContainer = dependency.makeDoneSettingSceneDIContainer()
-        let doneSettingSceneCoordinator = doneSettingSceneDIContainer.makeDoneSettingSceneCoordinator(navigationController)
+        let settingSceneDIContainer = dependency.settingSceneDIContainer
+        let settingSceneCoordinator = settingSceneDIContainer.makeSettingSceneCoordinator(navigationController)
         
-        doneSettingSceneCoordinator.parentCoordinator = self
-        childCoordinator.append(doneSettingSceneCoordinator)
+        settingSceneCoordinator.parentCoordinator = self
+        settingSceneCoordinator.showDoneSettingViewController()
         
-        doneSettingSceneCoordinator.showDoneSettingViewController()
+        childCoordinator.append(settingSceneCoordinator)
     }
     
     func dismiss(target viewController: UIViewController?) {
         viewController?.dismiss(animated: true)
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }

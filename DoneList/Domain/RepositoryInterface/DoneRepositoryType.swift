@@ -8,8 +8,8 @@
 import Combine
 
 protocol DoneRepositoryType {
-    func createItem(_ item: Done) -> Completable<DoneStorageError>
-    func readItems() -> AnyPublisher<[Done], Never>
-    func updateItem(to item: Done) -> Completable<DoneStorageError>
-    func deleteItem(target item: Done) -> Completable<DoneStorageError>
+    func createItem(_ item: Done)
+    var readItems: AnyPublisher<[Done], Never> { get }
+    func updateItem(to item: Done)
+    func deleteItem(target item: Done)
 }

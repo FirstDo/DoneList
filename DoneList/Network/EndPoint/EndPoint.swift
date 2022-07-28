@@ -48,6 +48,7 @@ extension EndPoint {
 }
 
 fileprivate extension Encodable {
+    
     func makeData() -> Data? {
         return try? JSONEncoder().encode(self)
     }

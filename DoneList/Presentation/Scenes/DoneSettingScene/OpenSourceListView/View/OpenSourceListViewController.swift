@@ -11,7 +11,7 @@ import Combine
 
 class OpenSourceListViewController: UITableViewController {
     
-    weak var coordinator: DoneSettingSceneCoordinator?
+    weak var coordinator: SettingSceneCoordinator?
     private let viewModel: OpenSourceListViewModelType
     private var cancellableBag = Set<AnyCancellable>()
     
@@ -27,6 +27,10 @@ class OpenSourceListViewController: UITableViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print(self, #function)
     }
     
     override func viewDidLoad() {
@@ -69,10 +73,6 @@ class OpenSourceListViewController: UITableViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot)
-    }
-    
-    deinit {
-        print(self, #function)
     }
 }
 

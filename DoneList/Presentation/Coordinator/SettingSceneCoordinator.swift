@@ -1,5 +1,5 @@
 //
-//  DoneSettingSceneCoordinator.swift
+//  SettingSceneCoordinator.swift
 //  DoneList
 //
 //  Created by 김도연 on 2022/07/28.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class DoneSettingSceneCoordinator: Coordinator {
+final class SettingSceneCoordinator: Coordinator {
     var navigationController: UINavigationController?
     weak var parentCoordinator: Coordinator?
     var childCoordinator: [Coordinator] = []
     
-    private let dependency: DoneSettingSceneDIContainer
+    private let dependency: SettingSceneDIContainer
     
-    init(navigationController: UINavigationController, dependency: DoneSettingSceneDIContainer) {
+    init(navigationController: UINavigationController, dependency: SettingSceneDIContainer) {
         self.navigationController = navigationController
         self.dependency = dependency
     }
@@ -22,7 +22,7 @@ final class DoneSettingSceneCoordinator: Coordinator {
     // MARK: - DoneSettingViewController
     
     func showDoneSettingViewController() {
-        let doneSettingViewController = dependency.makeDoneSettingViewController()
+        let doneSettingViewController = dependency.makeSettingViewController()
         doneSettingViewController.coordinator = self
         
         navigationController?.pushViewController(doneSettingViewController, animated: true)
@@ -32,19 +32,19 @@ final class DoneSettingSceneCoordinator: Coordinator {
     
     func showOpenSourceListViewController() {
         let viewModel = OpenSourceListViewModel(openSources: OpenSource.allOpenSources)
-        let viewController = OpenSourceListViewController(viewModel)
-        viewController.coordinator = self
+        let openSourceListViewController = OpenSourceListViewController(viewModel)
+        openSourceListViewController.coordinator = self
         
-        navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(openSourceListViewController, animated: true)
     }
     
     // MARK: - OpenSourceViewController
     
     func showOpenSoureViewController(with item: OpenSource) {
         let viewModel = OpenSourceViewModel(item: item)
-        let viewController = OpenSourceViewController(viewModel)
+        let openSourceViewController = OpenSourceViewController(viewModel)
         
-        navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(openSourceViewController, animated: true)
     }
     
     func pop(target viewController: UIViewController?) {

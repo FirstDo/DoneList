@@ -43,6 +43,11 @@ class CalendarViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    deinit {
+        print(self, #function)
+        coordinator?.dismiss(target: self)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -52,12 +57,6 @@ class CalendarViewController: UIViewController {
         
         setup()
         bind()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        coordinator?.dismiss(target: self)
     }
     
     private func bind() {

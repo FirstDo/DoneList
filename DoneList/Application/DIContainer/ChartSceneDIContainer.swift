@@ -1,5 +1,5 @@
 //
-//  DoneChartSceneDIContainer.swift
+//  ChartSceneDIContainer.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DoneChartSceneDIContainer {
+final class ChartSceneDIContainer {
     struct Dependencies {
         unowned let doneStorage: DoneStorageType
     }
@@ -20,16 +20,16 @@ final class DoneChartSceneDIContainer {
     
     // MARK: - Coordinator
     
-    func makeDoneChartSceneCoordinator(_ navigationController: UINavigationController) -> DoneChartSceneCoordinator {
-        return DoneChartSceneCoordinator(navigationController: navigationController, dependency: self)
+    func makeChartSceneCoordinator(_ navigationController: UINavigationController) -> ChartSceneCoordinator {
+        return ChartSceneCoordinator(navigationController: navigationController, dependency: self)
     }
     
     // MARK: - ViewController
     
-    func makeDoneChartViewController(_ date: Date) -> DoneChartViewController {
+    func makeChartViewController(with date: Date) -> ChartViewController {
         let viewModel = DoneChartViewModel(doneUseCase: doneUseCase, targetDate: date)
         
-        return DoneChartViewController(viewModel)
+        return ChartViewController(viewModel)
     }
     
     // MARK: - UseCase
@@ -42,5 +42,9 @@ final class DoneChartSceneDIContainer {
     
     private var doneRepository: DoneRepositoryType {
         return DoneRepository(storage: dependencies.doneStorage)
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }

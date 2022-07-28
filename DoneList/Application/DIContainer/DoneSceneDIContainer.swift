@@ -21,12 +21,12 @@ final class DoneSceneDIContainer {
     
     // MARK: - DIContainer
     
-    func makeDoneChartSceneDIContainer() -> DoneChartSceneDIContainer {
-        return DoneChartSceneDIContainer(dependencies: DoneChartSceneDIContainer.Dependencies(doneStorage: dependencies.doneStorage))
+    var chartSceneDIContainer: ChartSceneDIContainer {
+        return ChartSceneDIContainer(dependencies: ChartSceneDIContainer.Dependencies(doneStorage: dependencies.doneStorage))
     }
     
-    func makeDoneSettingSceneDIContainer() -> DoneSettingSceneDIContainer {
-        return DoneSettingSceneDIContainer()
+    var settingSceneDIContainer: SettingSceneDIContainer {
+        return SettingSceneDIContainer()
     }
     
     // MARK: - Coordiantor
@@ -85,5 +85,9 @@ final class DoneSceneDIContainer {
     
     private var quotesRepository: QuotesRepositoryType {
         return QuotesRepository(apiProvider: dependencies.apiProvider)
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }

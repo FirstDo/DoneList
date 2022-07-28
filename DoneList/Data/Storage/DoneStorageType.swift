@@ -16,43 +16,37 @@ enum DoneStorageError: LocalizedError {
 }
 
 protocol DoneStorageType: AnyObject {
-    func create(_ item: Done) -> Completable<DoneStorageError>
-    func read() -> AnyPublisher<[Done], Never>
-    func update(_ item: Done) -> Completable<DoneStorageError>
-    func delete(_ item: Done) -> Completable<DoneStorageError>
+    func create(_ item: Done)
+    var read: AnyPublisher<[Done], Never> { get }
+    func update(_ item: Done)
+    func delete(_ item: Done)
 }
 
 final class DoneMemoryStorage: DoneStorageType {
     
     @Published private var items = [Done]()
     
-    #if DEBUG
+#if DEBUG
     init() {
         items.append(contentsOf: Done.dummy())
     }
-    #endif
+#endif
     
-    func create(_ item: Done) -> Completable<DoneStorageError> {
+    func create(_ item: Done) {
         items.append(item)
-        
-        return Empty().eraseToAnyPublisher()
     }
     
-    func read() -> AnyPublisher<[Done], Never> {
+    var read: AnyPublisher<[Done], Never> {
         return $items.eraseToAnyPublisher()
     }
     
-    func update(_ item: Done) -> Completable<DoneStorageError> {
+    func update(_ item: Done) {
         if let index = items.firstIndex(where: {$0.id == item.id }) {
             items[index] = item
         }
-        
-        return Empty().eraseToAnyPublisher()
     }
     
-    func delete(_ item: Done) -> Completable<DoneStorageError> {
+    func delete(_ item: Done) {
         items.removeAll { $0.id == item.id }
-        
-        return Empty().eraseToAnyPublisher()
     }
 }

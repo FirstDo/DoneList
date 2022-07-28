@@ -10,6 +10,15 @@ final class AppDIContainer {
     private let storage: DoneStorageType = DoneMemoryStorage()
     
     func makeDoneSceneDIContainer() -> DoneSceneDIContainer {
-        return DoneSceneDIContainer(dependencies: DoneSceneDIContainer.Dependencies(doneStorage: storage, apiProvider: apiProvider))
+        return DoneSceneDIContainer(
+            dependencies: DoneSceneDIContainer.Dependencies(
+                doneStorage: storage,
+                apiProvider: apiProvider
+            )
+        )
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }

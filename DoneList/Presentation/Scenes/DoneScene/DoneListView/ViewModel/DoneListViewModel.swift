@@ -53,7 +53,7 @@ final class DoneListViewModel: DoneListViewModelType {
     // MARK: - OutPut
     
     var doneItems: AnyPublisher<[Done], Never> {
-        return doneUseCase.fetchAllItem()
+        return doneUseCase.fetchAllItem
             .combineLatest($currentDate)
             .compactMap { items, date in
                 let startOfDay = date.startOfDay

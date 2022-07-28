@@ -26,6 +26,10 @@ final class OpenSourceViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print(self, #function)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

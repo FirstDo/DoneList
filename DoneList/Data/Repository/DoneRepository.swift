@@ -15,19 +15,19 @@ final class DoneRepository: DoneRepositoryType {
         self.storage = storage
     }
     
-    func createItem(_ item: Done) -> Completable<DoneStorageError> {
-        return storage.create(item)
+    func createItem(_ item: Done) {
+        storage.create(item)
     }
     
-    func readItems() -> AnyPublisher<[Done], Never> {
-        return storage.read()
+    var readItems: AnyPublisher<[Done], Never> {
+        return storage.read
     }
     
-    func updateItem(to item: Done) -> Completable<DoneStorageError> {
-        return storage.update(item)
+    func updateItem(to item: Done) {
+        storage.update(item)
     }
     
-    func deleteItem(target item: Done) -> Completable<DoneStorageError> {
-        return storage.delete(item)
+    func deleteItem(target item: Done) {
+        storage.delete(item)
     }
 }

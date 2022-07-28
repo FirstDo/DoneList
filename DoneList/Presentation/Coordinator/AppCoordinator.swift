@@ -36,9 +36,14 @@ final class AppCoordinator: Coordinator {
         
         let doneSceneDIContainer = dependency.makeDoneSceneDIContainer()
         let doneSceneCoordinator = doneSceneDIContainer.makeDoneSceneCoordinator(navigationController)
-        doneSceneCoordinator.parentCoordinator = self
-        childCoordinator.append(doneSceneCoordinator)
         
+        doneSceneCoordinator.parentCoordinator = self
         doneSceneCoordinator.showDoneListViewController()
+        
+        childCoordinator.append(doneSceneCoordinator)
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }

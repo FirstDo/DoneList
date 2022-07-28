@@ -27,17 +27,16 @@ final class DoneEditViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print(self, #function)
+        coordinator?.dismiss(target: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setup()
         bind()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        coordinator?.dismiss(target: self)
     }
     
     private func bind() {

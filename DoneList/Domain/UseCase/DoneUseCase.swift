@@ -9,11 +9,11 @@ import Foundation
 import Combine
 
 protocol DoneUseCaseType {
-    func createNewItem(_ item: Done) -> Completable<DoneStorageError>
-    func fetchAllItem() -> AnyPublisher<[Done], Never>
+    func createNewItem(_ item: Done)
+    var fetchAllItem: AnyPublisher<[Done], Never> { get }
     func fetchItmes(for weeks: [Date]) -> AnyPublisher<[Date: [Done]], Never>
-    func editItem(to item: Done) -> Completable<DoneStorageError>
-    func deleteItem(target item: Done) -> Completable<DoneStorageError>
+    func editItem(to item: Done)
+    func deleteItem(target item: Done)
 }
 
 final class DoneUseCase: DoneUseCaseType {
@@ -24,16 +24,16 @@ final class DoneUseCase: DoneUseCaseType {
         self.repository = repository
     }
     
-    func createNewItem(_ item: Done) -> Completable<DoneStorageError> {
+    func createNewItem(_ item: Done) {
         return repository.createItem(item)
     }
     
-    func fetchAllItem() -> AnyPublisher<[Done], Never> {
-        return repository.readItems()
+    var fetchAllItem: AnyPublisher<[Done], Never> {
+        return repository.readItems
     }
     
     func fetchItmes(for weeks: [Date]) -> AnyPublisher<[Date: [Done]], Never> {
-        return repository.readItems()
+        return repository.readItems
             .map { items in
                 return items.filter { (weeks.first!...weeks.last!) ~= $0.createdAt }
             }
@@ -47,15 +47,14 @@ final class DoneUseCase: DoneUseCaseType {
                 
                 return dicts
             }
-            
             .eraseToAnyPublisher()
     }
     
-    func editItem(to item: Done) -> Completable<DoneStorageError> {
+    func editItem(to item: Done) {
         return repository.updateItem(to: item)
     }
     
-    func deleteItem(target item: Done) -> Completable<DoneStorageError> {
+    func deleteItem(target item: Done) {
         return repository.deleteItem(target: item)
     }
 }

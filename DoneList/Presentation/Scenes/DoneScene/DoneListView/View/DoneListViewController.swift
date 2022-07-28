@@ -27,6 +27,10 @@ final class DoneListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print(self, #function)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,13 +74,13 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showChartView
             .sink { [weak self] date in
-                self?.coordinator?.showDoneChartViewController(date)
+                self?.coordinator?.showChartViewController(with: date)
             }
             .store(in: &cancelBag)
         
         viewModel.showSettingView
             .sink { [weak self] _ in
-                self?.coordinator?.showDoneSettingViewController()
+                self?.coordinator?.showSettingViewController()
             }
             .store(in: &cancelBag)
         
