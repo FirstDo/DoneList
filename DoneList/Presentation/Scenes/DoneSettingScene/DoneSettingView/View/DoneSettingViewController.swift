@@ -57,31 +57,22 @@ final class DoneSettingViewController: UITableViewController {
 
 extension DoneSettingViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.numberOfSections()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 2
-        case 1:
-            return 2
-        default:
-            return 0
-        }
+        return viewModel.numberOfRowsInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch (indexPath.section, indexPath.row) {
-        case (0, 0):
+        switch indexPath.section {
+        case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "push", for: indexPath) as! PushAlarmCell
             let viewModel = PushAlarmCellViewModel(pushAlarmUseCase: PushAlarmUseCase(notificationManager: LocalNotificationManager()), switchState: true, alarmDate: .now)
             cell.bind(viewModel)
             
             return cell
-        case (0, 1):
-            return UITableViewCell()
-        case (1, _):
+        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath) as! DefaultSettingCell
             let viewModel = DefaultSettingCellViewModel(row: indexPath.row)
             cell.bind(viewModel)
@@ -98,16 +89,14 @@ extension DoneSettingViewController {
 extension DoneSettingViewController {
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return indexPath.section == 1 ? indexPath : nil
+        viewModel.willSelectRowAt(indexPath)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch (indexPath.section, indexPath.row) {
-        case (0, _):
-            break
-        case (1, 0):
-            break
-        case (1, 1):
+        switch indexPath.row {
+        case 0:
+            viewModel.didTapAppStoreReviewCell()
+        case 1:
             viewModel.didTapOpenSoureCell()
         default:
             break
