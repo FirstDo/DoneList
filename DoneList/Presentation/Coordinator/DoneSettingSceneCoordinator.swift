@@ -25,11 +25,23 @@ final class DoneSettingSceneCoordinator: Coordinator {
         let doneSettingViewController = dependency.makeDoneSettingViewController()
         doneSettingViewController.coordinator = self
         
-        navigationController?.topViewController?.present(doneSettingViewController, animated: true)
+        let settingNavigationController = UINavigationController(rootViewController: doneSettingViewController)
+        
+        navigationController?.topViewController?.present(settingNavigationController, animated: true)
+        
+        navigationController = settingNavigationController
     }
     
-    func dismiss() {
-        navigationController?.popViewController(animated: true)
+    func dismiss(target view: UIViewController?) {
+        view?.dismiss(animated: true)
+        parentCoordinator?.removeChild(self)
+    }
+    
+    func pop(target viewController: UIViewController?) {
+        if navigationController?.topViewController == viewController {
+            navigationController?.popViewController(animated: true)
+        }
+        
         parentCoordinator?.removeChild(self)
     }
     

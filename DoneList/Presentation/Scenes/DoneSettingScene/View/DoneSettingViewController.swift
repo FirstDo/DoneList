@@ -30,7 +30,7 @@ final class DoneSettingViewController: UITableViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        coordinator?.dismiss()
+        coordinator?.dismiss(target: self)
     }
     
     private func setup() {
