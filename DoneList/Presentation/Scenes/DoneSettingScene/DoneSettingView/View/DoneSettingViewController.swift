@@ -9,8 +9,10 @@ import UIKit
 import Combine
 
 final class DoneSettingViewController: UITableViewController {
+    
     weak var coordinator: DoneSettingSceneCoordinator?
     private let viewModel: DoneSettingViewModelType
+    private var cancellableBag = Set<AnyCancellable>()
     
     init(_ viewModel: DoneSettingViewModelType) {
         self.viewModel = viewModel
@@ -25,12 +27,15 @@ final class DoneSettingViewController: UITableViewController {
         super.viewDidLoad()
         
         setup()
+        bind()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        coordinator?.dismiss(target: self)
+    func bind() {
+        viewModel.showOpenSourceViewController
+            .sink { [weak self] _ in
+                self?.coordinator?.showOpenSourceViewController()
+            }
+            .store(in: &cancellableBag)
     }
     
     private func setup() {
@@ -43,7 +48,8 @@ final class DoneSettingViewController: UITableViewController {
     }
     
     deinit {
-        print(#function)
+        print(self, #function)
+        coordinator?.pop(target: self)
     }
 }
 
@@ -66,7 +72,6 @@ extension DoneSettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "push", for: indexPath) as! PushAlarmCell
@@ -97,11 +102,13 @@ extension DoneSettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
+        switch (indexPath.section, indexPath.row) {
+        case (0, _):
             break
-        case 1:
+        case (1, 0):
             break
+        case (1, 1):
+            viewModel.didTapOpenSoureCell()
         default:
             break
         }

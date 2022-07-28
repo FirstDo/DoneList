@@ -36,12 +36,6 @@ class OpenSourceViewController: UITableViewController {
         bind()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        coordinator?.pop(target: self)
-    }
-    
     private func bind() {
         viewModel.showOpenSourceModalView
             .sink { [weak self] openSource in
@@ -65,6 +59,10 @@ class OpenSourceViewController: UITableViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot)
+    }
+    
+    deinit {
+        print(self, #function)
     }
 }
 

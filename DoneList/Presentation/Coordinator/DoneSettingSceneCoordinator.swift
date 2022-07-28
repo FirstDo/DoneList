@@ -19,22 +19,23 @@ final class DoneSettingSceneCoordinator: Coordinator {
         self.dependency = dependency
     }
     
-    // MARK: DoneSettingViewController
+    // MARK: - DoneSettingViewController
     
     func showDoneSetting() {
         let doneSettingViewController = dependency.makeDoneSettingViewController()
         doneSettingViewController.coordinator = self
         
-        let settingNavigationController = UINavigationController(rootViewController: doneSettingViewController)
-        
-        navigationController?.topViewController?.present(settingNavigationController, animated: true)
-        
-        navigationController = settingNavigationController
+        navigationController?.pushViewController(doneSettingViewController, animated: true)
     }
     
-    func dismiss(target view: UIViewController?) {
-        view?.dismiss(animated: true)
-        parentCoordinator?.removeChild(self)
+    // MARK: - OpenSourceViewController
+    
+    func showOpenSourceViewController() {
+        let viewModel = OpenSoureViewModel(openSources: OpenSource.allOpenSources)
+        let viewController = OpenSourceViewController(viewModel)
+        viewController.coordinator = self
+        
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func pop(target viewController: UIViewController?) {
@@ -46,6 +47,6 @@ final class DoneSettingSceneCoordinator: Coordinator {
     }
     
     deinit {
-        print(#function)
+        print(self, #function)
     }
 }
