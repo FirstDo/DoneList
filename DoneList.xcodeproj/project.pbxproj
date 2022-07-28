@@ -142,6 +142,7 @@
 		948A29B2289252C90055A031 /* DefaultSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCell.swift; sourceTree = "<group>"; };
 		948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCellViewModel.swift; sourceTree = "<group>"; };
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +326,7 @@
 			children = (
 				94272A4A288AAE870010BC10 /* Done.swift */,
 				948A29CF2892A9C20055A031 /* Content.swift */,
+				948A29D82892B8300055A031 /* OpenSource.swift */,
 				94272A63288ACB560010BC10 /* Quote.swift */,
 				94272ABC288BFD460010BC10 /* Category.swift */,
 			);
@@ -557,6 +559,7 @@
 			children = (
 				948A292B289053020055A031 /* View */,
 				948A292A289052FA0055A031 /* ViewModel */,
+				948A29D22892B7680055A031 /* OpenSoureListView */,
 			);
 			path = DoneSettingScene;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				948A292F289055360055A031 /* DoneSettingViewController.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
 				948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */,
+				948A29D92892B8310055A031 /* OpenSource.swift in Sources */,
 				948A29A82891C6C40055A031 /* PushAlarmCell.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
