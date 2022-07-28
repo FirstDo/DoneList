@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9411226D2892FD3D0082DEB8 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */; };
 		941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */; };
 		941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */; };
 		941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
 		941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UITextField.swift"; sourceTree = "<group>"; };
 		941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIButton.swift"; sourceTree = "<group>"; };
 		941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneEditViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9411226B2892FD360082DEB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		941D7D08288C96CA0071C2C7 /* DoneEditView */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +670,7 @@
 		94F36F742892F358003CEFCB /* OpenSourceView */ = {
 			isa = PBXGroup;
 			children = (
+				9411226B2892FD360082DEB8 /* View */,
 				94F36F792892F4D7003CEFCB /* ViewModel */,
 			);
 			path = OpenSourceView;
@@ -813,6 +824,7 @@
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
 				948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */,
 				948A2923289000940055A031 /* LineView.swift in Sources */,
+				9411226D2892FD3D0082DEB8 /* OpenSourceViewController.swift in Sources */,
 				948A299428919A190055A031 /* DoneSettingSceneCoordinator.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
