@@ -1,5 +1,5 @@
 //
-//  OpenSoureViewModel.swift
+//  OpenSourceViewModel.swift
 //  DoneList
 //
 //  Created by dudu on 2022/07/29.
@@ -15,7 +15,7 @@ protocol OpenSourceViewModelOutput {
 
 protocol OpenSourceViewModelType: OpenSourceViewModelInput, OpenSourceViewModelOutput {}
 
-final class OpenSoureViewModel: OpenSourceViewModelType {
+final class OpenSourceViewModel: OpenSourceViewModelType {
     let item: OpenSource
     
     init(item: OpenSource) {

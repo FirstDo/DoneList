@@ -31,7 +31,7 @@ final class DoneSettingSceneCoordinator: Coordinator {
     // MARK: - OpenSourceViewController
     
     func showOpenSourceViewController() {
-        let viewModel = OpenSoureListViewModel(openSources: OpenSource.allOpenSources)
+        let viewModel = OpenSourceListViewModel(openSources: OpenSource.allOpenSources)
         let viewController = OpenSourceListViewController(viewModel)
         viewController.coordinator = self
         

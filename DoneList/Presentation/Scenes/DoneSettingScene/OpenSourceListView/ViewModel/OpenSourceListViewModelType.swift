@@ -7,16 +7,16 @@
 
 import Combine
 
-protocol OpenSoureListViewModelInput {
+protocol OpenSourceListViewModelInput {
     func didTapCell(index: Int)
 }
 protocol OpenSourceListViewModelOutput {
     var items: [OpenSource] { get }
     var showOpenSourceView: PassthroughSubject<OpenSource, Never> { get }
 }
-protocol OpenSourceListViewModelType: OpenSoureListViewModelInput, OpenSourceListViewModelOutput {}
+protocol OpenSourceListViewModelType: OpenSourceListViewModelInput, OpenSourceListViewModelOutput {}
 
-final class OpenSoureListViewModel: OpenSourceListViewModelType {
+final class OpenSourceListViewModel: OpenSourceListViewModelType {
     let items: [OpenSource]
     
     // MARK: - Output
@@ -30,7 +30,7 @@ final class OpenSoureListViewModel: OpenSourceListViewModelType {
 
 // MARK: - Input
 
-extension OpenSoureListViewModel {
+extension OpenSourceListViewModel {
     func didTapCell(index: Int) {
         showOpenSourceView.send(items[index])
     }
