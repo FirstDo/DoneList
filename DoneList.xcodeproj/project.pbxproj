@@ -75,6 +75,7 @@
 		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
 		948A29D72892B7A20055A031 /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */; };
 		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
+		948A29DB2892BB130055A031 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		948A29D62892B7A20055A031 /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
+		948A29DA2892BB130055A031 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -647,6 +649,7 @@
 		948A29D52892B7900055A031 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				948A29DA2892BB130055A031 /* OpenSourceViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
+				948A29DB2892BB130055A031 /* OpenSourceViewController.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,

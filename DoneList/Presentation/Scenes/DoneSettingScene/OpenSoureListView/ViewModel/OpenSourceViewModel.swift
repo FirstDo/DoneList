@@ -11,19 +11,20 @@ protocol OpenSoureViewModelInput {
     func didTapCell(index: Int)
 }
 protocol OpenSoureViewModelOutput {
+    var items: [OpenSource] { get }
     var showOpenSourceModalView: PassthroughSubject<OpenSource, Never> { get }
 }
 protocol OpenSoureViewModelType: OpenSoureViewModelInput, OpenSoureViewModelOutput {}
 
 final class OpenSoureViewModel: OpenSoureViewModelType {
-    private let openSources: [OpenSource]
+    let items: [OpenSource]
     
     // MARK: - Output
     
     let showOpenSourceModalView = PassthroughSubject<OpenSource, Never>()
     
     init(openSources: [OpenSource]) {
-        self.openSources = openSources
+        self.items = openSources
     }
 }
 
@@ -31,6 +32,6 @@ final class OpenSoureViewModel: OpenSoureViewModelType {
 
 extension OpenSoureViewModel {
     func didTapCell(index: Int) {
-        showOpenSourceModalView.send(openSources[index])
+        showOpenSourceModalView.send(items[index])
     }
 }
