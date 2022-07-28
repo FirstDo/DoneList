@@ -52,6 +52,16 @@ class OpenSourceListViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        dataSource = DataSource(tableView: tableView) { tableView, indexPath, item in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            
+            var content = cell.defaultContentConfiguration()
+            content.text = item.name
+            cell.contentConfiguration = content
+            
+            return cell
+        }
     }
     
     private func applySnapshot(_ items: [OpenSource]) {
