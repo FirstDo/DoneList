@@ -27,20 +27,20 @@ final class DoneChartSceneDIContainer {
     // MARK: - ViewController
     
     func makeDoneChartViewController(_ date: Date) -> DoneChartViewController {
-        let viewModel = DoneChartViewModel(doneUseCase: makeDoneUseCase(), targetDate: date)
+        let viewModel = DoneChartViewModel(doneUseCase: doneUseCase, targetDate: date)
         
         return DoneChartViewController(viewModel)
     }
     
     // MARK: - UseCase
     
-    private func makeDoneUseCase() -> DoneUseCaseType {
-        return DoneUseCase(repository: makeDoneRepository())
+    private var doneUseCase: DoneUseCaseType {
+        return DoneUseCase(repository: doneRepository)
     }
     
     // MARK: - Repository
     
-    private func makeDoneRepository() -> DoneRepositoryType {
+    private var doneRepository: DoneRepositoryType {
         return DoneRepository(storage: dependencies.doneStorage)
     }
 }

@@ -38,7 +38,7 @@ final class DoneSceneDIContainer {
     // MARK: - DoneListViewController
     
     func makeDoneListViewController() -> DoneListViewController {
-        let viewModel = DoneListViewModel(doneUseCase: makeDoneUseCase(), fetchQuoteUseCase: makeFetchQuoteUseCase())
+        let viewModel = DoneListViewModel(doneUseCase: doneUseCase, fetchQuoteUseCase: fetchQuoteUseCase)
         
         return DoneListViewController(viewModel)
     }
@@ -54,7 +54,7 @@ final class DoneSceneDIContainer {
     // MARK: - DoneCreateViewController
     
     func makeDoneCreateViewController(_ date: Date) -> DoneCreateViewController {
-        let viewModel = DoneCreateViewModel(doneUseCase: makeDoneUseCase(), date: date)
+        let viewModel = DoneCreateViewModel(doneUseCase: doneUseCase, date: date)
         
         return DoneCreateViewController(viewModel)
     }
@@ -62,28 +62,28 @@ final class DoneSceneDIContainer {
     // MARK: - DoneEditViewController
     
     func makeDoneEditViewController(_ item: Done) -> DoneEditViewController {
-        let viewModel = DoneEditViewModel(doneUseCase: makeDoneUseCase(), done: item)
+        let viewModel = DoneEditViewModel(doneUseCase: doneUseCase, done: item)
         
         return DoneEditViewController(viewModel)
     }
     
     // MARK: - UseCase
     
-    private func makeDoneUseCase() -> DoneUseCaseType {
-        return DoneUseCase(repository: makeDoneRepository())
+    private var doneUseCase: DoneUseCaseType {
+        return DoneUseCase(repository: doneRepository)
     }
     
-    private func makeFetchQuoteUseCase() -> FetchQuoteUseCaseType {
-        return FetchQuoteUsecase(repository: makeQuotesRepository())
+    private var fetchQuoteUseCase: FetchQuoteUseCaseType {
+        return FetchQuoteUsecase(repository: quotesRepository)
     }
     
     // MARK: - Repository
     
-    private func makeDoneRepository() -> DoneRepositoryType {
+    private var doneRepository: DoneRepositoryType {
         return DoneRepository(storage: dependencies.doneStorage)
     }
     
-    private func makeQuotesRepository() -> QuotesRepositoryType {
+    private var quotesRepository: QuotesRepositoryType {
         return QuotesRepository(apiProvider: dependencies.apiProvider)
     }
 }
