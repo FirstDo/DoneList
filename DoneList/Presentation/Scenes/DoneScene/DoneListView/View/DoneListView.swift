@@ -42,6 +42,8 @@ fileprivate enum Const {
 
 final class DoneListView: UIView {
     
+    private let viewModel: DoneListViewModelType
+    
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.spacing = Const.BaseStack.spcaing
@@ -108,22 +110,12 @@ final class DoneListView: UIView {
         return label
     }()
     
-    let doneCollectionView: UICollectionView = {
-        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
+    private(set) lazy var doneCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
+        collectionView.backgroundColor = .systemBackground
+        doneCollectionView.delegate = self
         
-        listConfiguration.trailingSwipeActionsConfigurationProvider = { indexPath in
-            
-            let action = UIContextualAction(style: .destructive, title: "삭제") { _, _, completion in
-                
-                completion(true)
-            }
-            
-            return UISwipeActionsConfiguration(actions: [action])
-        }
-        
-        let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
-        
-        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return collectionView
     }()
     
     let addDoneButton: UIButton = {
@@ -137,14 +129,19 @@ final class DoneListView: UIView {
         return button
     }()
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, Done>
-    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Done>
+    private typealias DataSource = UICollectionViewDiffableDataSource<Int, Done>
+    private typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Done>
     
     private var dataSource: DataSource?
-
-    convenience init() {
-        self.init(frame: .zero)
+    
+    init(_ viewModel: DoneListViewModelType) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setup() {
@@ -185,10 +182,39 @@ final class DoneListView: UIView {
         }
     }
     
+    private func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
+        listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
+        
+        return UICollectionViewCompositionalLayout.list(using: listConfiguration)
+    }
+    
+    private func makeSwipeActions(for indexPath: IndexPath?) -> UISwipeActionsConfiguration? {
+        guard let indexPath = indexPath, let item = dataSource?.itemIdentifier(for: indexPath) else { return nil }
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "삭제") { [weak self] _, _, completion in
+            self?.viewModel.didCellSwipe(target: item)
+            completion(true)
+        }
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
     func applySnapshot(_ items: [Done]) {
         var snapshot = SnapShot()
         snapshot.appendSections([0])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot)
+    }
+}
+
+extension DoneListView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dataSource = dataSource,
+              let item = dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        
+        viewModel.didTapCell(with: item)
     }
 }
