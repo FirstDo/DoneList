@@ -157,6 +157,10 @@ final class DoneListView: UIView {
             $0.edges.equalTo(safeAreaLayoutGuide).inset(Const.BaseStack.inset)
         }
         
+        quoteLabel.snp.makeConstraints {
+            $0.leading.trailing.equalTo(baseStackView).inset(40)
+        }
+        
         doneCollectionView.snp.makeConstraints {
             $0.width.equalToSuperview()
         }
