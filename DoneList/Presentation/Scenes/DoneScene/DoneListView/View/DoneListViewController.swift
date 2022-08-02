@@ -141,7 +141,7 @@ final class DoneListViewController: UIViewController {
     
     private func setupNavigationItem() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "chart.pie.fill"),
+            image: UIImage(systemName: "chart.bar.fill"),
             primaryAction: UIAction { [weak self] _ in
                 self?.viewModel.didTapChartButton()
             }

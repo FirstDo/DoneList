@@ -21,12 +21,10 @@ fileprivate enum Const {
     }
     
     enum YesterDay {
-        static let imageName = "chevron.left.square"
         static let font: UIFont = .preferredFont(forTextStyle: .title2)
     }
     
     enum Tomorrow {
-        static let imageName = "chevron.right.square"
         static let font: UIFont = .preferredFont(forTextStyle: .title2)
     }
     
@@ -36,7 +34,7 @@ fileprivate enum Const {
     }
     
     enum ListTitle {
-        static let text = "✅ Done List"
+        static let text = "Done List"
     }
 }
 
@@ -65,7 +63,7 @@ final class DoneListView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: Const.YesterDay.imageName)
+        configuration.image = UIImage(systemName: "chevron.left.circle")
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
         button.configuration = configuration
         
@@ -76,7 +74,7 @@ final class DoneListView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: Const.Tomorrow.imageName)
+        configuration.image = UIImage(systemName: "chevron.right.circle")
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
         button.configuration = configuration
         
