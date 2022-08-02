@@ -113,7 +113,7 @@ final class DoneListView: UIView {
     private(set) lazy var doneCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
         collectionView.backgroundColor = .systemBackground
-        doneCollectionView.delegate = self
+        collectionView.delegate = self
         
         return collectionView
     }()
