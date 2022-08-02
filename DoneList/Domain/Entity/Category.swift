@@ -16,16 +16,29 @@ struct Category: Hashable {
         self.color = color
     }
     
-    static let empty = Category(name: "plus", color: .systemGray)
+    static let empty = Category(name: "add.circle", color: .systemGray)
     
     static let all: [Category] = [
-        Category(name: "books.vertical.fill", color: .systemRed), // 독서
-        Category(name: "moon.zzz", color: .systemBlue),
-        Category(name: "cross.circle.fill", color: .systemGreen),
-        Category(name: "paintpalette", color: .systemYellow),
-        Category(name: "fork.knife", color: .systemTeal),
-        Category(name: "gift", color: .systemCyan),
-        Category(name: "message.circle", color: .systemMint),
-        Category(name: "rectangle.and.pencil.and.ellipsis", color: .systemBrown),
+        Category(name: "bath"),
+        Category(name: "check"),
+        Category(name: "clean"),
+        Category(name: "coffee"),
+        Category(name: "computer"),
+        Category(name: "dinner"),
+        Category(name: "exercise"),
+        Category(name: "food"),
+        Category(name: "game"),
+        Category(name: "instagram"),
+        Category(name: "kakaotalk"),
+        Category(name: "passport"),
+        Category(name: "phone"),
+        Category(name: "reading"),
+        Category(name: "shopping"),
+        Category(name: "study"),
+        Category(name: "subway"),
+        Category(name: "tv"),
+        Category(name: "work"),
+        Category(name: "yoga"),
+        Category(name: "youtube"),
     ]
 }

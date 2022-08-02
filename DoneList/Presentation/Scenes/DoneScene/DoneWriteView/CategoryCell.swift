@@ -50,7 +50,7 @@ class CategoryCell: UICollectionViewCell {
     }
     
     func setup(with item: Category) {
-        doneImageView.image = UIImage(systemName: item.name)
+        doneImageView.image = UIImage(named: item.name)
         doneImageView.tintColor = item.color
     }
 }

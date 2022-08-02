@@ -123,7 +123,7 @@ final class DoneListView: UIView {
         
         var configuration = UIButton.Configuration.plain()
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Add.font)
-        configuration.image = UIImage(systemName: Const.Add.imageName)
+        configuration.image = UIImage(named: "plus.circle.fill")
         button.configuration = configuration
         
         return button

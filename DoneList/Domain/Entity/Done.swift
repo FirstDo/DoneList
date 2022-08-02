@@ -27,11 +27,11 @@ extension Done {
         let today = Date.now.startOfDay
         
         return [
-            Done(createdAt: today, taskName: "iOS 공부를 했다", category: Category(name: "iphone.homebutton")),
-            Done(createdAt: today.dayAfter, taskName: "유튜브를 봤다", category: Category(name: "play.rectangle.fill")),
-            Done(createdAt: today.dayBefore, taskName: "운동을 했다", category: Category(name: "heart.fill")),
-            Done(createdAt: today, taskName: "게임을 했다!!", category: Category(name: "gamecontroller.fill")),
-            Done(createdAt: today, taskName: "회사에 갔다!! 그리고 매우매우 매우 매우 긴 레이블입니다", category: Category(name: "building.2"))
+            Done(createdAt: today, taskName: "iOS 공부를 했다", category: Category(name: "study")),
+            Done(createdAt: today.dayAfter, taskName: "유튜브를 봤다", category: Category(name: "youtube")),
+            Done(createdAt: today.dayBefore, taskName: "운동을 했다", category: Category(name: "exercise")),
+            Done(createdAt: today, taskName: "게임을 했다!!", category: Category(name: "game")),
+            Done(createdAt: today, taskName: "회사에 갔다!! 그리고 매우매우 매우 매우 긴 레이블입니다", category: Category(name: "work"))
         ]
     }
 }
