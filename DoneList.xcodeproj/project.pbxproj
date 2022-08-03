@@ -77,6 +77,7 @@
 		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
 		948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */; };
 		94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D52899D2FF0038BE68 /* UILabel+.swift */; };
+		94BE34D8289AAD440038BE68 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D7289AAD440038BE68 /* UIColor+.swift */; };
 		94F36F7B2892F4EF003CEFCB /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
 		948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewController.swift; sourceTree = "<group>"; };
 		94BE34D52899D2FF0038BE68 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		94BE34D7289AAD440038BE68 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -475,6 +477,7 @@
 				94BE34D52899D2FF0038BE68 /* UILabel+.swift */,
 				94272AA2288B052C0010BC10 /* UIView+.swift */,
 				948A2924289001570055A031 /* Date+.swift */,
+				94BE34D7289AAD440038BE68 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
 				941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */,
 				94272A95288AFB860010BC10 /* DoneCell.swift in Sources */,
+				94BE34D8289AAD440038BE68 /* UIColor+.swift in Sources */,
 				94272ABD288BFD460010BC10 /* Category.swift in Sources */,
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */,
