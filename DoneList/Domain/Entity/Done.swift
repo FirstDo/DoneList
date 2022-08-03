@@ -27,11 +27,27 @@ extension Done {
         let today = Date.now.startOfDay
         
         return [
-            Done(createdAt: today, taskName: "iOS 공부를 했다", category: Category(name: "study")),
-            Done(createdAt: today.dayAfter, taskName: "유튜브를 봤다", category: Category(name: "youtube")),
-            Done(createdAt: today.dayBefore, taskName: "운동을 했다", category: Category(name: "exercise")),
-            Done(createdAt: today, taskName: "게임을 했다!!", category: Category(name: "game")),
-            Done(createdAt: today, taskName: "회사에 갔다!! 그리고 매우매우 매우 매우 긴 레이블입니다", category: Category(name: "work"))
+            Done(createdAt: today, taskName: "샤워", category: Category(name: "bath")),
+            Done(createdAt: today, taskName: "체크", category: Category(name: "check")),
+            Done(createdAt: today, taskName: "청소", category: Category(name: "clean")),
+            Done(createdAt: today, taskName: "커피", category: Category(name: "coffee")),
+            Done(createdAt: today, taskName: "컴퓨터", category: Category(name: "computer")),
+            Done(createdAt: today, taskName: "식사", category: Category(name: "dinner")),
+            Done(createdAt: today, taskName: "운동", category: Category(name: "exercise")),
+            Done(createdAt: today, taskName: "음식", category: Category(name: "food")),
+            Done(createdAt: today, taskName: "게임", category: Category(name: "game")),
+            Done(createdAt: today, taskName: "인스타", category: Category(name: "instagram")),
+            Done(createdAt: today, taskName: "카카오톡", category: Category(name: "kakaotalk")),
+            Done(createdAt: today, taskName: "여행", category: Category(name: "passport")),
+            Done(createdAt: today, taskName: "폰", category: Category(name: "phone")),
+            Done(createdAt: today, taskName: "독서", category: Category(name: "reading")),
+            Done(createdAt: today, taskName: "쇼핑", category: Category(name: "shopping")),
+            Done(createdAt: today, taskName: "스터디", category: Category(name: "study")),
+            Done(createdAt: today, taskName: "지하철", category: Category(name: "subway")),
+            Done(createdAt: today, taskName: "티비", category: Category(name: "tv")),
+            Done(createdAt: today, taskName: "업무", category: Category(name: "work")),
+            Done(createdAt: today, taskName: "요가", category: Category(name: "yoga")),
+            Done(createdAt: today, taskName: "유튜브", category: Category(name: "youtube"))
         ]
     }
 }

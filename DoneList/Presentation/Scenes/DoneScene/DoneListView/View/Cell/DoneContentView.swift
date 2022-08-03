@@ -13,21 +13,18 @@ final class DoneContentView: UIView, UIContentView {
         let stackview = UIStackView()
         stackview.alignment = .center
         stackview.spacing = 20
-        stackview.backgroundColor = .systemGray5
         stackview.layer.cornerRadius = 8
-        stackview.layer.borderColor = UIColor.systemGray.cgColor
-        stackview.layer.borderWidth = 2.0
         
         stackview.isLayoutMarginsRelativeArrangement = true
-        stackview.directionalLayoutMargins = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
+        stackview.directionalLayoutMargins = .init(top: 10, leading: 5, bottom: 10, trailing: 5)
         
         return stackview
     }()
     
     private let doneTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .title3)
-        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .white
         
         return label
     }()
@@ -67,7 +64,7 @@ final class DoneContentView: UIView, UIContentView {
         baseStackView.addArrangedSubviews(doneImageView, doneTitleLabel)
         
         baseStackView.snp.makeConstraints {
-            $0.edges.equalTo(self.safeAreaLayoutGuide).inset(5)
+            $0.edges.equalTo(self.safeAreaLayoutGuide).inset(3)
         }
         
         doneImageView.snp.makeConstraints {
@@ -80,6 +77,6 @@ final class DoneContentView: UIView, UIContentView {
         
         doneTitleLabel.text = doneConfiguration.title
         doneImageView.image = doneConfiguration.image
-        doneImageView.tintColor = doneConfiguration.tintColor
+        baseStackView.backgroundColor = doneConfiguration.themeColor
     }
 }

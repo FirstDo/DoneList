@@ -11,7 +11,7 @@ struct Category: Hashable {
     let name: String
     let color: UIColor
     
-    init(name: String, color: UIColor = .tintColor) {
+    init(name: String, color: UIColor = .randomColor) {
         self.name = name
         self.color = color
     }
@@ -39,6 +39,6 @@ struct Category: Hashable {
         Category(name: "tv"),
         Category(name: "work"),
         Category(name: "yoga"),
-        Category(name: "youtube"),
+        Category(name: "youtube")
     ]
 }
