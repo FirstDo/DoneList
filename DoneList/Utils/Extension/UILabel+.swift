@@ -12,9 +12,11 @@ extension UILabel {
         self.text = ""
 
         for (index, letter) in text.enumerated() {
-            Timer.scheduledTimer(withTimeInterval: delay * Double(index), repeats: false) { timer in
-                self.text?.append(letter)
+            let timer = Timer(timeInterval: delay * Double(index), repeats: false) { [weak self] timer in
+                self?.text?.append(letter)
             }
+            
+            RunLoop.current.add(timer, forMode: .common)
         }
     }
 }
