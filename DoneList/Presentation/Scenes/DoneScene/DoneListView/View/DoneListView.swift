@@ -63,6 +63,7 @@ final class DoneListView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
+        configuration.baseForegroundColor = .label
         configuration.image = UIImage(systemName: "chevron.left.circle")
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
         button.configuration = configuration
@@ -74,6 +75,7 @@ final class DoneListView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
+        configuration.baseForegroundColor = .label
         configuration.image = UIImage(systemName: "chevron.right.circle")
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
         button.configuration = configuration

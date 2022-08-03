@@ -148,11 +148,15 @@ final class DoneListViewController: UIViewController {
             }
         )
         
+        navigationItem.leftBarButtonItem?.tintColor = .label
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gearshape.fill"),
             primaryAction: UIAction { [weak self] _ in
                 self?.viewModel.didTapSettingButton()
             }
         )
+        
+        navigationItem.rightBarButtonItem?.tintColor = .label
     }
 }
