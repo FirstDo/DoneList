@@ -186,6 +186,7 @@ final class DoneListView: UIView {
     
     private func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
+        listConfiguration.showsSeparators = false
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
         
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)

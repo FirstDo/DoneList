@@ -7,23 +7,19 @@
 
 import UIKit
 
-fileprivate enum Const {
-    enum Image {
-        static let size: CGFloat = 30
-    }
-    
-    enum BaseStack {
-        static let spacing: CGFloat = 20
-        static let inset: CGFloat = 10
-    }
-}
-
 final class DoneContentView: UIView, UIContentView {
     
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.alignment = .center
-        stackview.spacing = Const.BaseStack.spacing
+        stackview.spacing = 20
+        stackview.backgroundColor = .systemGray5
+        stackview.layer.cornerRadius = 8
+        stackview.layer.borderColor = UIColor.systemGray.cgColor
+        stackview.layer.borderWidth = 2.0
+        
+        stackview.isLayoutMarginsRelativeArrangement = true
+        stackview.directionalLayoutMargins = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
         
         return stackview
     }()
@@ -67,14 +63,15 @@ final class DoneContentView: UIView, UIContentView {
     
     private func setupLayout() {
         self.addSubview(baseStackView)
+        
         baseStackView.addArrangedSubviews(doneImageView, doneTitleLabel)
         
         baseStackView.snp.makeConstraints {
-            $0.edges.equalTo(self.safeAreaLayoutGuide).inset(Const.BaseStack.inset)
+            $0.edges.equalTo(self.safeAreaLayoutGuide).inset(5)
         }
         
         doneImageView.snp.makeConstraints {
-            $0.width.height.equalTo(Const.Image.size)
+            $0.width.height.equalTo(30)
         }
     }
     

@@ -21,6 +21,6 @@ final class DoneCell: UICollectionViewListCell {
         configuration.tintColor = done.category.color
         
         contentConfiguration = configuration
-        backgroundConfiguration = .listAccompaniedSidebarCell()
+        backgroundConfiguration = .clear()
     }
 }
