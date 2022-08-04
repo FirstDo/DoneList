@@ -106,6 +106,10 @@ extension DoneListViewModel {
     }
     
     func didTapTomorrowButton() {
+        guard currentDate.dayAfter <= Date.now.startOfDay else {
+            return showErrorAlert.send("미래의 날짜는 볼 수 없어요")
+        }
+        
         currentDate = currentDate.dayAfter
     }
     

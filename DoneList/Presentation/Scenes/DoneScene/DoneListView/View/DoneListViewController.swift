@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 import SnapKit
+import ToastPresenter
 
 final class DoneListViewController: UIViewController {
     
@@ -61,7 +62,11 @@ final class DoneListViewController: UIViewController {
         
         viewModel.showErrorAlert
             .sink { [weak self] message in
-                // TODO: Show Alert
+                guard let self = self else { return }
+                
+                ToastView(message: message)
+                    .setImage(UIImage(systemName: "xmark.circle.fill"))
+                    .show(in: self.view, position: .top(constant: .zero), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)
         
