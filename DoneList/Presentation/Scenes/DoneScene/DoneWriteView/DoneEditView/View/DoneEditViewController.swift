@@ -78,6 +78,12 @@ final class DoneEditViewController: UIViewController {
             }
             .store(in: &cancelBag)
         
+        viewModel.viewTitle
+            .sink { [weak self] title in
+                self?.mainView.titleLabel.text = title
+            }
+            .store(in: &cancelBag)
+        
         mainView.doneButton.tapPublisher
             .sink { [weak self] _ in
                 self?.viewModel.didTapEditButton()

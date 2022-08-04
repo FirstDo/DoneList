@@ -20,6 +20,7 @@ protocol DoneEditViewModelOutput {
     var category: CurrentValueSubject<Category, Never> { get }
     var doneButtonState: AnyPublisher<Bool, Never> { get }
     var doneButtonTitle: AnyPublisher<String, Never> { get }
+    var viewTitle: AnyPublisher<String, Never> { get }
     
     var dismissView: PassthroughSubject<Void, Never> { get }
 }
@@ -48,6 +49,10 @@ final class DoneEditViewModel: DoneEditViewModelType {
     
     var doneButtonTitle: AnyPublisher<String, Never> {
         return Just("수정하기").eraseToAnyPublisher()
+    }
+    
+    var viewTitle: AnyPublisher<String, Never> {
+        return Just("한 일 수정하기").eraseToAnyPublisher()
     }
     
     let taskTitle: CurrentValueSubject<String, Never>

@@ -24,7 +24,7 @@ final class DoneWriteView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "한 일 추가하기"
+        label.font = .preferredFont(forTextStyle: .title3)
         
         return label
     }()
@@ -34,6 +34,8 @@ final class DoneWriteView: UIView {
         stackview.spacing = 20
         stackview.layer.cornerRadius = 10
         stackview.backgroundColor = .systemBackground
+        stackview.isLayoutMarginsRelativeArrangement = true
+        stackview.directionalLayoutMargins = .init(top: 5, leading: 5, bottom: 5, trailing: .zero)
         
         return stackview
     }()
@@ -101,11 +103,11 @@ final class DoneWriteView: UIView {
         }
         
         doneImageView.snp.makeConstraints {
-            $0.width.height.equalTo(50)
+            $0.width.height.equalTo(40)
         }
         
         doneCollectionView.snp.makeConstraints {
-            $0.height.equalTo(200)
+            $0.height.equalTo(baseStackView).multipliedBy(0.45)
         }
     }
     
