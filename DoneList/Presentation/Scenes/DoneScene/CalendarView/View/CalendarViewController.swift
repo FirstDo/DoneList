@@ -10,6 +10,7 @@ import Combine
 
 import SnapKit
 import FSCalendar
+import ToastPresenter
 
 class CalendarViewController: UIViewController {
 
@@ -71,6 +72,16 @@ class CalendarViewController: UIViewController {
                 self?.calendarView.select(date)
             }
             .store(in: &cancelBag)
+        
+        viewModel.showErrorAlert
+            .sink { [weak self] message in
+                guard let self = self else { return }
+                
+                ToastView(message: message)
+                    .setImage(UIImage(systemName: "xmark.circle.fill"))
+                    .show(in: self.view, position: .center(constant: .zero), holdingTime: 1, fadeAnimationDuration: 1)
+            }
+            .store(in: &cancelBag)
     }
     
     private func setup() {
@@ -104,6 +115,10 @@ extension CalendarViewController: FSCalendarDataSource {
 }
 
 extension CalendarViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+        return viewModel.willTapCell(date)
+    }
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         viewModel.didTapCell(date.startOfDay)
     }
