@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class CategoryCell: UICollectionViewCell {
+final class CategoryCell: UICollectionViewCell {
     private let doneImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -33,20 +33,14 @@ class CategoryCell: UICollectionViewCell {
     
     private func setup() {
         setupLayout()
-        setupView()
     }
 
     private func setupLayout() {
         contentView.addSubview(doneImageView)
         
         doneImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalToSuperview().inset(20)
         }
-    }
-    
-    private func setupView() {
-        contentView.layer.borderWidth = 1.0
-        contentView.layer.cornerRadius = 10
     }
     
     func setup(with item: Category) {
