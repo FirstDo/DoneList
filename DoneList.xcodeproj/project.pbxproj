@@ -78,6 +78,7 @@
 		948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */; };
 		94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D52899D2FF0038BE68 /* UILabel+.swift */; };
 		94BE34D8289AAD440038BE68 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D7289AAD440038BE68 /* UIColor+.swift */; };
+		94F067FE289B9CBC00982832 /* ToastPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 94F067FD289B9CBC00982832 /* ToastPresenter */; };
 		94F36F7B2892F4EF003CEFCB /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 			files = (
 				94272A9B288AFDF20010BC10 /* SnapKit in Frameworks */,
 				94272AA6288B31E50010BC10 /* FSCalendar in Frameworks */,
+				94F067FE289B9CBC00982832 /* ToastPresenter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +708,7 @@
 			packageProductDependencies = (
 				94272A9A288AFDF20010BC10 /* SnapKit */,
 				94272AA5288B31E50010BC10 /* FSCalendar */,
+				94F067FD289B9CBC00982832 /* ToastPresenter */,
 			);
 			productName = DoneList;
 			productReference = 94272A25288AA0480010BC10 /* DoneList.app */;
@@ -738,6 +741,7 @@
 			packageReferences = (
 				94272A99288AFDF20010BC10 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				94272AA4288B31E50010BC10 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				94F067FC289B9CBC00982832 /* XCRemoteSwiftPackageReference "ToastPresenter" */,
 			);
 			productRefGroup = 94272A26288AA0480010BC10 /* Products */;
 			projectDirPath = "";
@@ -1058,6 +1062,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		94F067FC289B9CBC00982832 /* XCRemoteSwiftPackageReference "ToastPresenter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FirstDo/ToastPresenter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1070,6 +1082,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94272AA4288B31E50010BC10 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		94F067FD289B9CBC00982832 /* ToastPresenter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94F067FC289B9CBC00982832 /* XCRemoteSwiftPackageReference "ToastPresenter" */;
+			productName = ToastPresenter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
