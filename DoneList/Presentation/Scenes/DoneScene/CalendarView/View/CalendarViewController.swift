@@ -28,13 +28,15 @@ class CalendarViewController: UIViewController {
         calendar.appearance.headerTitleColor = .label
         calendar.appearance.headerTitleFont = .preferredFont(forTextStyle: .title1)
         
+        calendar.appearance.titleTodayColor = .systemRed
+        calendar.appearance.titleDefaultColor = .label
         calendar.appearance.titleWeekendColor = .systemGray
         calendar.appearance.weekdayTextColor = .label
         
+        calendar.appearance.eventSelectionColor = .systemRed
         calendar.appearance.eventDefaultColor = .systemRed
         calendar.appearance.eventOffset = CGPoint(x: .zero, y: 5)
         calendar.appearance.todayColor = .clear
-        calendar.appearance.titleTodayColor = .systemRed
         
         return calendar
     }()
