@@ -55,14 +55,15 @@ class OpenSourceListViewController: UITableViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         
         dataSource = DataSource(tableView: tableView) { tableView, indexPath, item in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
             
             var content = cell.defaultContentConfiguration()
             content.text = item.name
             cell.contentConfiguration = content
+            cell.accessoryType = .disclosureIndicator
             
             return cell
         }

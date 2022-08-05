@@ -48,8 +48,8 @@ final class SettingViewController: UITableViewController {
     }
     
     private func setupTableView() {
-        tableView.register(PushAlarmCell.self, forCellReuseIdentifier: "push")
-        tableView.register(DefaultSettingCell.self, forCellReuseIdentifier: "default")
+        tableView.register(PushAlarmCell.self, forCellReuseIdentifier: PushAlarmCell.identifier)
+        tableView.register(DefaultSettingCell.self, forCellReuseIdentifier: DefaultSettingCell.identifier)
     }
 }
 
@@ -67,13 +67,19 @@ extension SettingViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "push", for: indexPath) as! PushAlarmCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PushAlarmCell.identifier, for: indexPath) as? PushAlarmCell else {
+                return UITableViewCell()
+            }
+            
             let viewModel = PushAlarmCellViewModel(pushAlarmUseCase: PushAlarmUseCase(notificationManager: LocalNotificationManager()), switchState: true, alarmDate: .now)
             cell.bind(viewModel)
             
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath) as! DefaultSettingCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultSettingCell.identifier, for: indexPath) as? DefaultSettingCell else {
+                return UITableViewCell()
+            }
+            
             let viewModel = DefaultSettingCellViewModel(row: indexPath.row)
             cell.bind(viewModel)
             
