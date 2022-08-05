@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 import SnapKit
+import ToastPresenter
 
 final class ChartViewController: UIViewController {
     
@@ -56,6 +57,16 @@ final class ChartViewController: UIViewController {
             .sink { [weak self] values in
                 self?.mainView.lineChartView.setup(with: values)
                 self?.mainView.lineChartView.setNeedsDisplay()
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.showErrorAlert
+            .sink { [weak self] message in
+                guard let self = self else { return }
+                
+                ToastView(message: message)
+                    .setImage(UIImage(systemName: "xmark.circle.fill"))
+                    .show(in: self.view, position: .bottom(constant: 20), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)
         

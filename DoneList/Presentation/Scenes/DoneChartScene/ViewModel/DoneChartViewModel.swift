@@ -18,6 +18,8 @@ protocol DoneChartViewModelOutput {
     var dateTitle: AnyPublisher<String, Never> { get }
     var weekIndexTitle: AnyPublisher<[String], Never> { get }
     var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> { get }
+    
+    var showErrorAlert: PassthroughSubject<String, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
 }
 
@@ -68,6 +70,8 @@ final class DoneChartViewModel: DoneChartViewModelType {
             .eraseToAnyPublisher()
     }
     
+    let showErrorAlert = PassthroughSubject<String, Never>()
+    
     let dismissView = PassthroughSubject<Void, Never>()
     
     init(doneUseCase: DoneUseCaseType, targetDate: Date) {
@@ -84,6 +88,11 @@ extension DoneChartViewModel {
     }
     
     func didTapTomorrowButton() {
+        guard targetDate.dayAfter <= Date.now.startOfDay else {
+            return showErrorAlert.send("미래의 날짜는 선택할 수 없어요")
+        }
+        
+        
         targetDate.addTimeInterval(86400 * 7)
     }
     
