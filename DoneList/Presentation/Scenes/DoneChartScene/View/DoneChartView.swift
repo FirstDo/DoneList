@@ -53,6 +53,7 @@ final class DoneChartView: UIView {
         configuration.image = UIImage(systemName: Const.Close.imageName)
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Close.font)
         button.configuration = configuration
+        button.tintColor = .systemRed
         
         return button
     }()
@@ -72,6 +73,7 @@ final class DoneChartView: UIView {
         configuration.image = UIImage(systemName: Const.YesterDay.imageName)
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
         button.configuration = configuration
+        button.tintColor = .label
         
         return button
     }()
@@ -83,6 +85,7 @@ final class DoneChartView: UIView {
         configuration.image = UIImage(systemName: Const.Tomorrow.imageName)
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
         button.configuration = configuration
+        button.tintColor = .label
         
         return button
     }()
@@ -127,8 +130,6 @@ final class DoneChartView: UIView {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
         }
-        
-        lineChartView.backgroundColor = .systemGray6
         
         lineChartView.snp.makeConstraints {
             $0.width.height.equalTo(snp.width).inset(20)

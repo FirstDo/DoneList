@@ -21,42 +21,49 @@ final class WeekIndexView: UIView {
     
     private let mondayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let tuesdayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let wednesdayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let thursdayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let fridayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let saturdayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
     private let sundayLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()

@@ -13,6 +13,8 @@ final class LineChartView: UIView {
     private let baseStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
+        stackView.backgroundColor = .systemGray5
+        stackView.layer.cornerRadius = 20
         
         return stackView
     }()
@@ -52,7 +54,7 @@ final class LineChartView: UIView {
             baseStackView.addArrangedSubviews(lineView)
         }
     }
-    
+
     func setup(with values: [(taskCount: Int, totalTaskCount: Int)]) {
         zip(lineViews, values).forEach { view, count in
             view.setup(count.taskCount, count.totalTaskCount)
