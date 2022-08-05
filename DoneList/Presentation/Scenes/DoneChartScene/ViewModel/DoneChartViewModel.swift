@@ -92,7 +92,6 @@ extension DoneChartViewModel {
             return showErrorAlert.send("미래의 날짜는 선택할 수 없어요")
         }
         
-        
         targetDate.addTimeInterval(86400 * 7)
     }
     

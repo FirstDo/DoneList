@@ -40,7 +40,7 @@ final class LineView: UIView {
         
         guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
 
-        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
+        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 3)
         let graphHeight = frame.height * (1 - percentage) - 40
         
         countLabel.snp.makeConstraints {
@@ -53,10 +53,16 @@ final class LineView: UIView {
     
     override func draw(_ rect: CGRect) {
         guard let taskCount = taskCount, let totalTaskCount = totalTaskCount else { return }
-        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 1)
+        
+        let percentage = CGFloat(taskCount) / CGFloat(totalTaskCount + 3)
         
         if let graphLayer = graphLayer {
             graphLayer.removeFromSuperlayer()
+        }
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { [weak self] in
+            self?.countLabel.isHidden = false
         }
         
         graphLayer = CAShapeLayer()
@@ -90,10 +96,13 @@ final class LineView: UIView {
         graphLayer.add(animation, forKey: "path")
         
         layer.addSublayer(graphLayer)
+        
+        CATransaction.commit()
     }
     
     func setup(_ taskCount: Int, _ totalTaskCount: Int) {
         self.taskCount = taskCount
         self.totalTaskCount = totalTaskCount
+        self.countLabel.isHidden = true
     }
 }
