@@ -79,6 +79,7 @@
 		94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D52899D2FF0038BE68 /* UILabel+.swift */; };
 		94BE34D8289AAD440038BE68 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D7289AAD440038BE68 /* UIColor+.swift */; };
 		94F067FE289B9CBC00982832 /* ToastPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 94F067FD289B9CBC00982832 /* ToastPresenter */; };
+		94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F067FF289D9AA200982832 /* UITableViewCell+.swift */; };
 		94F36F7B2892F4EF003CEFCB /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +155,7 @@
 		948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewController.swift; sourceTree = "<group>"; };
 		94BE34D52899D2FF0038BE68 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		94BE34D7289AAD440038BE68 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		94F067FF289D9AA200982832 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -475,6 +477,7 @@
 		94272A96288AFD250010BC10 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				94F067FF289D9AA200982832 /* UITableViewCell+.swift */,
 				94272A97288AFD3E0010BC10 /* UIStackView+.swift */,
 				94BE34D52899D2FF0038BE68 /* UILabel+.swift */,
 				94272AA2288B052C0010BC10 /* UIView+.swift */,
@@ -826,6 +829,7 @@
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
+				94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */,
 				948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */,
 				948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */,
 				948A2992289199BB0055A031 /* SettingSceneDIContainer.swift in Sources */,
