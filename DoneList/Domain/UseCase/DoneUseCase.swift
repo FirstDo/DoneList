@@ -11,6 +11,7 @@ import Combine
 protocol DoneUseCaseType {
     func createNewItem(_ item: Done)
     var fetchAllItem: AnyPublisher<[Done], Never> { get }
+    func fetchItems(from startDate: Date, to endDate: Date) -> AnyPublisher<[Date: Bool], Never>
     func fetchItmes(for weeks: [Date]) -> AnyPublisher<[Date: [Done]], Never>
     func editItem(to item: Done)
     func deleteItem(target item: Done)
@@ -30,6 +31,23 @@ final class DoneUseCase: DoneUseCaseType {
     
     var fetchAllItem: AnyPublisher<[Done], Never> {
         return repository.readItems
+    }
+    
+    func fetchItems(from startDate: Date, to endDate: Date) -> AnyPublisher<[Date: Bool], Never> {
+        return repository.readItems
+            .map { items in
+                return items.filter { (startDate...endDate) ~= $0.createdAt }
+            }
+            .map { items in
+                var dicts = [Date: Bool]()
+                
+                items.forEach { item in
+                    dicts[item.createdAt.startOfDay] = true
+                }
+                
+                return dicts
+            }
+            .eraseToAnyPublisher()
     }
     
     func fetchItmes(for weeks: [Date]) -> AnyPublisher<[Date: [Done]], Never> {

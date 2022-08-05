@@ -25,6 +25,8 @@ protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput 
 
 final class CalendarViewModel: CalendarViewModelType {
     
+    private var event: [Date: Bool] = [:]
+    private let doneUseCase: DoneUseCaseType
     private let changedTargetDate: (Date) -> ()
     private var cancelBag = Set<AnyCancellable>()
     
@@ -35,12 +37,19 @@ final class CalendarViewModel: CalendarViewModelType {
     let showErrorAlert = PassthroughSubject<String, Never>()
     
     func numberOfEvent(_ date: Date) -> Int {
-        return 1
+        return event[date.startOfDay] == true ? 1 : 0
     }
     
-    init(date: Date, changedTargetDate: @escaping (Date) -> ()) {
+    init(doneUseCase: DoneUseCaseType, date: Date, changedTargetDate: @escaping (Date) -> ()) {
+        self.doneUseCase = doneUseCase
         self.changedTargetDate = changedTargetDate
         self.selectedDate = CurrentValueSubject<Date, Never>(date)
+        
+        doneUseCase.fetchItems(from: date.startOfMonth, to: date.endOfMonth)
+            .sink { [weak self] items in
+                self?.event = items
+            }
+            .store(in: &cancelBag)
     }
 }
 

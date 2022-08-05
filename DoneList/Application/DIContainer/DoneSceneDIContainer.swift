@@ -46,7 +46,7 @@ final class DoneSceneDIContainer {
     // MARK: - CalendarViewController
     
     func makeCalendarViewController(_ date: Date, _ changedTargetDate: @escaping (Date) -> ()) -> CalendarViewController {
-        let viewModel = CalendarViewModel(date: date, changedTargetDate: changedTargetDate)
+        let viewModel = CalendarViewModel(doneUseCase: doneUseCase, date: date, changedTargetDate: changedTargetDate)
         
         return CalendarViewController(viewModel)
     }
