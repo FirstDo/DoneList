@@ -33,7 +33,7 @@ final class DoneChartViewModel: DoneChartViewModelType {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = .current
-        formatter.dateFormat = "MM.dd"
+        formatter.dateFormat = "M.d"
         
         return formatter
     }()
@@ -45,7 +45,7 @@ final class DoneChartViewModel: DoneChartViewModelType {
             .map { date in
                 date.findWeeks
             }
-            .map { self.dateFormatter.string(from: $0.first!) + "~" + self.dateFormatter.string(from: $0.last!) }
+            .map { self.dateFormatter.string(from: $0.first!) + " ~ " + self.dateFormatter.string(from: $0.last!) }
             .eraseToAnyPublisher()
     }
     
