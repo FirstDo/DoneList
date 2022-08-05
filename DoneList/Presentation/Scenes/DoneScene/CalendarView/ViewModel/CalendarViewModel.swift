@@ -11,12 +11,14 @@ import Foundation
 protocol CalendarViewModelInput {
     func didTapCell(_ date: Date)
     func willTapCell(_ date: Date) -> Bool
+    func didSwipeCalendar(_ date: Date)
 }
 
 protocol CalendarViewModelOutput {
     var selectedDate: CurrentValueSubject<Date, Never> { get }
     var showErrorAlert: PassthroughSubject<String, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
+    var reloadCalendar: PassthroughSubject<Void, Never> { get }
     
     func numberOfEvent(_ date: Date) -> Int
 }
@@ -26,6 +28,7 @@ protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput 
 final class CalendarViewModel: CalendarViewModelType {
     
     private var event: [Date: Bool] = [:]
+    private let currentPageDate: CurrentValueSubject<Date, Never>
     private let doneUseCase: DoneUseCaseType
     private let changedTargetDate: (Date) -> ()
     private var cancelBag = Set<AnyCancellable>()
@@ -35,6 +38,7 @@ final class CalendarViewModel: CalendarViewModelType {
     let selectedDate: CurrentValueSubject<Date, Never>
     let dismissView = PassthroughSubject<Void, Never>()
     let showErrorAlert = PassthroughSubject<String, Never>()
+    let reloadCalendar = PassthroughSubject<Void, Never>()
     
     func numberOfEvent(_ date: Date) -> Int {
         return event[date.startOfDay] == true ? 1 : 0
@@ -44,12 +48,16 @@ final class CalendarViewModel: CalendarViewModelType {
         self.doneUseCase = doneUseCase
         self.changedTargetDate = changedTargetDate
         self.selectedDate = CurrentValueSubject<Date, Never>(date)
+        self.currentPageDate = CurrentValueSubject<Date, Never>(date)
         
-        doneUseCase.fetchItems(from: date.startOfMonth, to: date.endOfMonth)
-            .sink { [weak self] items in
-                self?.event = items
-            }
-            .store(in: &cancelBag)
+        currentPageDate.flatMap { date in
+            return doneUseCase.fetchItems(from: date.startOfMonth, to: date.endOfMonth)
+        }
+        .sink { [weak self] items in
+            self?.event = items
+            self?.reloadCalendar.send()
+        }
+        .store(in: &cancelBag)
     }
 }
 
@@ -68,5 +76,9 @@ extension CalendarViewModel {
         }
         
         return true
+    }
+    
+    func didSwipeCalendar(_ date: Date) {
+        currentPageDate.send(date)
     }
 }

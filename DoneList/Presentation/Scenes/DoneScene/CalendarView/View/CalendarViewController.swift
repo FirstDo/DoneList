@@ -84,6 +84,12 @@ class CalendarViewController: UIViewController {
                     .show(in: self.view, position: .center(constant: .zero), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)
+        
+        viewModel.reloadCalendar
+            .sink { [weak self] _  in
+                self?.calendarView.reloadData()
+            }
+            .store(in: &cancelBag)
     }
     
     private func setup() {
@@ -117,6 +123,10 @@ extension CalendarViewController: FSCalendarDataSource {
 }
 
 extension CalendarViewController: FSCalendarDelegate {
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+        viewModel.didSwipeCalendar(calendar.currentPage.dayAfter)
+    }
+    
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
         return viewModel.willTapCell(date)
     }
