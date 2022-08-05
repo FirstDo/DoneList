@@ -88,7 +88,7 @@ extension DoneChartViewModel {
     }
     
     func didTapTomorrowButton() {
-        guard targetDate.dayAfter <= Date.now.startOfDay else {
+        guard let lastDayOfWeek = targetDate.findWeeks.last, lastDayOfWeek <= Date.now.startOfDay else {
             return showErrorAlert.send("미래의 날짜는 선택할 수 없어요")
         }
         
