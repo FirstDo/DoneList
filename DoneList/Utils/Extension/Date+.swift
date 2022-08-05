@@ -20,6 +20,15 @@ extension Date {
         return Date(timeInterval: 86_400, since: startOfDay)
     }
     
+    var startOfMonth: Date {
+        let components = Calendar.current.dateComponents([.year, .month], from: self.startOfDay)
+        return Calendar.current.date(from: components) ?? .now
+    }
+    
+    var endOfMonth: Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth) ?? .now
+    }
+    
     var findWeeks: [Date] {
         let weekIndex = Calendar.current.dateComponents([.weekday], from: startOfDay).weekday!
         let interval = Double((weekIndex + 7 - 2) % 7)
