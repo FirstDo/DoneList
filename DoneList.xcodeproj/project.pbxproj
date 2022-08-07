@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9408675B289FE6A8009719C4 /* OpenSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408675A289FE6A8009719C4 /* OpenSourceCell.swift */; };
 		9408675D289FE855009719C4 /* AppStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408675C289FE855009719C4 /* AppStoreCell.swift */; };
+		9408675F289FEEA4009719C4 /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408675E289FEEA4009719C4 /* FontCell.swift */; };
 		94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175073289FBAAA000EE6F5 /* SettingView.swift */; };
 		94175078289FC5AC000EE6F5 /* OpenSourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */; };
 		9417507A289FC5BC000EE6F5 /* OpenSourceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		9408675A289FE6A8009719C4 /* OpenSourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceCell.swift; sourceTree = "<group>"; };
 		9408675C289FE855009719C4 /* AppStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCell.swift; sourceTree = "<group>"; };
+		9408675E289FEEA4009719C4 /* FontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
 		94175073289FBAAA000EE6F5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListView.swift; sourceTree = "<group>"; };
 		94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				9408675A289FE6A8009719C4 /* OpenSourceCell.swift */,
 				9408675C289FE855009719C4 /* AppStoreCell.swift */,
+				9408675E289FEEA4009719C4 /* FontCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */,
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
+				9408675F289FEEA4009719C4 /* FontCell.swift in Sources */,
 				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,

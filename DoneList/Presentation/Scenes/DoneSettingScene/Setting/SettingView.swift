@@ -13,7 +13,7 @@ struct SettingView: View {
             Form {
                 Section("앱 설정") {
                     Text("푸쉬 알람")
-                    Text("폰트 변경")
+                    FontCell()
                 }
                 
                 Section {
