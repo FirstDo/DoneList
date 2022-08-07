@@ -10,8 +10,9 @@ import SwiftUI
 struct OpenSourceCell: View {
     var body: some View {
         HStack {
-            Image(systemName: "doc.fill")
+            Image(systemName: "doc.on.doc.fill")
                 .foregroundColor(.blue)
+            
             NavigationLink("오픈소스 라이센스") {
                 OpenSourceListView(viewModel: OpenSourceListViewModel())
             }

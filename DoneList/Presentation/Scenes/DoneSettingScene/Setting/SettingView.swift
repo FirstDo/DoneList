@@ -17,7 +17,7 @@ struct SettingView: View {
                 }
                 
                 Section {
-                    Text("앱 평가하러 가기")
+                    AppStoreCell()
                     OpenSourceCell()
                 } header: {
                     Text("기타")
