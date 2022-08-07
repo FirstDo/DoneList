@@ -164,6 +164,7 @@
 			children = (
 				94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */,
 				94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */,
+				9417507B289FDFD0000EE6F5 /* OpenSource */,
 			);
 			path = OpenSourceList;
 			sourceTree = "<group>";
@@ -175,6 +176,15 @@
 				9417507E289FDFF6000EE6F5 /* OpenSourceViewModel.swift */,
 			);
 			path = OpenSource;
+			sourceTree = "<group>";
+		};
+		94175080289FE5C0000EE6F5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				94175073289FBAAA000EE6F5 /* SettingView.swift */,
+				94175075289FC562000EE6F5 /* OpenSourceList */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		941D7D08288C96CA0071C2C7 /* DoneEditView */ = {
@@ -576,9 +586,7 @@
 		948A2929289052F40055A031 /* DoneSettingScene */ = {
 			isa = PBXGroup;
 			children = (
-				94175073289FBAAA000EE6F5 /* SettingView.swift */,
-				94175075289FC562000EE6F5 /* OpenSourceList */,
-				9417507B289FDFD0000EE6F5 /* OpenSource */,
+				94175080289FE5C0000EE6F5 /* Setting */,
 			);
 			path = DoneSettingScene;
 			sourceTree = "<group>";
