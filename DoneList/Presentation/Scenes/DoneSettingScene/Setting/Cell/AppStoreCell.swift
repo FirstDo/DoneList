@@ -27,5 +27,11 @@ struct AppStoreCell_Previews: PreviewProvider {
     static var previews: some View {
         AppStoreCell()
             .previewLayout(.fixed(width: 400, height: 100))
+            .preferredColorScheme(.light)
+        
+        AppStoreCell()
+            .previewLayout(.fixed(width: 400, height: 100))
+            .preferredColorScheme(.dark)
+        
     }
 }

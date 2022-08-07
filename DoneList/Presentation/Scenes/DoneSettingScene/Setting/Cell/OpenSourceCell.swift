@@ -24,5 +24,10 @@ struct ExtractedView_Previews: PreviewProvider {
     static var previews: some View {
         OpenSourceCell()
             .previewLayout(.fixed(width: 400, height: 100))
+            .preferredColorScheme(.light)
+        
+        OpenSourceCell()
+            .previewLayout(.fixed(width: 400, height: 100))
+            .preferredColorScheme(.dark)
     }
 }

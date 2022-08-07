@@ -39,6 +39,14 @@ struct SettingView_Previews: PreviewProvider {
             SettingView()
                 .navigationTitle("설정")
                 .navigationBarTitleDisplayMode(.large)
+                .preferredColorScheme(.light)
+        }
+        
+        NavigationView {
+            SettingView()
+                .navigationTitle("설정")
+                .navigationBarTitleDisplayMode(.large)
+                .preferredColorScheme(.dark)
         }
     }
 }
