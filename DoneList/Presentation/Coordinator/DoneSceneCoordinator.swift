@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class DoneSceneCoordiantor: Coordinator {
     var navigationController: UINavigationController?
@@ -90,7 +91,9 @@ final class DoneSceneCoordiantor: Coordinator {
     // MARK: SettingViewController
     
     func showSettingViewController() {
-
+        let settingView = SettingView()
+        let hostingViewController = UIHostingController(rootView: settingView)
+        navigationController?.pushViewController(hostingViewController, animated: true)
     }
     
     func dismiss(target viewController: UIViewController?) {

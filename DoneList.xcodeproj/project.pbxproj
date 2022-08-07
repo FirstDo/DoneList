@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175073289FBAAA000EE6F5 /* SettingView.swift */; };
 		941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */; };
 		941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */; };
 		941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94175073289FBAAA000EE6F5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UITextField.swift"; sourceTree = "<group>"; };
 		941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIButton.swift"; sourceTree = "<group>"; };
 		941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneEditViewModel.swift; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 		948A2929289052F40055A031 /* DoneSettingScene */ = {
 			isa = PBXGroup;
 			children = (
+				94175073289FBAAA000EE6F5 /* SettingView.swift */,
 			);
 			path = DoneSettingScene;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
 				948A2923289000940055A031 /* LineView.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
+				94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
 				94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */,
 			);
