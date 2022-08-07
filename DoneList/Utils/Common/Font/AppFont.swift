@@ -41,7 +41,7 @@ enum AppFont: String, CaseIterable {
 }
 
 extension UIFont {
-    func customFont(_ appFont: AppFont, _ size: FontSize) -> UIFont {
+    static func customFont(_ appFont: AppFont, _ size: FontSize) -> UIFont {
         return UIFont(name: appFont.rawValue, size: size.rawValue) ?? .systemFont(ofSize: size.rawValue)
     }
 }
