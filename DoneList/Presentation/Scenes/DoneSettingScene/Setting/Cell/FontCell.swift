@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FontCell: View {
-    @State var currentFont = "SystemFont"
+    @State var currentFont = "Mabinogi_Classic_OTF"
     @State var isPresented = false
     
     var body: some View {
@@ -18,14 +18,14 @@ struct FontCell: View {
             Text("글씨체 변경하기")
             Spacer()
             Text(currentFont)
-                .font(.headline)
+                .font(.custom(currentFont, size: 18))
                 .fontWeight(.semibold)
         }
         .onTapGesture {
             isPresented = true
         }
         .confirmationDialog("글씨체", isPresented: $isPresented) {
-            ForEach(["Font1", "Font2", "Font3"], id: \.self) { font in
+            ForEach(["Mabinogi_Classic_OTF", "Chosun Centennial", "DalseoHealing"], id: \.self) { font in
                 Button(font) {
                     currentFont = font
                 }
