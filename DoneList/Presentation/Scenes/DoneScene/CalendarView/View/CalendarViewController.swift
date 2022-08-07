@@ -26,7 +26,6 @@ class CalendarViewController: UIViewController {
         calendar.appearance.headerDateFormat = "YYYY년 MM월"
         calendar.appearance.headerMinimumDissolvedAlpha = .zero
         calendar.appearance.headerTitleColor = .label
-        calendar.appearance.headerTitleFont = .preferredFont(forTextStyle: .title1)
         
         calendar.appearance.titleTodayColor = .systemRed
         calendar.appearance.titleDefaultColor = .label
@@ -90,6 +89,8 @@ class CalendarViewController: UIViewController {
                 self?.calendarView.reloadData()
             }
             .store(in: &cancelBag)
+        
+        setFont(viewModel.appFont)
     }
     
     private func setup() {
@@ -114,6 +115,13 @@ class CalendarViewController: UIViewController {
         calendarView.delegate = self
         calendarView.dataSource = self
     }
+    
+    private func setFont(_ appFont: AppFont) {
+        calendarView.appearance.titleFont = .customFont(appFont, .body)
+        calendarView.appearance.weekdayFont = .customFont(appFont, .body)
+        calendarView.appearance.subtitleFont = .customFont(appFont, .body)
+        calendarView.appearance.headerTitleFont = .customFont(appFont, .title1)
+    }
 }
 
 extension CalendarViewController: FSCalendarDataSource {
@@ -137,9 +145,9 @@ extension CalendarViewController: FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
         if calendar.selectedDate == date {
-            cell.titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+            cell.titleLabel.font = .systemFont(ofSize: FontSize.body.rawValue, weight: .bold)
         } else {
-            cell.titleLabel.font = .systemFont(ofSize: 18)
+            cell.titleLabel.font = .customFont(viewModel.appFont, .body)
         }
     }
 }

@@ -15,6 +15,7 @@ protocol CalendarViewModelInput {
 }
 
 protocol CalendarViewModelOutput {
+    var appFont: AppFont { get }
     var selectedDate: CurrentValueSubject<Date, Never> { get }
     var showErrorAlert: PassthroughSubject<String, Never> { get }
     var dismissView: PassthroughSubject<Void, Never> { get }
@@ -35,6 +36,7 @@ final class CalendarViewModel: CalendarViewModelType {
     
     // MARK: - Output
     
+    let appFont: AppFont = FontManager.getFontName()
     let selectedDate: CurrentValueSubject<Date, Never>
     let dismissView = PassthroughSubject<Void, Never>()
     let showErrorAlert = PassthroughSubject<String, Never>()
