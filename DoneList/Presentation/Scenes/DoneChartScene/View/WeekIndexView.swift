@@ -96,4 +96,14 @@ final class WeekIndexView: UIView {
         saturdayLabel.text = week[5]
         sundayLabel.text = week[6]
     }
+    
+    func setFont(_ appFont: AppFont) {
+        mondayLabel.font = .customFont(appFont, .body)
+        tuesdayLabel.font = .customFont(appFont, .body)
+        wednesdayLabel.font = .customFont(appFont, .body)
+        thursdayLabel.font = .customFont(appFont, .body)
+        fridayLabel.font = .customFont(appFont, .body)
+        saturdayLabel.font = .customFont(appFont, .body)
+        sundayLabel.font = .customFont(appFont, .body)
+    }
 }

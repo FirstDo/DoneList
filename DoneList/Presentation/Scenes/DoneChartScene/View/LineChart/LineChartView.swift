@@ -62,4 +62,10 @@ final class LineChartView: UIView {
             view.setNeedsLayout()
         }
     }
+    
+    func setFont(_ appFont: AppFont) {
+        lineViews.forEach { lineView in
+            lineView.setFont(appFont)
+        }
+    }
 }

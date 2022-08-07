@@ -41,7 +41,6 @@ final class DoneChartView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.text = Const.viewTitle.text
-        label.font = .preferredFont(forTextStyle: .largeTitle)
         
         return label
     }()
@@ -93,7 +92,6 @@ final class DoneChartView: UIView {
     let dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title1)
 
         return label
     }()
@@ -146,5 +144,13 @@ final class DoneChartView: UIView {
     
     private func setupView() {
         backgroundColor = .systemBackground
+    }
+    
+    func setupFont(_ appFont: AppFont) {
+        titleLabel.font = .customFont(appFont, .largetTitle)
+        dateLabel.font = .customFont(appFont, .title1)
+        
+        lineChartView.setFont(appFont)
+        weekIndexView.setFont(appFont)
     }
 }

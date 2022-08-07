@@ -93,6 +93,8 @@ final class ChartViewController: UIViewController {
                 self?.viewModel.didTapCloseButton()
             }
             .store(in: &cancelBag)
+        
+        mainView.setupFont(viewModel.appFont)
     }
     
     private func setup() {

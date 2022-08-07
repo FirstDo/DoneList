@@ -105,4 +105,8 @@ final class LineView: UIView {
         self.totalTaskCount = totalTaskCount
         self.countLabel.isHidden = true
     }
+    
+    func setFont(_ appFont: AppFont) {
+        self.countLabel.font = .customFont(appFont, .body)
+    }
 }

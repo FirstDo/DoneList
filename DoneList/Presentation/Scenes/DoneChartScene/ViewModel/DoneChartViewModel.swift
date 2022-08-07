@@ -15,6 +15,7 @@ protocol DoneChartViewModelInput {
 }
 
 protocol DoneChartViewModelOutput {
+    var appFont: AppFont { get }
     var dateTitle: AnyPublisher<String, Never> { get }
     var weekIndexTitle: AnyPublisher<[String], Never> { get }
     var graphValues: AnyPublisher<[(taskCount: Int, totalTaskCount: Int)], Never> { get }
@@ -39,6 +40,8 @@ final class DoneChartViewModel: DoneChartViewModelType {
     }()
     
     // MARK: - Output
+    
+    let appFont: AppFont = FontManager.getFontName()
     
     var dateTitle: AnyPublisher<String, Never> {
         return $targetDate
