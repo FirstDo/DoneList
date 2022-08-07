@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct AppStoreCell: View {
+    
+    @AppStorage("font") var currentFont: AppFont = FontManager.getFontName()
+    
     var body: some View {
         HStack {
             Image(systemName: "star.fill")
                 .foregroundColor(.yellow)
             
-            NavigationLink("오픈소스 라이센스", isActive: .constant(false)) {
+            NavigationLink("앱 리뷰 남기러 가기", isActive: .constant(false)) {
                 
             }
         }

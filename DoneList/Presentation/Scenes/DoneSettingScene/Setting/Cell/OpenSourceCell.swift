@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OpenSourceCell: View {
+    
     var body: some View {
         HStack {
             Image(systemName: "doc.on.doc.fill")

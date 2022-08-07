@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct SettingView: View {
+struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
+    
+    @AppStorage("font") var appFont: AppFont = FontManager.getFontName()
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
         VStack {
             Form {
@@ -15,6 +19,7 @@ struct SettingView: View {
                     Text("푸쉬 알람")
                     FontCell()
                 }
+                .customFont(appFont, .body)
                 
                 Section {
                     AppStoreCell()
@@ -26,6 +31,7 @@ struct SettingView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 }
+                .customFont(appFont, .body)
             }
         }
         .navigationTitle("설정")
@@ -36,14 +42,14 @@ struct SettingView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SettingView()
+            SettingView(viewModel: SettingViewModel())
                 .navigationTitle("설정")
                 .navigationBarTitleDisplayMode(.large)
                 .preferredColorScheme(.light)
         }
         
         NavigationView {
-            SettingView()
+            SettingView(viewModel: SettingViewModel())
                 .navigationTitle("설정")
                 .navigationBarTitleDisplayMode(.large)
                 .preferredColorScheme(.dark)

@@ -14,6 +14,7 @@
 		9408676A28A007FB009719C4 /* ChosunCentennial_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9408676728A007FB009719C4 /* ChosunCentennial_otf.otf */; };
 		9408676B28A007FB009719C4 /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9408676828A007FB009719C4 /* DalseoHealingMedium.otf */; };
 		9408676F28A017E9009719C4 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408676E28A017E9009719C4 /* AppFont.swift */; };
+		9408677128A02C71009719C4 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408677028A02C71009719C4 /* SettingViewModel.swift */; };
 		94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175073289FBAAA000EE6F5 /* SettingView.swift */; };
 		94175078289FC5AC000EE6F5 /* OpenSourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */; };
 		9417507A289FC5BC000EE6F5 /* OpenSourceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */; };
@@ -91,6 +92,7 @@
 		9408676728A007FB009719C4 /* ChosunCentennial_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChosunCentennial_otf.otf; sourceTree = "<group>"; };
 		9408676828A007FB009719C4 /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
 		9408676E28A017E9009719C4 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		9408677028A02C71009719C4 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		94175073289FBAAA000EE6F5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListView.swift; sourceTree = "<group>"; };
 		94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModel.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				94175073289FBAAA000EE6F5 /* SettingView.swift */,
+				9408677028A02C71009719C4 /* SettingViewModel.swift */,
 				94086759289FE68D009719C4 /* Cell */,
 				94175075289FC562000EE6F5 /* OpenSourceList */,
 			);
@@ -727,6 +730,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9408677128A02C71009719C4 /* SettingViewModel.swift in Sources */,
 				948A2925289001570055A031 /* Date+.swift in Sources */,
 				94175078289FC5AC000EE6F5 /* OpenSourceListView.swift in Sources */,
 				94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */,

@@ -16,6 +16,7 @@ struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewMo
             NavigationLink(openSource.name) {
                 OpenSourceView(viewModel: OpenSourceViewModel(openSource: openSource))
             }
+            .customFont(viewModel.appFont, .body)
         }
         .navigationTitle(viewModel.navigationTitle)
     }
