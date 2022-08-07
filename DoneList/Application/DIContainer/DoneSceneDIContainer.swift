@@ -25,10 +25,6 @@ final class DoneSceneDIContainer {
         return ChartSceneDIContainer(dependencies: ChartSceneDIContainer.Dependencies(doneStorage: dependencies.doneStorage))
     }
     
-    var settingSceneDIContainer: SettingSceneDIContainer {
-        return SettingSceneDIContainer()
-    }
-    
     // MARK: - Coordiantor
     
     func makeDoneSceneCoordinator(_ navigationController: UINavigationController) -> DoneSceneCoordiantor {

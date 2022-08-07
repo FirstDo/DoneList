@@ -90,15 +90,7 @@ final class DoneSceneCoordiantor: Coordinator {
     // MARK: SettingViewController
     
     func showSettingViewController() {
-        guard let navigationController = navigationController else { return }
-        
-        let settingSceneDIContainer = dependency.settingSceneDIContainer
-        let settingSceneCoordinator = settingSceneDIContainer.makeSettingSceneCoordinator(navigationController)
-        
-        settingSceneCoordinator.parentCoordinator = self
-        settingSceneCoordinator.showDoneSettingViewController()
-        
-        childCoordinator.append(settingSceneCoordinator)
+
     }
     
     func dismiss(target viewController: UIViewController?) {

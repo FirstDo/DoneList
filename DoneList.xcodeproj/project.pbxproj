@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9411226D2892FD3D0082DEB8 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */; };
 		941D7D05288C5CA70071C2C7 /* Combine+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */; };
 		941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */; };
 		941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */; };
@@ -60,31 +59,19 @@
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
 		948A2925289001570055A031 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2924289001570055A031 /* Date+.swift */; };
-		948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292C2890531C0055A031 /* DoneSettingViewModel.swift */; };
-		948A292F289055360055A031 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A292E289055360055A031 /* SettingViewController.swift */; };
-		948A2992289199BB0055A031 /* SettingSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2991289199BB0055A031 /* SettingSceneDIContainer.swift */; };
-		948A299428919A190055A031 /* SettingSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299328919A190055A031 /* SettingSceneCoordinator.swift */; };
 		948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29952891A9660055A031 /* PushAlarmUseCase.swift */; };
 		948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29982891AA520055A031 /* LocalNotificationManager.swift */; };
 		948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */; };
-		948A29A82891C6C40055A031 /* PushAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29A72891C6C40055A031 /* PushAlarmCell.swift */; };
-		948A29AD2891C9EB0055A031 /* PushAlarmCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */; };
 		948A29B12891D1820055A031 /* Combine+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B02891D1820055A031 /* Combine+UISwitch.swift */; };
-		948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B2289252C90055A031 /* DefaultSettingCell.swift */; };
-		948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */; };
 		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
-		948A29D72892B7A20055A031 /* OpenSourceListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D62892B7A20055A031 /* OpenSourceListViewModelType.swift */; };
 		948A29D92892B8310055A031 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29D82892B8300055A031 /* OpenSource.swift */; };
-		948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */; };
 		94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D52899D2FF0038BE68 /* UILabel+.swift */; };
 		94BE34D8289AAD440038BE68 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE34D7289AAD440038BE68 /* UIColor+.swift */; };
 		94F067FE289B9CBC00982832 /* ToastPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 94F067FD289B9CBC00982832 /* ToastPresenter */; };
 		94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F067FF289D9AA200982832 /* UITableViewCell+.swift */; };
-		94F36F7B2892F4EF003CEFCB /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
 		941D7D04288C5CA70071C2C7 /* Combine+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UITextField.swift"; sourceTree = "<group>"; };
 		941D7D06288C5CC10071C2C7 /* Combine+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIButton.swift"; sourceTree = "<group>"; };
 		941D7D0B288C96E50071C2C7 /* DoneEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneEditViewModel.swift; sourceTree = "<group>"; };
@@ -137,26 +124,15 @@
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		948A2924289001570055A031 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		948A292C2890531C0055A031 /* DoneSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSettingViewModel.swift; sourceTree = "<group>"; };
-		948A292E289055360055A031 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		948A2991289199BB0055A031 /* SettingSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSceneDIContainer.swift; sourceTree = "<group>"; };
-		948A299328919A190055A031 /* SettingSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSceneCoordinator.swift; sourceTree = "<group>"; };
 		948A29952891A9660055A031 /* PushAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmUseCase.swift; sourceTree = "<group>"; };
 		948A29982891AA520055A031 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIDatePicker.swift"; sourceTree = "<group>"; };
-		948A29A72891C6C40055A031 /* PushAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCell.swift; sourceTree = "<group>"; };
-		948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCellViewModel.swift; sourceTree = "<group>"; };
 		948A29B02891D1820055A031 /* Combine+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UISwitch.swift"; sourceTree = "<group>"; };
-		948A29B2289252C90055A031 /* DefaultSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCell.swift; sourceTree = "<group>"; };
-		948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCellViewModel.swift; sourceTree = "<group>"; };
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		948A29D62892B7A20055A031 /* OpenSourceListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModelType.swift; sourceTree = "<group>"; };
 		948A29D82892B8300055A031 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
-		948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewController.swift; sourceTree = "<group>"; };
 		94BE34D52899D2FF0038BE68 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		94BE34D7289AAD440038BE68 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		94F067FF289D9AA200982832 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
-		94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,14 +149,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9411226B2892FD360082DEB8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9411226C2892FD3D0082DEB8 /* OpenSourceViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		941D7D08288C96CA0071C2C7 /* DoneEditView */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +296,6 @@
 				94272A7D288ADB6E0010BC10 /* AppDIContainer.swift */,
 				94272A7F288ADC450010BC10 /* DoneSceneDIContainer.swift */,
 				948A2909288D34380055A031 /* ChartSceneDIContainer.swift */,
-				948A2991289199BB0055A031 /* SettingSceneDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -339,7 +306,6 @@
 				94272A87288AE0620010BC10 /* AppCoordinator.swift */,
 				94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */,
 				948A290D288D36280055A031 /* ChartSceneCoordinator.swift */,
-				948A299328919A190055A031 /* SettingSceneCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -582,28 +548,8 @@
 		948A2929289052F40055A031 /* DoneSettingScene */ = {
 			isa = PBXGroup;
 			children = (
-				948A29D12892B7580055A031 /* DoneSettingView */,
-				948A29D22892B7680055A031 /* OpenSourceListView */,
-				94F36F742892F358003CEFCB /* OpenSourceView */,
 			);
 			path = DoneSettingScene;
-			sourceTree = "<group>";
-		};
-		948A292A289052FA0055A031 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				948A292C2890531C0055A031 /* DoneSettingViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		948A292B289053020055A031 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				948A292E289055360055A031 /* SettingViewController.swift */,
-				948A29A92891C85A0055A031 /* Cell */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		948A29972891AA430055A031 /* Common */ = {
@@ -612,84 +558,6 @@
 				948A29982891AA520055A031 /* LocalNotificationManager.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		948A29A92891C85A0055A031 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				948A29AE2891C9F50055A031 /* View */,
-				948A29AF2891C9F90055A031 /* ViewModel */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		948A29AE2891C9F50055A031 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				948A29A72891C6C40055A031 /* PushAlarmCell.swift */,
-				948A29B2289252C90055A031 /* DefaultSettingCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		948A29AF2891C9F90055A031 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				948A29AC2891C9EB0055A031 /* PushAlarmCellViewModel.swift */,
-				948A29CD2892A5DE0055A031 /* DefaultSettingCellViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		948A29D12892B7580055A031 /* DoneSettingView */ = {
-			isa = PBXGroup;
-			children = (
-				948A292B289053020055A031 /* View */,
-				948A292A289052FA0055A031 /* ViewModel */,
-			);
-			path = DoneSettingView;
-			sourceTree = "<group>";
-		};
-		948A29D22892B7680055A031 /* OpenSourceListView */ = {
-			isa = PBXGroup;
-			children = (
-				948A29D52892B7900055A031 /* View */,
-				948A29D42892B78A0055A031 /* ViewModel */,
-			);
-			path = OpenSourceListView;
-			sourceTree = "<group>";
-		};
-		948A29D42892B78A0055A031 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				948A29D62892B7A20055A031 /* OpenSourceListViewModelType.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		948A29D52892B7900055A031 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				948A29DA2892BB130055A031 /* OpenSourceListViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		94F36F742892F358003CEFCB /* OpenSourceView */ = {
-			isa = PBXGroup;
-			children = (
-				9411226B2892FD360082DEB8 /* View */,
-				94F36F792892F4D7003CEFCB /* ViewModel */,
-			);
-			path = OpenSourceView;
-			sourceTree = "<group>";
-		};
-		94F36F792892F4D7003CEFCB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				94F36F7A2892F4EF003CEFCB /* OpenSourceViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -777,17 +645,12 @@
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
 				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
-				948A292D2890531C0055A031 /* DoneSettingViewModel.swift in Sources */,
 				94272A59288AB2420010BC10 /* EndPoint.swift in Sources */,
-				948A292F289055360055A031 /* SettingViewController.swift in Sources */,
 				94272A80288ADC450010BC10 /* DoneSceneDIContainer.swift in Sources */,
-				948A29CE2892A5DF0055A031 /* DefaultSettingCellViewModel.swift in Sources */,
 				948A29D92892B8310055A031 /* OpenSource.swift in Sources */,
-				948A29A82891C6C40055A031 /* PushAlarmCell.swift in Sources */,
 				94272A5D288AC5C00010BC10 /* APIProvider.swift in Sources */,
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
-				948A29DB2892BB130055A031 /* OpenSourceListViewController.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
 				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
@@ -803,13 +666,10 @@
 				94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */,
 				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
-				948A29D72892B7A20055A031 /* OpenSourceListViewModelType.swift in Sources */,
 				94272A4D288AAF200010BC10 /* DoneStorageType.swift in Sources */,
-				948A29AD2891C9EB0055A031 /* PushAlarmCellViewModel.swift in Sources */,
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
-				94F36F7B2892F4EF003CEFCB /* OpenSourceViewModel.swift in Sources */,
 				948A2910288D40D90055A031 /* DoneChartView.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
@@ -832,12 +692,8 @@
 				94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */,
 				948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */,
 				948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */,
-				948A2992289199BB0055A031 /* SettingSceneDIContainer.swift in Sources */,
 				94272AA1288B01460010BC10 /* DoneListView.swift in Sources */,
-				948A29B3289252C90055A031 /* DefaultSettingCell.swift in Sources */,
 				948A2923289000940055A031 /* LineView.swift in Sources */,
-				9411226D2892FD3D0082DEB8 /* OpenSourceViewController.swift in Sources */,
-				948A299428919A190055A031 /* SettingSceneCoordinator.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
 				94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */,
