@@ -2,12 +2,13 @@
 //  OpenSourceCell.swift
 //  DoneList
 //
-//  Created by 김도연 on 2022/08/07.
+//  Created by dudu on 2022/08/07.
 //
 
 import SwiftUI
 
 struct OpenSourceCell: View {
+    
     var body: some View {
         HStack {
             Image(systemName: "doc.on.doc.fill")

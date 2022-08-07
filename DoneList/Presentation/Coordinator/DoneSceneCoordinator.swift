@@ -91,7 +91,7 @@ final class DoneSceneCoordiantor: Coordinator {
     // MARK: SettingViewController
     
     func showSettingViewController() {
-        let settingView = SettingView()
+        let settingView = SettingView(viewModel: SettingViewModel())
         let hostingViewController = UIHostingController(rootView: settingView)
         navigationController?.pushViewController(hostingViewController, animated: true)
     }

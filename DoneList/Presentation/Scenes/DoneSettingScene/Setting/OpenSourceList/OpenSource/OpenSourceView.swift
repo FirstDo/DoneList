@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct OpenSourceView<ViewModel>: View where ViewModel: OpenSourceViewModelType {
+    
     @StateObject var viewModel: ViewModel
     
     var body: some View {
         ScrollView {
             Text(viewModel.openSource.content)
+                .customFont(viewModel.appFont, .body)
         }
         .padding()
         .navigationTitle(viewModel.openSource.name)

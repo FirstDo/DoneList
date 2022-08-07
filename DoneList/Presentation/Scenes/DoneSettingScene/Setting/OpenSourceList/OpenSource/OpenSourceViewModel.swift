@@ -9,9 +9,12 @@ import Combine
 
 protocol OpenSourceViewModelType: ObservableObject {
     var openSource: OpenSource { get }
+    var appFont: AppFont { get }
 }
 
 final class OpenSourceViewModel: OpenSourceViewModelType {
+    
+    @Published var appFont = FontManager.getFontName()
     @Published var openSource: OpenSource
     
     init(openSource: OpenSource) {

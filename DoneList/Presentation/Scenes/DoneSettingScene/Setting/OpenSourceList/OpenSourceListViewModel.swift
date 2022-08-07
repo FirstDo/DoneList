@@ -10,12 +10,14 @@ import Combine
 protocol OpenSourceListViewModelType: ObservableObject {
     var navigationTitle: String { get }
     var openSources: [OpenSource] { get }
+    var appFont: AppFont { get }
 }
 
 final class OpenSourceListViewModel: OpenSourceListViewModelType {
     
-    @Published var openSources: [OpenSource]
     let navigationTitle = "오픈소스"
+    @Published var openSources: [OpenSource]
+    @Published var appFont = FontManager.getFontName()
     
     init(openSources: [OpenSource] = OpenSource.allOpenSources) {
         self.openSources = openSources
