@@ -18,9 +18,7 @@ struct SettingView: View {
                 
                 Section {
                     Text("앱 평가하러 가기")
-                    NavigationLink("오픈소스 라이센스") {
-                        OpenSourceListView(viewModel: OpenSourceListViewModel())
-                    }
+                    OpenSourceCell()
                 } header: {
                     Text("기타")
                 } footer: {

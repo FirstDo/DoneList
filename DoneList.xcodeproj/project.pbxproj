@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9408675B289FE6A8009719C4 /* OpenSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408675A289FE6A8009719C4 /* OpenSourceCell.swift */; };
 		94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175073289FBAAA000EE6F5 /* SettingView.swift */; };
 		94175078289FC5AC000EE6F5 /* OpenSourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */; };
 		9417507A289FC5BC000EE6F5 /* OpenSourceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9408675A289FE6A8009719C4 /* OpenSourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceCell.swift; sourceTree = "<group>"; };
 		94175073289FBAAA000EE6F5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListView.swift; sourceTree = "<group>"; };
 		94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94086759289FE68D009719C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9408675A289FE6A8009719C4 /* OpenSourceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		94175075289FC562000EE6F5 /* OpenSourceList */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				94175073289FBAAA000EE6F5 /* SettingView.swift */,
+				94086759289FE68D009719C4 /* Cell */,
 				94175075289FC562000EE6F5 /* OpenSourceList */,
 			);
 			path = Setting;
@@ -730,6 +741,7 @@
 				94272A7C288ADA7D0010BC10 /* DoneUseCase.swift in Sources */,
 				94272A8A288AE19F0010BC10 /* DoneSceneCoordinator.swift in Sources */,
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
+				9408675B289FE6A8009719C4 /* OpenSourceCell.swift in Sources */,
 				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */,
