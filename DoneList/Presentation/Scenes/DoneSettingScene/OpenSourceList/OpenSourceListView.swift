@@ -11,9 +11,9 @@ struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewMo
     @StateObject var viewModel: ViewModel
     
     var body: some View {
-        List(viewModel.openSources, id: \.self) { opensource in
-            NavigationLink(opensource.name) {
-                Text("OpenSource")
+        List(viewModel.openSources, id: \.self) { openSource in
+            NavigationLink(openSource.name) {
+                OpenSourceView(viewModel: OpenSourceViewModel(openSource: openSource))
             }
         }
         .navigationTitle("오픈소스")
