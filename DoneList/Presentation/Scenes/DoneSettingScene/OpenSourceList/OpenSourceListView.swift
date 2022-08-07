@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewModelType {
+    
     @StateObject var viewModel: ViewModel
     
     var body: some View {
@@ -16,15 +17,18 @@ struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewMo
                 OpenSourceView(viewModel: OpenSourceViewModel(openSource: openSource))
             }
         }
-        .navigationTitle("오픈소스")
+        .navigationTitle(viewModel.navigationTitle)
     }
 }
 
 struct OpenSourceListView_Previews: PreviewProvider {
+    
+    static let viewModel = OpenSourceListViewModel()
+    
     static var previews: some View {
         NavigationView {
-            OpenSourceListView(viewModel: OpenSourceListViewModel())
-                .navigationTitle("오픈소스")
+            OpenSourceListView(viewModel: viewModel)
+                .navigationTitle(viewModel.navigationTitle)
         }
     }
 }
