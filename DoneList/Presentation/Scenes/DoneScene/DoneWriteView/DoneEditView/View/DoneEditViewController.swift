@@ -95,6 +95,8 @@ final class DoneEditViewController: UIViewController {
                 self?.viewModel.didEditTextField(text)
             }
             .store(in: &cancelBag)
+        
+        mainView.setFont(viewModel.appFont)
     }
     
     private func setup() {

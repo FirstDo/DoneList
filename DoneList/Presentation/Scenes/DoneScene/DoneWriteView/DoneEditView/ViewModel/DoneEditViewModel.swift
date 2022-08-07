@@ -15,6 +15,7 @@ protocol DoneEditViewModelInput {
 }
 
 protocol DoneEditViewModelOutput {
+    var appFont: AppFont { get }
     var cellItems: AnyPublisher<[Category], Never> { get }
     var taskTitle: CurrentValueSubject<String, Never> { get }
     var category: CurrentValueSubject<Category, Never> { get }
@@ -34,6 +35,8 @@ final class DoneEditViewModel: DoneEditViewModelType {
     private var cancelBag = Set<AnyCancellable>()
     
     // MARK: - Output
+    
+    let appFont = FontManager.getFontName()
     
     var cellItems: AnyPublisher<[Category], Never> {
         return Just(Category.all).eraseToAnyPublisher()

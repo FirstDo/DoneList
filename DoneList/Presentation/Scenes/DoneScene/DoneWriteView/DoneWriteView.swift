@@ -24,7 +24,6 @@ final class DoneWriteView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title3)
         
         return label
     }()
@@ -144,5 +143,11 @@ final class DoneWriteView: UIView {
         snapshot.appendSections([0])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot)
+    }
+    
+    func setFont(_ appFont: AppFont) {
+        titleLabel.font = .customFont(appFont, .title3)
+        doneButton.titleLabel?.font = .customFont(appFont, .body)
+        doneTextField.font = .customFont(appFont, .body)
     }
 }

@@ -15,6 +15,7 @@ protocol DoneCreateViewModelInput {
 }
 
 protocol DoneCreateViewModelOutput {
+    var appFont: AppFont { get }
     var cellItems: AnyPublisher<[Category], Never> { get }
     var category: CurrentValueSubject<Category, Never> { get }
     var doneButtonState: AnyPublisher<Bool, Never> { get }
@@ -35,6 +36,8 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
     @Published var doneTitle: String = ""
     
     // MARK: - Output
+    
+    let appFont = FontManager.getFontName()
     
     var cellItems: AnyPublisher<[Category], Never> {
         return Just(Category.all).eraseToAnyPublisher()
