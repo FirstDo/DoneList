@@ -5,7 +5,10 @@
 //  Created by dudu on 2022/07/28.
 //
 
-struct OpenSource: Hashable {
+import Foundation
+
+struct OpenSource: Hashable, Identifiable {
+    let id = UUID()
     let name: String
     let content: String
     
