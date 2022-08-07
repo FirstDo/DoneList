@@ -13,6 +13,7 @@
 		9408676928A007FB009719C4 /* Mabinogi_Classic_OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9408676628A007FB009719C4 /* Mabinogi_Classic_OTF.otf */; };
 		9408676A28A007FB009719C4 /* ChosunCentennial_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9408676728A007FB009719C4 /* ChosunCentennial_otf.otf */; };
 		9408676B28A007FB009719C4 /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9408676828A007FB009719C4 /* DalseoHealingMedium.otf */; };
+		9408676F28A017E9009719C4 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408676E28A017E9009719C4 /* AppFont.swift */; };
 		94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175073289FBAAA000EE6F5 /* SettingView.swift */; };
 		94175078289FC5AC000EE6F5 /* OpenSourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */; };
 		9417507A289FC5BC000EE6F5 /* OpenSourceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */; };
@@ -89,6 +90,7 @@
 		9408676628A007FB009719C4 /* Mabinogi_Classic_OTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mabinogi_Classic_OTF.otf; sourceTree = "<group>"; };
 		9408676728A007FB009719C4 /* ChosunCentennial_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChosunCentennial_otf.otf; sourceTree = "<group>"; };
 		9408676828A007FB009719C4 /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
+		9408676E28A017E9009719C4 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		94175073289FBAAA000EE6F5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		94175077289FC5AC000EE6F5 /* OpenSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListView.swift; sourceTree = "<group>"; };
 		94175079289FC5BC000EE6F5 /* OpenSourceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,14 @@
 				9408676728A007FB009719C4 /* ChosunCentennial_otf.otf */,
 				9408676828A007FB009719C4 /* DalseoHealingMedium.otf */,
 				9408676628A007FB009719C4 /* Mabinogi_Classic_OTF.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9408676D28A017E0009719C4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9408676E28A017E9009719C4 /* AppFont.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -628,6 +638,7 @@
 		948A29972891AA430055A031 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9408676D28A017E0009719C4 /* Font */,
 				948A29982891AA520055A031 /* LocalNotificationManager.swift */,
 			);
 			path = Common;
@@ -742,6 +753,7 @@
 				94272ABD288BFD460010BC10 /* Category.swift in Sources */,
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */,
+				9408676F28A017E9009719C4 /* AppFont.swift in Sources */,
 				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				9408675D289FE855009719C4 /* AppStoreCell.swift in Sources */,
