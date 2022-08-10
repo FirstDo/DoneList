@@ -12,13 +12,13 @@ struct AppStoreCell: View {
     @AppStorage("font") var currentFont: AppFont = FontManager.getFontName()
     
     var body: some View {
-        HStack {
+        Label {
+            NavigationLink("앱 리뷰 남기러 가기", isActive: .constant(false)) {
+                // empty
+            }
+        } icon: {
             Image(systemName: "star.fill")
                 .foregroundColor(.yellow)
-            
-            NavigationLink("앱 리뷰 남기러 가기", isActive: .constant(false)) {
-                
-            }
         }
         .onTapGesture {
             // TODO: Show App Store Link

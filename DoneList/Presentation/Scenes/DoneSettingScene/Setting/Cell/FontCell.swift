@@ -14,9 +14,13 @@ struct FontCell: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "text.bubble")
-                .foregroundColor(.teal)
-            Text("글씨체 변경하기")
+            Label {
+                Text("글씨체 변경하기")
+            } icon: {
+                Image(systemName: "text.bubble")
+                    .foregroundColor(.teal)
+            }
+            
             Spacer()
             Text(currentFont.name)
         }

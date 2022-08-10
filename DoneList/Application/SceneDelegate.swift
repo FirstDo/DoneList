@@ -30,5 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         LocalNotificationManager().requestAuthorization()
     }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        LocalNotificationManager().requestAuthorization()
+    }
 }
 
