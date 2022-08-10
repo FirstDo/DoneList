@@ -38,3 +38,15 @@ extension Date {
             .compactMap(monday.addingTimeInterval)
     }
 }
+
+extension Date: RawRepresentable {
+    private static let formatter = ISO8601DateFormatter()
+    
+    public var rawValue: String {
+        return Date.formatter.string(from: self)
+    }
+    
+    public init?(rawValue: String) {
+        self = Date.formatter.date(from: rawValue) ?? .now
+    }
+}
