@@ -19,7 +19,7 @@ struct AppStoreCell: View {
                 .foregroundColor(.yellow)
         }
         .onTapGesture {
-            // TODO: Show App Store Link
+            Application.shared.openAppStore()
         }
     }
 }
