@@ -86,7 +86,6 @@ final class DoneListView: UIView {
     let dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .largeTitle)
         label.isUserInteractionEnabled = true
         
         return label
@@ -95,7 +94,6 @@ final class DoneListView: UIView {
     let quoteLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title3)
         label.numberOfLines = .zero
         
         return label
@@ -105,7 +103,6 @@ final class DoneListView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.text = Const.ListTitle.text
-        label.font = .preferredFont(forTextStyle: .title1)
         
         return label
     }()
@@ -210,6 +207,12 @@ final class DoneListView: UIView {
         snapshot.appendSections([0])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot)
+    }
+    
+    func setFont(_ appFont: AppFont) {
+        dateLabel.font = .customFont(appFont, .largetTitle)
+        quoteLabel.font = .customFont(appFont, .title3)
+        doneListTitle.font = .customFont(appFont, .title1)
     }
 }
 

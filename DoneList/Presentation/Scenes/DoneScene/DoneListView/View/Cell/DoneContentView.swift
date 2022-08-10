@@ -76,6 +76,7 @@ final class DoneContentView: UIView, UIContentView {
         guard let doneConfiguration = configuration as? DoneContentConfiguration else { return }
         
         doneTitleLabel.text = doneConfiguration.title
+        doneTitleLabel.font = doneConfiguration.font
         doneImageView.image = doneConfiguration.image
         baseStackView.backgroundColor = doneConfiguration.themeColor
     }

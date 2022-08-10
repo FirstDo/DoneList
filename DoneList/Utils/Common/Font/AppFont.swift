@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 enum FontSize: CGFloat {
     case largetTitle = 34
@@ -56,10 +57,25 @@ extension View {
     }
 }
 
+extension UserDefaults {
+    @objc dynamic var font: String {
+        return string(forKey: "font") ?? "System"
+    }
+}
+
 final class FontManager {
     static func getFontName() -> AppFont {
         let key = UserDefaults.standard.string(forKey: "font") ?? "System"
         return AppFont(rawValue: key)!
+    }
+    
+    static func getFontNamePublisher() -> AnyPublisher<AppFont, Never> {
+        return UserDefaults.standard
+            .publisher(for: \.font)
+            .compactMap { key in
+                return AppFont(rawValue: key)
+            }
+            .eraseToAnyPublisher()
     }
     
     static func setFont(_ font: AppFont) {

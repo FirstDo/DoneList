@@ -20,6 +20,9 @@ final class DoneCell: UICollectionViewListCell {
         configuration.image = UIImage(named: done.category.name)
         configuration.themeColor = done.category.color
         
+        let appFont = FontManager.getFontName()
+        configuration.font = .customFont(appFont, .body)
+        
         contentConfiguration = configuration
         backgroundConfiguration = .clear()
     }
