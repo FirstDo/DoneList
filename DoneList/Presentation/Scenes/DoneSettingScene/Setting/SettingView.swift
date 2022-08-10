@@ -9,17 +9,15 @@ import SwiftUI
 
 struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
     
-    @AppStorage("font") var appFont: AppFont = FontManager.getFontName()
     @StateObject var viewModel: ViewModel
     
     var body: some View {
         VStack {
             Form {
                 Section("앱 설정") {
-                    PushAlarmCell()
                     FontCell()
                 }
-                .customFont(appFont, .body)
+                .customFont(viewModel.appFont, .body)
                 
                 Section {
                     AppStoreCell()
@@ -31,7 +29,7 @@ struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 }
-                .customFont(appFont, .body)
+                .customFont(viewModel.appFont, .body)
             }
         }
         .navigationTitle("설정")

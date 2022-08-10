@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AppStoreCell: View {
     
-    @AppStorage("font") var currentFont: AppFont = FontManager.getFontName()
-    
     var body: some View {
         Label {
             NavigationLink("앱 리뷰 남기러 가기", isActive: .constant(false)) {

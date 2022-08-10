@@ -27,12 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appCoordinator = AppCoordinator(navigationController: rootNavigationController, dependency: appDIContainer)
         appCoordinator?.start()
-        
-        LocalNotificationManager().requestAuthorization()
-    }
-    
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        LocalNotificationManager().requestAuthorization()
     }
 }
 

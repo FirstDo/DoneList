@@ -8,8 +8,6 @@
 import Foundation
 
 enum UserDefaultsKey {
-    static let pushAlarmState = "PushAlarm"
-    static let pushAlarmTime = "PushAlarmTime"
     static let userFont = "userFont"
 }
 

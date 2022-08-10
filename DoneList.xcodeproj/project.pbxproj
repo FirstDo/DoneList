@@ -63,7 +63,6 @@
 		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
-		9461B92728A3A9DB00E4F871 /* PushAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */; };
 		9461B92B28A3B64100E4F871 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92A28A3B64100E4F871 /* UserDefaults+.swift */; };
 		9461B93028A3EEEB00E4F871 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92F28A3EEEB00E4F871 /* Application.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
@@ -75,8 +74,6 @@
 		948A2914288D47D20055A031 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2913288D47D20055A031 /* LineChartView.swift */; };
 		948A2923289000940055A031 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2922289000940055A031 /* LineView.swift */; };
 		948A2925289001570055A031 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2924289001570055A031 /* Date+.swift */; };
-		948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29952891A9660055A031 /* PushAlarmUseCase.swift */; };
-		948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29982891AA520055A031 /* LocalNotificationManager.swift */; };
 		948A299B2891BB700055A031 /* Combine+UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */; };
 		948A29B12891D1820055A031 /* Combine+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29B02891D1820055A031 /* Combine+UISwitch.swift */; };
 		948A29D02892A9C20055A031 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A29CF2892A9C20055A031 /* Content.swift */; };
@@ -144,7 +141,6 @@
 		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
-		9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCell.swift; sourceTree = "<group>"; };
 		9461B92A28A3B64100E4F871 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		9461B92F28A3EEEB00E4F871 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
@@ -156,8 +152,6 @@
 		948A2913288D47D20055A031 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		948A2922289000940055A031 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		948A2924289001570055A031 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		948A29952891A9660055A031 /* PushAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmUseCase.swift; sourceTree = "<group>"; };
-		948A29982891AA520055A031 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		948A299A2891BB700055A031 /* Combine+UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIDatePicker.swift"; sourceTree = "<group>"; };
 		948A29B02891D1820055A031 /* Combine+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UISwitch.swift"; sourceTree = "<group>"; };
 		948A29CF2892A9C20055A031 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
@@ -184,7 +178,6 @@
 		94086759289FE68D009719C4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */,
 				9408675A289FE6A8009719C4 /* OpenSourceCell.swift */,
 				9408675C289FE855009719C4 /* AppStoreCell.swift */,
 				9408675E289FEEA4009719C4 /* FontCell.swift */,
@@ -419,7 +412,6 @@
 			children = (
 				94272A6D288AD4810010BC10 /* FetchQuoteUseCase.swift */,
 				94272A7B288ADA7D0010BC10 /* DoneUseCase.swift */,
-				948A29952891A9660055A031 /* PushAlarmUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -658,7 +650,6 @@
 			children = (
 				9461B92928A3B63700E4F871 /* UserDefaults */,
 				9408676D28A017E0009719C4 /* Font */,
-				948A29982891AA520055A031 /* LocalNotificationManager.swift */,
 				9461B92F28A3EEEB00E4F871 /* Application.swift */,
 			);
 			path = Common;
@@ -776,14 +767,12 @@
 				94272A98288AFD3E0010BC10 /* UIStackView+.swift in Sources */,
 				94BE34D62899D2FF0038BE68 /* UILabel+.swift in Sources */,
 				9408676F28A017E9009719C4 /* AppFont.swift in Sources */,
-				948A29992891AA520055A031 /* LocalNotificationManager.swift in Sources */,
 				94272A84288ADD8C0010BC10 /* DoneListViewModel.swift in Sources */,
 				9408675D289FE855009719C4 /* AppStoreCell.swift in Sources */,
 				94272A4D288AAF200010BC10 /* DoneStorageType.swift in Sources */,
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
-				9461B92728A3A9DB00E4F871 /* PushAlarmCell.swift in Sources */,
 				948A2910288D40D90055A031 /* DoneChartView.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				9417507F289FDFF6000EE6F5 /* OpenSourceViewModel.swift in Sources */,
@@ -796,7 +785,6 @@
 				9417507A289FC5BC000EE6F5 /* OpenSourceListViewModel.swift in Sources */,
 				94272A53288AB15D0010BC10 /* HTTPMethod.swift in Sources */,
 				9417507D289FDFEE000EE6F5 /* OpenSourceView.swift in Sources */,
-				948A29962891A9660055A031 /* PushAlarmUseCase.swift in Sources */,
 				94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */,
 				94272A5F288AC8B80010BC10 /* QuotesRepository.swift in Sources */,
 				94272A7E288ADB6E0010BC10 /* AppDIContainer.swift in Sources */,

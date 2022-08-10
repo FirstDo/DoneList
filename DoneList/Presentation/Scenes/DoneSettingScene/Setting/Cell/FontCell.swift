@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FontCell: View {
     
-    @AppStorage("font") var currentFont: AppFont = FontManager.getFontName()
+    @AppStorage(UserDefaultsKey.userFont) var currentFont: AppFont = FontManager.getFontName()
     @State var isPresented = false
     
     var body: some View {
@@ -31,7 +31,7 @@ struct FontCell: View {
             ForEach(AppFont.allCases, id: \.self) { font in
                 Button {
                     currentFont = font
-                    FontManager.setFont(font)
+                    //FontManager.setFont(font)
                 } label: {
                     Text(font.name)
                 }
