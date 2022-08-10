@@ -28,7 +28,7 @@ final class DoneCreateViewController: UIViewController {
     }
     
     deinit {
-        print(self, #function)
+        debugPrint(self, #function)
         coordinator?.dismiss(target: self)
     }
     

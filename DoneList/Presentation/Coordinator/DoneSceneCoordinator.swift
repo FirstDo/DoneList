@@ -101,6 +101,6 @@ final class DoneSceneCoordiantor: Coordinator {
     }
     
     deinit {
-        print(self, #function)
+        debugPrint(self, #function)
     }
 }

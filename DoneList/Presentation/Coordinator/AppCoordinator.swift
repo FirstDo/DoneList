@@ -44,6 +44,6 @@ final class AppCoordinator: Coordinator {
     }
     
     deinit {
-        print(self, #function)
+        debugPrint(self, #function)
     }
 }

@@ -45,6 +45,6 @@ final class ChartSceneDIContainer {
     }
     
     deinit {
-        print(self, #function)
+        debugPrint(self, #function)
     }
 }

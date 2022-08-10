@@ -34,6 +34,6 @@ final class ChartSceneCoordinator: Coordinator {
     }
     
     deinit {
-        print(self, #function)
+        debugPrint(self, #function)
     }
 }
