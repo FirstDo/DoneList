@@ -64,6 +64,7 @@
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
 		9461B92728A3A9DB00E4F871 /* PushAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */; };
+		9461B92B28A3B64100E4F871 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92A28A3B64100E4F871 /* UserDefaults+.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* ChartViewController.swift */; };
 		948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* ChartSceneDIContainer.swift */; };
@@ -143,6 +144,7 @@
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
 		9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCell.swift; sourceTree = "<group>"; };
+		9461B92A28A3B64100E4F871 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* ChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -624,6 +626,14 @@
 			path = Publisher;
 			sourceTree = "<group>";
 		};
+		9461B92928A3B63700E4F871 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9461B92A28A3B64100E4F871 /* UserDefaults+.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		948A29212890007F0055A031 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +654,7 @@
 		948A29972891AA430055A031 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9461B92928A3B63700E4F871 /* UserDefaults */,
 				9408676D28A017E0009719C4 /* Font */,
 				948A29982891AA520055A031 /* LocalNotificationManager.swift */,
 			);
@@ -791,6 +802,7 @@
 				94272A7A288ADA050010BC10 /* DoneRepository.swift in Sources */,
 				9408675B289FE6A8009719C4 /* OpenSourceCell.swift in Sources */,
 				94272AB9288BF27C0010BC10 /* DoneCreateViewModel.swift in Sources */,
+				9461B92B28A3B64100E4F871 /* UserDefaults+.swift in Sources */,
 				94272A78288AD9620010BC10 /* DoneRepositoryType.swift in Sources */,
 				94F06800289D9AA200982832 /* UITableViewCell+.swift in Sources */,
 				948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */,

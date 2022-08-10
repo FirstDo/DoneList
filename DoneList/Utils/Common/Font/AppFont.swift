@@ -41,31 +41,9 @@ enum AppFont: String, CaseIterable {
     }
 }
 
-extension UIFont {
-    static func customFont(_ appFont: AppFont, _ size: FontSize) -> UIFont {
-        return UIFont(name: appFont.rawValue, size: size.rawValue) ?? .systemFont(ofSize: size.rawValue)
-    }
-}
-
-extension View {
-    func customFont(_ appFont: AppFont, _ size: FontSize) -> some View {
-        if appFont == .system {
-            return self.font(.system(size: size.rawValue))
-        } else {
-            return self.font(.custom(appFont.rawValue, size: size.rawValue))
-        }
-    }
-}
-
-extension UserDefaults {
-    @objc dynamic var font: String {
-        return string(forKey: "font") ?? "System"
-    }
-}
-
 final class FontManager {
     static func getFontName() -> AppFont {
-        let key = UserDefaults.standard.string(forKey: "font") ?? "System"
+        let key = UserDefaults.standard.string(forKey: UserDefaultsKey.userFont) ?? AppFont.system.rawValue
         return AppFont(rawValue: key)!
     }
     
@@ -79,6 +57,22 @@ final class FontManager {
     }
     
     static func setFont(_ font: AppFont) {
-        UserDefaults.standard.setValue(font.rawValue, forKey: "font")
+        UserDefaults.standard.setValue(font.rawValue, forKey: UserDefaultsKey.userFont)
+    }
+}
+
+extension UIFont {
+    static func customFont(_ appFont: AppFont, _ size: FontSize) -> UIFont {
+        return UIFont(name: appFont.rawValue, size: size.rawValue) ?? .systemFont(ofSize: size.rawValue)
+    }
+}
+
+extension View {
+    func customFont(_ appFont: AppFont, _ size: FontSize) -> some View {
+        if appFont == .system {
+            return self.font(.system(size: size.rawValue))
+        } else {
+            return self.font(.custom(appFont.rawValue, size: size.rawValue))
+        }
     }
 }
