@@ -47,15 +47,6 @@ final class FontManager {
         return AppFont(rawValue: key)!
     }
     
-    static func getFontNamePublisher() -> AnyPublisher<AppFont, Never> {
-        return UserDefaults.standard
-            .publisher(for: \.font)
-            .compactMap { key in
-                return AppFont(rawValue: key)
-            }
-            .eraseToAnyPublisher()
-    }
-    
     static func setFont(_ font: AppFont) {
         UserDefaults.standard.setValue(font.rawValue, forKey: UserDefaultsKey.userFont)
     }

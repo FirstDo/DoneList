@@ -39,13 +39,13 @@ final class DoneListViewController: UIViewController {
         bind()
     }
     
-    private func bind() {
-        viewModel.appFont
-            .sink { [weak self] appFont in
-                self?.mainView.setFont(appFont)
-            }
-            .store(in: &cancelBag)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        mainView.setFont(viewModel.appFont)
+    }
+    
+    private func bind() {
         viewModel.doneItems
             .sink { [weak self] items in
                 self?.mainView.applySnapshot(items)

@@ -10,9 +10,3 @@ import Foundation
 enum UserDefaultsKey {
     static let userFont = "userFont"
 }
-
-extension UserDefaults {
-    @objc dynamic var font: String {
-        return string(forKey: UserDefaultsKey.userFont) ?? AppFont.system.rawValue
-    }
-}

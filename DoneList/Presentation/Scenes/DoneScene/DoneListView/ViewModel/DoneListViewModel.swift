@@ -21,7 +21,7 @@ protocol DoneListViewModelInput {
 }
 
 protocol DoneListViewModelOutput {
-    var appFont: AnyPublisher<AppFont, Never> { get }
+    var appFont: AppFont { get }
     var doneItems: AnyPublisher<[Done], Never> { get }
     var quote: AnyPublisher<Quote, Never> { get }
     var dateTitle: AnyPublisher<String, Never> { get }
@@ -53,8 +53,8 @@ final class DoneListViewModel: DoneListViewModelType {
     
     // MARK: - OutPut
     
-    var appFont: AnyPublisher<AppFont, Never> {
-        return FontManager.getFontNamePublisher()
+    var appFont: AppFont {
+        return FontManager.getFontName()
     }
     
     var doneItems: AnyPublisher<[Done], Never> {
