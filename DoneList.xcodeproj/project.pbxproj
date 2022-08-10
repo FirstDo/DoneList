@@ -63,6 +63,7 @@
 		94272ABD288BFD460010BC10 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABC288BFD460010BC10 /* Category.swift */; };
 		94272AC0288BFD9A0010BC10 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272ABF288BFD9A0010BC10 /* CategoryCell.swift */; };
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
+		9461B92728A3A9DB00E4F871 /* PushAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* ChartViewController.swift */; };
 		948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* ChartSceneDIContainer.swift */; };
@@ -141,6 +142,7 @@
 		94272ABC288BFD460010BC10 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		94272ABF288BFD9A0010BC10 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
+		9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlarmCell.swift; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* ChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		94086759289FE68D009719C4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				9461B92628A3A9DB00E4F871 /* PushAlarmCell.swift */,
 				9408675A289FE6A8009719C4 /* OpenSourceCell.swift */,
 				9408675C289FE855009719C4 /* AppStoreCell.swift */,
 				9408675E289FEEA4009719C4 /* FontCell.swift */,
@@ -765,6 +768,7 @@
 				948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */,
 				94272A4B288AAE880010BC10 /* Done.swift in Sources */,
 				94272A5B288AB9F70010BC10 /* QuoteAPI.swift in Sources */,
+				9461B92728A3A9DB00E4F871 /* PushAlarmCell.swift in Sources */,
 				948A2910288D40D90055A031 /* DoneChartView.swift in Sources */,
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				9417507F289FDFF6000EE6F5 /* OpenSourceViewModel.swift in Sources */,

@@ -16,7 +16,7 @@ struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
         VStack {
             Form {
                 Section("앱 설정") {
-                    Text("푸쉬 알람")
+                    PushAlarmCell()
                     FontCell()
                 }
                 .customFont(appFont, .body)
