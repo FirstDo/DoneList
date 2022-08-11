@@ -72,7 +72,7 @@ final class DoneListViewController: UIViewController {
                 
                 ToastView(message: message)
                     .setImage(UIImage(systemName: "xmark.circle.fill"))
-                    .show(in: self.view, position: .top(constant: .zero), holdingTime: 1, fadeAnimationDuration: 1)
+                    .show(in: self.view, position: .bottom(constant: 20), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)
         
