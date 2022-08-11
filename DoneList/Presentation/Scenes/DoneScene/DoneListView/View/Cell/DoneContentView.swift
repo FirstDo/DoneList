@@ -12,7 +12,6 @@ final class DoneContentView: UIView, UIContentView {
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.alignment = .center
-        stackview.distribution = .fillProportionally
         stackview.spacing = 20
         stackview.layer.cornerRadius = 8
         
@@ -24,7 +23,6 @@ final class DoneContentView: UIView, UIContentView {
     
     private let doneTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .bold)
         label.textColor = .white
         
         return label
@@ -65,11 +63,11 @@ final class DoneContentView: UIView, UIContentView {
         baseStackView.addArrangedSubviews(doneImageView, doneTitleLabel)
         
         baseStackView.snp.makeConstraints {
-            $0.edges.equalTo(self.safeAreaLayoutGuide).inset(3)
+            $0.edges.equalToSuperview().inset(5)
         }
         
         doneImageView.snp.makeConstraints {
-            $0.width.height.equalTo(30)
+            $0.width.height.lessThanOrEqualTo(40)
         }
     }
     
