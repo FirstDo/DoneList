@@ -9,4 +9,5 @@ import Foundation
 
 enum UserDefaultsKey {
     static let userFont = "userFont"
+    static let exsitingUser = "exsitingUser"
 }

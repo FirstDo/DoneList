@@ -22,14 +22,18 @@ final class DoneRealmStorage: DoneStorageType {
     @Published private var items = [Done]()
     
     init() {
-        updateRealm()
+        if UserDefaults.standard.bool(forKey: UserDefaultsKey.exsitingUser) {
+            updateItem()
+        } else {
+            UserDefaults.standard.set(true, forKey: UserDefaultsKey.exsitingUser)
+            Done.dummy().forEach { create($0) }
+        }
     }
     
     func create(_ item: Done) {
         realm?.writeAsync { [weak self] in
             self?.realm?.add(item.realmDAO())
             self?.items.append(item)
-            //self?.updateRealm()
         }
     }
     
@@ -56,7 +60,7 @@ final class DoneRealmStorage: DoneStorageType {
         }
     }
     
-    private func updateRealm() {
+    private func updateItem() {
         guard let realm = realm else { return }
         
         items = realm.objects(DoneDAO.self).map { Done(realmDAO: $0) }
