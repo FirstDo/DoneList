@@ -20,48 +20,12 @@ final class WeekIndexView: UIView {
     }()
     
     private let mondayLabel = UILabel(alignment: .center)
-
-    private let tuesdayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
-    private let wednesdayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
-    private let thursdayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
-    private let fridayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
-    private let saturdayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
-    private let sundayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
+    private let tuesdayLabel = UILabel(alignment: .center)
+    private let wednesdayLabel = UILabel(alignment: .center)
+    private let thursdayLabel = UILabel(alignment: .center)
+    private let fridayLabel = UILabel(alignment: .center)
+    private let saturdayLabel = UILabel(alignment: .center)
+    private let sundayLabel = UILabel(alignment: .center)
     
     convenience init() {
         self.init(frame: .zero)
@@ -103,7 +67,7 @@ final class WeekIndexView: UIView {
     }
 }
 
-extension UILabel {
+private extension UILabel {
     convenience init(alignment: NSTextAlignment) {
         self.init(frame: .zero)
         self.textAlignment = alignment

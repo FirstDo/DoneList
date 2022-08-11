@@ -35,7 +35,7 @@ final class DoneListView: UIView {
         
         var configuration = UIButton.Configuration.plain()
         configuration.baseForegroundColor = .label
-        configuration.image = UIImage(systemName: "chevron.left.circle")
+        configuration.image = .chevronLeftCircle
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         
@@ -47,7 +47,7 @@ final class DoneListView: UIView {
         
         var configuration = UIButton.Configuration.plain()
         configuration.baseForegroundColor = .label
-        configuration.image = UIImage(systemName: "chevron.right.circle")
+        configuration.image = .chevronRightCircle
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         
@@ -88,7 +88,7 @@ final class DoneListView: UIView {
     
     let addDoneButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "plus.circle.fill"), for: .normal)
+        button.setImage(.plusCircleFill, for: .normal)
         
         return button
     }()

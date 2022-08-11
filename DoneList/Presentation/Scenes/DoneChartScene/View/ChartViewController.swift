@@ -65,7 +65,7 @@ final class ChartViewController: UIViewController {
                 guard let self = self else { return }
                 
                 ToastView(message: message)
-                    .setImage(UIImage(systemName: "xmark.circle.fill"))
+                    .setImage(.xmarkCircleFill)
                     .show(in: self.view, position: .bottom(constant: 20), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)

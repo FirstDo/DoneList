@@ -23,7 +23,7 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: "xmark.circle")
+        configuration.image = .xmarkCircle
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title1))
         button.configuration = configuration
         button.tintColor = .systemRed
@@ -43,7 +43,7 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: "chevron.left")
+        configuration.image = .chevronLeft
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         button.tintColor = .label
@@ -55,7 +55,7 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: "chevron.right")
+        configuration.image = .chevronRight
         configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         button.tintColor = .label

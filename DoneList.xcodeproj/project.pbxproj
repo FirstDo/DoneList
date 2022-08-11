@@ -71,6 +71,7 @@
 		9461B93B28A4FE2500E4F871 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93A28A4FE2500E4F871 /* CoordinatorProtocol.swift */; };
 		9461B93D28A5015400E4F871 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93C28A5015400E4F871 /* FontSize.swift */; };
 		9461B93F28A5017900E4F871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93E28A5017900E4F871 /* FontManager.swift */; };
+		9461B94228A5044200E4F871 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B94128A5044200E4F871 /* UIImage+.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* ChartViewController.swift */; };
 		948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* ChartSceneDIContainer.swift */; };
@@ -153,6 +154,7 @@
 		9461B93A28A4FE2500E4F871 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9461B93C28A5015400E4F871 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		9461B93E28A5017900E4F871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		9461B94128A5044200E4F871 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* ChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				94272AA2288B052C0010BC10 /* UIView+.swift */,
 				948A2924289001570055A031 /* Date+.swift */,
 				94BE34D7289AAD440038BE68 /* UIColor+.swift */,
+				9461B94128A5044200E4F871 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -652,6 +655,13 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		9461B94028A503DD00E4F871 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		948A29212890007F0055A031 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +682,7 @@
 		948A29972891AA430055A031 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9461B94028A503DD00E4F871 /* DesignSystem */,
 				9461B92928A3B63700E4F871 /* UserDefaults */,
 				9408676D28A017E0009719C4 /* Font */,
 				9461B92F28A3EEEB00E4F871 /* Application.swift */,
@@ -834,6 +845,7 @@
 				948A2923289000940055A031 /* LineView.swift in Sources */,
 				94272AAD288BB28B0010BC10 /* CalendarViewModel.swift in Sources */,
 				94175074289FBAAA000EE6F5 /* SettingView.swift in Sources */,
+				9461B94228A5044200E4F871 /* UIImage+.swift in Sources */,
 				94272A64288ACB560010BC10 /* Quote.swift in Sources */,
 				94272ABB288BF68A0010BC10 /* DoneCreateViewController.swift in Sources */,
 			);

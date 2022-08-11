@@ -71,7 +71,7 @@ final class DoneListViewController: UIViewController {
                 guard let self = self else { return }
                 
                 ToastView(message: message)
-                    .setImage(UIImage(systemName: "xmark.circle.fill"))
+                    .setImage(.xmarkCircleFill)
                     .show(in: self.view, position: .bottom(constant: 20), holdingTime: 1, fadeAnimationDuration: 1)
             }
             .store(in: &cancelBag)
@@ -153,7 +153,7 @@ final class DoneListViewController: UIViewController {
     
     private func setupNavigationItem() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "chart.bar.fill"),
+            image: .chartBarFill,
             primaryAction: UIAction { [weak self] _ in
                 self?.viewModel.didTapChartButton()
             }
@@ -162,7 +162,7 @@ final class DoneListViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = .label
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "gearshape.fill"),
+            image: .gearshapefill,
             primaryAction: UIAction { [weak self] _ in
                 self?.viewModel.didTapSettingButton()
             }
