@@ -19,6 +19,23 @@ struct Done: Hashable {
         self.taskName = taskName
         self.category = category
     }
+    
+    init(realmDAO: DoneDAO) {
+        self.id = realmDAO.id
+        self.createdAt = realmDAO.createdAt
+        self.taskName = realmDAO.taskName
+        self.category = Category(name: realmDAO.categoryName)
+    }
+    
+    func realmDAO() -> DoneDAO {
+        let doneDAO = DoneDAO()
+        doneDAO.id = id
+        doneDAO.createdAt = createdAt
+        doneDAO.taskName = taskName
+        doneDAO.categoryName = category.name
+        
+        return doneDAO
+    }
 }
 
 #if DEBUG
