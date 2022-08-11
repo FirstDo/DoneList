@@ -12,6 +12,7 @@ final class DoneContentView: UIView, UIContentView {
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.alignment = .center
+        stackview.distribution = .fillProportionally
         stackview.spacing = 20
         stackview.layer.cornerRadius = 8
         
