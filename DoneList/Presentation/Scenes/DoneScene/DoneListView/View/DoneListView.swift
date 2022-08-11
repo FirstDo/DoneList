@@ -9,42 +9,13 @@ import UIKit
 
 import SnapKit
 
-fileprivate enum Const {
-    
-    enum BaseStack {
-        static let spcaing: CGFloat = 30
-        static let inset: CGFloat = 10
-    }
-    
-    enum DateStack {
-        static let spcaing: CGFloat = 5
-    }
-    
-    enum YesterDay {
-        static let font: UIFont = .preferredFont(forTextStyle: .title2)
-    }
-    
-    enum Tomorrow {
-        static let font: UIFont = .preferredFont(forTextStyle: .title2)
-    }
-    
-    enum Add {
-        static let imageName = "plus.app"
-        static let font: UIFont = .preferredFont(forTextStyle: .title2)
-    }
-    
-    enum ListTitle {
-        static let text = "Done List"
-    }
-}
-
 final class DoneListView: UIView {
     
     private let viewModel: DoneListViewModelType
     
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
-        stackview.spacing = Const.BaseStack.spcaing
+        stackview.spacing = 30
         stackview.alignment = .center
         stackview.axis = .vertical
         
@@ -53,7 +24,7 @@ final class DoneListView: UIView {
 
     private let dateStackView: UIStackView = {
         let stackview = UIStackView()
-        stackview.spacing = Const.DateStack.spcaing
+        stackview.spacing = 5
         stackview.distribution = .fillProportionally
         
         return stackview
@@ -65,7 +36,7 @@ final class DoneListView: UIView {
         var configuration = UIButton.Configuration.plain()
         configuration.baseForegroundColor = .label
         configuration.image = UIImage(systemName: "chevron.left.circle")
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         
         return button
@@ -77,7 +48,7 @@ final class DoneListView: UIView {
         var configuration = UIButton.Configuration.plain()
         configuration.baseForegroundColor = .label
         configuration.image = UIImage(systemName: "chevron.right.circle")
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         
         return button
@@ -102,7 +73,7 @@ final class DoneListView: UIView {
     let doneListTitle: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = Const.ListTitle.text
+        label.text = "Done List"
         
         return label
     }()
@@ -117,11 +88,7 @@ final class DoneListView: UIView {
     
     let addDoneButton: UIButton = {
         let button = UIButton()
-        
-        var configuration = UIButton.Configuration.plain()
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Add.font)
-        configuration.image = UIImage(named: "plus.circle.fill")
-        button.configuration = configuration
+        button.setImage(UIImage(named: "plus.circle.fill"), for: .normal)
         
         return button
     }()
@@ -153,7 +120,7 @@ final class DoneListView: UIView {
         dateStackView.addArrangedSubviews(yesterDayButton, dateLabel, tomorrowButton)
         
         baseStackView.snp.makeConstraints {
-            $0.edges.equalTo(safeAreaLayoutGuide).inset(Const.BaseStack.inset)
+            $0.edges.equalTo(safeAreaLayoutGuide).inset(10)
         }
         
         quoteLabel.snp.makeConstraints {
@@ -165,6 +132,7 @@ final class DoneListView: UIView {
         }
         
         addDoneButton.snp.makeConstraints {
+            $0.width.height.equalTo(50)
             $0.trailing.bottom.equalTo(baseStackView.safeAreaLayoutGuide)
         }
     }

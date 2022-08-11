@@ -9,38 +9,12 @@ import UIKit
 
 import SnapKit
 
-fileprivate enum Const {
-    
-    enum DateStack {
-        static let spcaing: CGFloat = 5
-    }
-    
-    enum YesterDay {
-        static let imageName = "chevron.left"
-        static let font: UIFont = .preferredFont(forTextStyle: .title2)
-    }
-    
-    enum Tomorrow {
-        static let imageName = "chevron.right"
-        static let font: UIFont = .preferredFont(forTextStyle: .title2)
-    }
-    
-    enum Close {
-        static let imageName = "xmark.circle"
-        static let font: UIFont = .preferredFont(forTextStyle: .title1)
-    }
-    
-    enum viewTitle {
-        static let text = "리포트"
-    }
-}
-
 final class DoneChartView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = Const.viewTitle.text
+        label.text = "리포트"
         
         return label
     }()
@@ -49,8 +23,8 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: Const.Close.imageName)
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Close.font)
+        configuration.image = UIImage(systemName: "xmark.circle")
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title1))
         button.configuration = configuration
         button.tintColor = .systemRed
         
@@ -59,7 +33,7 @@ final class DoneChartView: UIView {
     
     private let dateStackView: UIStackView = {
         let stackview = UIStackView()
-        stackview.spacing = Const.DateStack.spcaing
+        stackview.spacing = 5
         stackview.distribution = .fillProportionally
         
         return stackview
@@ -69,8 +43,8 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: Const.YesterDay.imageName)
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.YesterDay.font)
+        configuration.image = UIImage(systemName: "chevron.left")
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         button.tintColor = .label
         
@@ -81,8 +55,8 @@ final class DoneChartView: UIView {
         let button = UIButton()
         
         var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: Const.Tomorrow.imageName)
-        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: Const.Tomorrow.font)
+        configuration.image = UIImage(systemName: "chevron.right")
+        configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(font: .preferredFont(forTextStyle: .title2))
         button.configuration = configuration
         button.tintColor = .label
         
