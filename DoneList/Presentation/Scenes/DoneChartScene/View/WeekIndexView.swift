@@ -19,13 +19,8 @@ final class WeekIndexView: UIView {
         return stackView
     }()
     
-    private let mondayLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
+    private let mondayLabel = UILabel(alignment: .center)
+
     private let tuesdayLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -105,5 +100,12 @@ final class WeekIndexView: UIView {
         fridayLabel.font = .customFont(appFont, .body)
         saturdayLabel.font = .customFont(appFont, .body)
         sundayLabel.font = .customFont(appFont, .body)
+    }
+}
+
+extension UILabel {
+    convenience init(alignment: NSTextAlignment) {
+        self.init(frame: .zero)
+        self.textAlignment = alignment
     }
 }

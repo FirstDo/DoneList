@@ -8,6 +8,7 @@
 import UIKit
 
 final class ChartSceneCoordinator: Coordinator {
+    
     var navigationController: UINavigationController?
     weak var parentCoordinator: Coordinator?
     var childCoordinator: [Coordinator] = []

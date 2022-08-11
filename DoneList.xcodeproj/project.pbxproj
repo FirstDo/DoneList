@@ -68,6 +68,9 @@
 		9461B93428A3FFA600E4F871 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9461B93328A3FFA600E4F871 /* Realm */; };
 		9461B93628A3FFA600E4F871 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9461B93528A3FFA600E4F871 /* RealmSwift */; };
 		9461B93928A4C18D00E4F871 /* DoneDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93828A4C18D00E4F871 /* DoneDAO.swift */; };
+		9461B93B28A4FE2500E4F871 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93A28A4FE2500E4F871 /* CoordinatorProtocol.swift */; };
+		9461B93D28A5015400E4F871 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93C28A5015400E4F871 /* FontSize.swift */; };
+		9461B93F28A5017900E4F871 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93E28A5017900E4F871 /* FontManager.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* ChartViewController.swift */; };
 		948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* ChartSceneDIContainer.swift */; };
@@ -147,6 +150,9 @@
 		9461B92A28A3B64100E4F871 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		9461B92F28A3EEEB00E4F871 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		9461B93828A4C18D00E4F871 /* DoneDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDAO.swift; sourceTree = "<group>"; };
+		9461B93A28A4FE2500E4F871 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9461B93C28A5015400E4F871 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		9461B93E28A5017900E4F871 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* ChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -204,7 +210,9 @@
 		9408676D28A017E0009719C4 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				9461B93C28A5015400E4F871 /* FontSize.swift */,
 				9408676E28A017E9009719C4 /* AppFont.swift */,
+				9461B93E28A5017900E4F871 /* FontManager.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -394,6 +402,7 @@
 		94272A43288AA2E90010BC10 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				9461B93A28A4FE2500E4F871 /* CoordinatorProtocol.swift */,
 				94272A87288AE0620010BC10 /* AppCoordinator.swift */,
 				94272A89288AE19F0010BC10 /* DoneSceneCoordinator.swift */,
 				948A290D288D36280055A031 /* ChartSceneCoordinator.swift */,
@@ -773,9 +782,11 @@
 				94272AB5288BEFBC0010BC10 /* DoneWriteView.swift in Sources */,
 				94272A67288ACBE70010BC10 /* QuotesRepositoryType.swift in Sources */,
 				94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */,
+				9461B93B28A4FE2500E4F871 /* CoordinatorProtocol.swift in Sources */,
 				948A2914288D47D20055A031 /* LineChartView.swift in Sources */,
 				94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */,
 				948A29D02892A9C20055A031 /* Content.swift in Sources */,
+				9461B93F28A5017900E4F871 /* FontManager.swift in Sources */,
 				941D7D0E288C9A4C0071C2C7 /* DoneEditViewController.swift in Sources */,
 				941D7D0C288C96E50071C2C7 /* DoneEditViewModel.swift in Sources */,
 				94272A9D288AFFE80010BC10 /* DoneContentConfiguration.swift in Sources */,
@@ -796,6 +807,7 @@
 				94272A88288AE0620010BC10 /* AppCoordinator.swift in Sources */,
 				9417507F289FDFF6000EE6F5 /* OpenSourceViewModel.swift in Sources */,
 				94272A6E288AD4820010BC10 /* FetchQuoteUseCase.swift in Sources */,
+				9461B93D28A5015400E4F871 /* FontSize.swift in Sources */,
 				948A290E288D36280055A031 /* ChartSceneCoordinator.swift in Sources */,
 				941D7D07288C5CC10071C2C7 /* Combine+UIButton.swift in Sources */,
 				948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */,

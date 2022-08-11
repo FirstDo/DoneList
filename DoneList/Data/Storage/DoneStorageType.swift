@@ -18,6 +18,7 @@ protocol DoneStorageType: AnyObject {
 }
 
 final class DoneRealmStorage: DoneStorageType {
+    
     private let realm = try? Realm()
     @Published private var items = [Done]()
     

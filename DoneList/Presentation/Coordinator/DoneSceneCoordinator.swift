@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 final class DoneSceneCoordiantor: Coordinator {
+    
     var navigationController: UINavigationController?
     weak var parentCoordinator: Coordinator?
     var childCoordinator: [Coordinator] = []
@@ -79,7 +80,7 @@ final class DoneSceneCoordiantor: Coordinator {
     func showChartViewController(with date: Date) {
         guard let navigationController = navigationController else { return }
         
-        let chartSceneDIContainer = dependency.chartSceneDIContainer
+        let chartSceneDIContainer = dependency.makechartSceneDIContainer()
         let chartSceneCoordinator = chartSceneDIContainer.makeChartSceneCoordinator(navigationController)
         
         chartSceneCoordinator.parentCoordinator = self

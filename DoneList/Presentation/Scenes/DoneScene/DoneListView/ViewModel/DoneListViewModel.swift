@@ -37,6 +37,7 @@ protocol DoneListViewModelOutput {
 protocol DoneListViewModelType: DoneListViewModelInput, DoneListViewModelOutput {}
 
 final class DoneListViewModel: DoneListViewModelType {
+    
     private let doneUseCase: DoneUseCaseType
     private let fetchQuoteUseCase: FetchQuoteUseCaseType
     private var cancelBag = Set<AnyCancellable>()

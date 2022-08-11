@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 final class CategoryCell: UICollectionViewCell {
+    
     private let doneImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit

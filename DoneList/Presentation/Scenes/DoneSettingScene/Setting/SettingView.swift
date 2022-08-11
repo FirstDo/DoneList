@@ -14,7 +14,7 @@ struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
     var body: some View {
         VStack {
             Form {
-                Section("앱 설정") {
+                Section(viewModel.appSettingSectionHeader) {
                     FontCell()
                 }
                 .customFont(viewModel.appFont, .body)
@@ -23,16 +23,16 @@ struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
                     AppStoreCell()
                     OpenSourceCell()
                 } header: {
-                    Text("기타")
+                    Text(viewModel.otherSettingSectionHeader)
                 } footer: {
-                    Text("developed by dudu")
+                    Text(viewModel.otherSettingSectionFootter)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 }
                 .customFont(viewModel.appFont, .body)
             }
         }
-        .navigationTitle("설정")
+        .navigationTitle(viewModel.navigationTitle)
         .navigationBarTitleDisplayMode(.large)
     }
 }

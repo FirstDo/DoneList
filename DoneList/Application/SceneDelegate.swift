@@ -8,6 +8,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
     private let appDIContainer = AppDIContainer()
     private var appCoordinator: AppCoordinator?
     

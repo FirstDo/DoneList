@@ -8,6 +8,7 @@
 import UIKit
 
 final class ChartSceneDIContainer {
+    
     struct Dependencies {
         unowned let doneStorage: DoneStorageType
     }

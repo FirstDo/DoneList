@@ -8,6 +8,7 @@
 import UIKit
 
 final class DoneSceneDIContainer {
+    
     struct Dependencies {
         unowned let doneStorage: DoneStorageType
         unowned let apiProvider: APIProvider
@@ -20,9 +21,8 @@ final class DoneSceneDIContainer {
     }
     
     // MARK: - DIContainer
-    
-    var chartSceneDIContainer: ChartSceneDIContainer {
-        return ChartSceneDIContainer(dependencies: ChartSceneDIContainer.Dependencies(doneStorage: dependencies.doneStorage))
+    func makechartSceneDIContainer() -> ChartSceneDIContainer {
+        return ChartSceneDIContainer(dependencies: .init(doneStorage: dependencies.doneStorage))
     }
     
     // MARK: - Coordiantor

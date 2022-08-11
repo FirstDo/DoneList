@@ -7,19 +7,8 @@
 
 import UIKit
 
-protocol Coordinator: AnyObject {
-    var navigationController: UINavigationController? { get set }
-    var parentCoordinator: Coordinator? { get set }
-    var childCoordinator: [Coordinator] { get set }
-}
-
-extension Coordinator {
-    func removeChild(_ child: Coordinator) {
-        childCoordinator.removeAll { $0 === child }
-    }
-}
-
 final class AppCoordinator: Coordinator {
+    
     var navigationController: UINavigationController?
     weak var parentCoordinator: Coordinator?
     var childCoordinator: [Coordinator] = []

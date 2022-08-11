@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 final class LineChartView: UIView {
+    
     private let baseStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually

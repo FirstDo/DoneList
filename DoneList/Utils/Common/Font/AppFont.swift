@@ -7,19 +7,6 @@
 
 import UIKit
 import SwiftUI
-import Combine
-
-enum FontSize: CGFloat {
-    case largetTitle = 34
-    case title1 = 28
-    case title2 = 22
-    case title3 = 20
-    case body = 17
-    case callout = 16
-    case footnote = 13
-    case caption1 = 12
-    case caption2 = 11
-}
 
 enum AppFont: String, CaseIterable {
     case system = "System"
@@ -38,17 +25,6 @@ enum AppFont: String, CaseIterable {
         case .chosunCentennial:
             return "조선100년체"
         }
-    }
-}
-
-final class FontManager {
-    static func getFontName() -> AppFont {
-        let key = UserDefaults.standard.string(forKey: UserDefaultsKey.userFont) ?? AppFont.system.rawValue
-        return AppFont(rawValue: key)!
-    }
-    
-    static func setFont(_ font: AppFont) {
-        UserDefaults.standard.setValue(font.rawValue, forKey: UserDefaultsKey.userFont)
     }
 }
 

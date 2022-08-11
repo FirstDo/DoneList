@@ -8,6 +8,7 @@
 import UIKit
 
 final class Application {
+    
     static let shared = Application()
     private init() {}
     
