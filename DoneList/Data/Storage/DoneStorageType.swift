@@ -31,9 +31,9 @@ final class DoneRealmStorage: DoneStorageType {
     }
     
     func create(_ item: Done) {
-        realm?.writeAsync { [weak self] in
-            self?.realm?.add(item.realmDAO())
-            self?.items.append(item)
+        try? realm?.write {
+            realm?.add(item.realmDAO())
+            items.append(item)
         }
     }
     
@@ -42,21 +42,21 @@ final class DoneRealmStorage: DoneStorageType {
     }
     
     func update(_ item: Done) {
-        realm?.writeAsync { [weak self] in
-            self?.realm?.add(item.realmDAO(), update: .modified)
+        try? realm?.write {
+            realm?.add(item.realmDAO(), update: .modified)
             
-            if let index = self?.items.firstIndex(where: { $0.id == item.id }) {
-                self?.items[index] = item
+            if let index = items.firstIndex(where: { $0.id == item.id }) {
+                items[index] = item
             }
         }
     }
     
     func delete(_ item: Done) {
-        realm?.writeAsync { [weak self] in
-            guard let targetDAO = self?.realm?.object(ofType: DoneDAO.self, forPrimaryKey: item.id) else { return }
+        try? realm?.write {
+            guard let targetDAO = realm?.object(ofType: DoneDAO.self, forPrimaryKey: item.id) else { return }
             
-            self?.realm?.delete(targetDAO)
-            self?.items.removeAll { $0.id == item.id }
+            realm?.delete(targetDAO)
+            items.removeAll { $0.id == item.id }
         }
     }
     
