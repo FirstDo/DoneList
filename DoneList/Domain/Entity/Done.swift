@@ -38,7 +38,6 @@ struct Done: Hashable {
     }
 }
 
-#if DEBUG
 extension Done {
     static func dummy() -> [Done] {
         let today = Date.now.startOfDay
@@ -50,4 +49,3 @@ extension Done {
         ]
     }
 }
-#endif
