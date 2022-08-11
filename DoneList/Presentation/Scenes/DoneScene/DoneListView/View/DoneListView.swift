@@ -213,6 +213,7 @@ final class DoneListView: UIView {
         dateLabel.font = .customFont(appFont, .largetTitle)
         quoteLabel.font = .customFont(appFont, .title3)
         doneListTitle.font = .customFont(appFont, .title1)
+        doneCollectionView.reloadData()
     }
 }
 
