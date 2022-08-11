@@ -65,6 +65,9 @@
 		94272AC2288C39B40010BC10 /* Combine+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272AC1288C39B30010BC10 /* Combine+UIControl.swift */; };
 		9461B92B28A3B64100E4F871 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92A28A3B64100E4F871 /* UserDefaults+.swift */; };
 		9461B93028A3EEEB00E4F871 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B92F28A3EEEB00E4F871 /* Application.swift */; };
+		9461B93428A3FFA600E4F871 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9461B93328A3FFA600E4F871 /* Realm */; };
+		9461B93628A3FFA600E4F871 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9461B93528A3FFA600E4F871 /* RealmSwift */; };
+		9461B93928A4C18D00E4F871 /* DoneDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461B93828A4C18D00E4F871 /* DoneDAO.swift */; };
 		948A2906288CB0850055A031 /* DoneChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2905288CB0850055A031 /* DoneChartViewModel.swift */; };
 		948A2908288D33BB0055A031 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2907288D33BB0055A031 /* ChartViewController.swift */; };
 		948A290A288D34390055A031 /* ChartSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A2909288D34380055A031 /* ChartSceneDIContainer.swift */; };
@@ -143,6 +146,7 @@
 		94272AC1288C39B30010BC10 /* Combine+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+UIControl.swift"; sourceTree = "<group>"; };
 		9461B92A28A3B64100E4F871 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		9461B92F28A3EEEB00E4F871 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		9461B93828A4C18D00E4F871 /* DoneDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDAO.swift; sourceTree = "<group>"; };
 		948A2905288CB0850055A031 /* DoneChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModel.swift; sourceTree = "<group>"; };
 		948A2907288D33BB0055A031 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		948A2909288D34380055A031 /* ChartSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			files = (
 				94272A9B288AFDF20010BC10 /* SnapKit in Frameworks */,
 				94272AA6288B31E50010BC10 /* FSCalendar in Frameworks */,
+				9461B93428A3FFA600E4F871 /* Realm in Frameworks */,
+				9461B93628A3FFA600E4F871 /* RealmSwift in Frameworks */,
 				94F067FE289B9CBC00982832 /* ToastPresenter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +404,7 @@
 		94272A45288AA3160010BC10 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				9461B93728A4C18200E4F871 /* Realm */,
 				948A29D82892B8300055A031 /* OpenSource.swift */,
 				94272A4A288AAE870010BC10 /* Done.swift */,
 				948A29CF2892A9C20055A031 /* Content.swift */,
@@ -628,6 +635,14 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		9461B93728A4C18200E4F871 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				9461B93828A4C18D00E4F871 /* DoneDAO.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		948A29212890007F0055A031 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +690,8 @@
 				94272A9A288AFDF20010BC10 /* SnapKit */,
 				94272AA5288B31E50010BC10 /* FSCalendar */,
 				94F067FD289B9CBC00982832 /* ToastPresenter */,
+				9461B93328A3FFA600E4F871 /* Realm */,
+				9461B93528A3FFA600E4F871 /* RealmSwift */,
 			);
 			productName = DoneList;
 			productReference = 94272A25288AA0480010BC10 /* DoneList.app */;
@@ -708,6 +725,7 @@
 				94272A99288AFDF20010BC10 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				94272AA4288B31E50010BC10 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				94F067FC289B9CBC00982832 /* XCRemoteSwiftPackageReference "ToastPresenter" */,
+				9461B93228A3FFA600E4F871 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 94272A26288AA0480010BC10 /* Products */;
 			projectDirPath = "";
@@ -744,6 +762,7 @@
 				9461B93028A3EEEB00E4F871 /* Application.swift in Sources */,
 				94272AAF288BB4490010BC10 /* CalendarViewController.swift in Sources */,
 				94272A9F288AFFF20010BC10 /* DoneContentView.swift in Sources */,
+				9461B93928A4C18D00E4F871 /* DoneDAO.swift in Sources */,
 				94272A86288ADE690010BC10 /* DoneListViewController.swift in Sources */,
 				9408675F289FEEA4009719C4 /* FontCell.swift in Sources */,
 				948A2912288D45550055A031 /* WeekIndexView.swift in Sources */,
@@ -1030,6 +1049,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		9461B93228A3FFA600E4F871 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		94F067FC289B9CBC00982832 /* XCRemoteSwiftPackageReference "ToastPresenter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FirstDo/ToastPresenter";
@@ -1050,6 +1077,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94272AA4288B31E50010BC10 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		9461B93328A3FFA600E4F871 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9461B93228A3FFA600E4F871 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		9461B93528A3FFA600E4F871 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9461B93228A3FFA600E4F871 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		94F067FD289B9CBC00982832 /* ToastPresenter */ = {
 			isa = XCSwiftPackageProductDependency;
