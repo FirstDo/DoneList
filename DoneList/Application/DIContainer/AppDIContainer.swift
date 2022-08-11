@@ -7,7 +7,7 @@
 
 final class AppDIContainer {
     private let apiProvider: APIProvider = APIProvider()
-    private let storage: DoneStorageType = DoneMemoryStorage()
+    private let storage: DoneStorageType = DoneRealmStorage()
     
     func makeDoneSceneDIContainer() -> DoneSceneDIContainer {
         return DoneSceneDIContainer(

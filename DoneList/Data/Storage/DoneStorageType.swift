@@ -8,12 +8,7 @@
 import Combine
 import Foundation
 
-enum DoneStorageError: LocalizedError {
-    case createFail
-    case readFail
-    case updateFail
-    case deleteFail
-}
+import RealmSwift
 
 protocol DoneStorageType: AnyObject {
     func create(_ item: Done)
@@ -22,18 +17,20 @@ protocol DoneStorageType: AnyObject {
     func delete(_ item: Done)
 }
 
-final class DoneMemoryStorage: DoneStorageType {
-    
+final class DoneRealmStorage: DoneStorageType {
+    private let realm = try? Realm()
     @Published private var items = [Done]()
     
-#if DEBUG
     init() {
-        items.append(contentsOf: Done.dummy())
+        updateRealm()
     }
-#endif
     
     func create(_ item: Done) {
-        items.append(item)
+        realm?.writeAsync { [weak self] in
+            self?.realm?.add(item.realmDAO())
+            self?.items.append(item)
+            //self?.updateRealm()
+        }
     }
     
     var read: AnyPublisher<[Done], Never> {
@@ -41,12 +38,27 @@ final class DoneMemoryStorage: DoneStorageType {
     }
     
     func update(_ item: Done) {
-        if let index = items.firstIndex(where: {$0.id == item.id }) {
-            items[index] = item
+        realm?.writeAsync { [weak self] in
+            self?.realm?.add(item.realmDAO(), update: .modified)
+            
+            if let index = self?.items.firstIndex(where: { $0.id == item.id }) {
+                self?.items[index] = item
+            }
         }
     }
     
     func delete(_ item: Done) {
-        items.removeAll { $0.id == item.id }
+        realm?.writeAsync { [weak self] in
+            guard let targetDAO = self?.realm?.object(ofType: DoneDAO.self, forPrimaryKey: item.id) else { return }
+            
+            self?.realm?.delete(targetDAO)
+            self?.items.removeAll { $0.id == item.id }
+        }
+    }
+    
+    private func updateRealm() {
+        guard let realm = realm else { return }
+        
+        items = realm.objects(DoneDAO.self).map { Done(realmDAO: $0) }
     }
 }
