@@ -51,6 +51,9 @@ final class DoneWriteView: UIView {
     let doneTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "오늘 한 일을 적어보세요 :)"
+        textField.enablesReturnKeyAutomatically = true
+        textField.clearButtonMode = .whileEditing
+        textField.returnKeyType = .done
         
         return textField
     }()
@@ -112,6 +115,7 @@ final class DoneWriteView: UIView {
     
     private func setupView() {
         backgroundColor = .systemGray6
+        doneTextField.delegate = self
     }
     
     private func makeCollectionLayout() -> UICollectionViewCompositionalLayout {
@@ -149,5 +153,12 @@ final class DoneWriteView: UIView {
         titleLabel.font = .customFont(appFont, .title3)
         doneButton.titleLabel?.font = .customFont(appFont, .body)
         doneTextField.font = .customFont(appFont, .body)
+    }
+}
+
+extension DoneWriteView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
     }
 }
