@@ -13,7 +13,6 @@ protocol OpenSourceViewModelType: ObservableObject {
 }
 
 final class OpenSourceViewModel: OpenSourceViewModelType {
-    
     @Published var appFont = FontManager.getFontName()
     @Published var openSource: OpenSource
     

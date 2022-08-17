@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 final class DoneChartView: UIView {
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center

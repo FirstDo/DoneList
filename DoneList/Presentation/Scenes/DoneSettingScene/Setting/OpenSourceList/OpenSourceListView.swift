@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewModelType {
-    
     @StateObject var viewModel: ViewModel
     
     var body: some View {
@@ -23,7 +22,6 @@ struct OpenSourceListView<ViewModel>: View where ViewModel: OpenSourceListViewMo
 }
 
 struct OpenSourceListView_Previews: PreviewProvider {
-    
     static let viewModel = OpenSourceListViewModel()
     
     static var previews: some View {

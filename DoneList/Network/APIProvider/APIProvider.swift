@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 final class APIProvider {
-    
     private let urlSession: URLSession
     
     init(urlSession: URLSession = .shared) {

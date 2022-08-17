@@ -29,7 +29,6 @@ protocol DoneEditViewModelOutput {
 protocol DoneEditViewModelType: DoneEditViewModelInput, DoneEditViewModelOutput {}
 
 final class DoneEditViewModel: DoneEditViewModelType {
-
     private let doneUseCase: DoneUseCaseType
     private let done: Done
     private var cancelBag = Set<AnyCancellable>()

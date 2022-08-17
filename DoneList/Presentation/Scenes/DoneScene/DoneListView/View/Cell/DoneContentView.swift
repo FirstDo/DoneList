@@ -8,7 +8,6 @@
 import UIKit
 
 final class DoneContentView: UIView, UIContentView {
-    
     private let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.alignment = .center

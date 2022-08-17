@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 final class WeekIndexView: UIView {
-    
     private let weekStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually

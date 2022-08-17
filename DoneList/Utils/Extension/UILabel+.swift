@@ -8,6 +8,7 @@
 import UIKit
 
 extension UILabel {
+    
     func typeWriterAnimation(text: String, delay: TimeInterval) {
         self.text = ""
 

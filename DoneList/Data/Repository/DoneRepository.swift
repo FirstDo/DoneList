@@ -8,7 +8,6 @@
 import Combine
 
 final class DoneRepository: DoneRepositoryType {
-    
     private unowned let storage: DoneStorageType
     
     init(storage: DoneStorageType) {

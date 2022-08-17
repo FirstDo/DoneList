@@ -8,7 +8,6 @@
 import UIKit
 
 struct DoneContentConfiguration: UIContentConfiguration {
-    
     var title: String?
     var image: UIImage?
     var themeColor: UIColor?

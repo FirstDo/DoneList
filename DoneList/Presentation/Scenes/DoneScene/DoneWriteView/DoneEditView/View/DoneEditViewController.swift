@@ -11,7 +11,6 @@ import Combine
 import SnapKit
 
 final class DoneEditViewController: UIViewController {
-    
     weak var coordinator: DoneSceneCoordiantor?
     private let viewModel: DoneEditViewModelType
     private let mainView: DoneWriteView

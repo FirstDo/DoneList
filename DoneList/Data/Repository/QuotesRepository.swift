@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 final class QuotesRepository: QuotesRepositoryType {
-    
     private unowned let apiProvider: APIProvider
     
     init(apiProvider: APIProvider) {

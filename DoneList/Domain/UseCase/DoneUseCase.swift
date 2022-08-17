@@ -18,7 +18,6 @@ protocol DoneUseCaseType {
 }
 
 final class DoneUseCase: DoneUseCaseType {
-    
     private let repository: DoneRepositoryType
     
     init(repository: DoneRepositoryType) {

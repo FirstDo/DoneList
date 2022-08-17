@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FontCell: View {
-    
     @State var currentFont: AppFont = FontManager.getFontName()
     @State var isPresented = false
     

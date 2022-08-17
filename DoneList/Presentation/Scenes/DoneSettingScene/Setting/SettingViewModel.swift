@@ -17,7 +17,6 @@ protocol SettingViewModelType: ObservableObject {
 }
 
 final class SettingViewModel: SettingViewModelType {
-    
     @AppStorage(UserDefaultsKey.userFont)
     var appFont: AppFont = FontManager.getFontName()
     

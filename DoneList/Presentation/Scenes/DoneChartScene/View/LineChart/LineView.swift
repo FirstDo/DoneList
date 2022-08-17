@@ -10,7 +10,6 @@ import UIKit
 import Combine
 
 final class LineView: UIView {
-    
     private let countLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center

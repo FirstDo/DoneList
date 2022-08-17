@@ -13,7 +13,6 @@ protocol FetchQuoteUseCaseType {
 }
 
 final class FetchQuoteUsecase: FetchQuoteUseCaseType {
-    
     private let repository: QuotesRepositoryType
     
     init(repository: QuotesRepositoryType) {

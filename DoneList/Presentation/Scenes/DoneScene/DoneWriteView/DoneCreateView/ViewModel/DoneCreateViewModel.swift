@@ -28,7 +28,6 @@ protocol DoneCreateViewModelOutput {
 protocol DoneCreateViewModelType: DoneCreateViewModelInput, DoneCreateViewModelOutput {}
 
 final class DoneCreateViewModel: DoneCreateViewModelType {
-
     private let doneUseCase: DoneUseCaseType
     private let targetDate: Date
     private var cancelBag = Set<AnyCancellable>()

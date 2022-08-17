@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 final class DoneListView: UIView {
-    
     private let viewModel: DoneListViewModelType
     
     private let baseStackView: UIStackView = {

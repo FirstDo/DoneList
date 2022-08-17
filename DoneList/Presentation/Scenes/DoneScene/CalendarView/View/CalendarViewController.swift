@@ -13,7 +13,6 @@ import FSCalendar
 import ToastPresenter
 
 class CalendarViewController: UIViewController {
-
     weak var coordinator: DoneSceneCoordiantor?
     private let viewModel: CalendarViewModelType
     private var cancelBag = Set<AnyCancellable>()

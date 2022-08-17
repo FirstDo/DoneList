@@ -6,7 +6,6 @@
 //
 
 final class AppDIContainer {
-    
     private let apiProvider: APIProvider = APIProvider()
     private let storage: DoneStorageType = DoneRealmStorage()
     

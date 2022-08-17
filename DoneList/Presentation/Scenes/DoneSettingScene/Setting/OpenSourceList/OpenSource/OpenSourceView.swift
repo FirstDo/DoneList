@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OpenSourceView<ViewModel>: View where ViewModel: OpenSourceViewModelType {
-    
     @StateObject var viewModel: ViewModel
     
     var body: some View {

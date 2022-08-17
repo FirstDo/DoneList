@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 final class DoneCell: UICollectionViewListCell {
-    
     var done: Done?
     
     override func updateConfiguration(using state: UICellConfigurationState) {

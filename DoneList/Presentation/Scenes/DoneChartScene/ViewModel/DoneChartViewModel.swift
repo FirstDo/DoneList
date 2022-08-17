@@ -27,7 +27,6 @@ protocol DoneChartViewModelOutput {
 protocol DoneChartViewModelType: DoneChartViewModelInput, DoneChartViewModelOutput {}
 
 final class DoneChartViewModel: DoneChartViewModelType {
-    
     private let doneUseCase: DoneUseCaseType
     @Published private var targetDate: Date
     private var cancelBag = Set<AnyCancellable>()

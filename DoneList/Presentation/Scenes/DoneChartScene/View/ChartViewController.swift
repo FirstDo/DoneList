@@ -12,7 +12,6 @@ import SnapKit
 import ToastPresenter
 
 final class ChartViewController: UIViewController {
-    
     weak var coordinator: ChartSceneCoordinator?
     private let mainView: DoneChartView
     private let viewModel: DoneChartViewModelType

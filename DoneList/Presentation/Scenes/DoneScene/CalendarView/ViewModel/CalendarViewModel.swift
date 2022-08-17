@@ -27,7 +27,6 @@ protocol CalendarViewModelOutput {
 protocol CalendarViewModelType: CalendarViewModelInput, CalendarViewModelOutput {}
 
 final class CalendarViewModel: CalendarViewModelType {
-    
     private var event: [Date: Bool] = [:]
     private let currentPageDate: CurrentValueSubject<Date, Never>
     private let doneUseCase: DoneUseCaseType

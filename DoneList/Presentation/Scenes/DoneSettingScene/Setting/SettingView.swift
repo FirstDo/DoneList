@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
-    
     @StateObject var viewModel: ViewModel
     
     var body: some View {

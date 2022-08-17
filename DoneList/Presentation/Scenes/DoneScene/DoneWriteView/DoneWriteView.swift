@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 final class DoneWriteView: UIView {
-    
     let baseStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.axis = .vertical

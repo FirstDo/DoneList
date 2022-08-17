@@ -12,7 +12,6 @@ import SnapKit
 import ToastPresenter
 
 final class DoneListViewController: UIViewController {
-    
     weak var coordinator: DoneSceneCoordiantor?
     private let viewModel: DoneListViewModelType
     private var mainView: DoneListView

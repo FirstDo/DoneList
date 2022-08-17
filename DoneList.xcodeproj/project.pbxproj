@@ -655,13 +655,6 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
-		9461B94028A503DD00E4F871 /* DesignSystem */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DesignSystem;
-			sourceTree = "<group>";
-		};
 		948A29212890007F0055A031 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,7 +675,6 @@
 		948A29972891AA430055A031 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9461B94028A503DD00E4F871 /* DesignSystem */,
 				9461B92928A3B63700E4F871 /* UserDefaults */,
 				9408676D28A017E0009719C4 /* Font */,
 				9461B92F28A3EEEB00E4F871 /* Application.swift */,
@@ -999,7 +991,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = dudu.com.gmail.whqtkf12.Done;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1028,7 +1020,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = dudu.com.gmail.whqtkf12.Done;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
