@@ -5,7 +5,7 @@
 //  Created by dudu on 2022/07/23.
 //
 
-import UIKit
+import Foundation
 import Combine
 
 protocol DoneCreateViewModelInput {
@@ -32,7 +32,7 @@ final class DoneCreateViewModel: DoneCreateViewModelType {
     private let targetDate: Date
     private var cancelBag = Set<AnyCancellable>()
     
-    @Published var doneTitle: String = ""
+    @Published private var doneTitle: String = ""
     
     // MARK: - Output
     
