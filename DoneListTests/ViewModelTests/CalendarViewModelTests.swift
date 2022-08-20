@@ -102,7 +102,7 @@ class CalendarViewModelTests: XCTestCase {
     }
     
     func test_didSwipeCalendar을호출했을때_currentPageDate에Date가전달되어야한다() {
-        // Empty
+        // empty
     }
     
     func test_selectedDate을호출했을때_전달받은Date를반환해야한다() {
