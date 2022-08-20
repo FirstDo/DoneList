@@ -15,7 +15,7 @@ protocol OpenSourceListViewModelType: ObservableObject {
 
 final class OpenSourceListViewModel: OpenSourceListViewModelType {
     let navigationTitle = "오픈소스"
-    @Published var openSources: [OpenSource]
+    let openSources: [OpenSource]
     @Published var appFont = FontManager.getFontName()
     
     init(openSources: [OpenSource] = OpenSource.allOpenSources) {
