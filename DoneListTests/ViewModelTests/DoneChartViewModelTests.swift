@@ -2,7 +2,7 @@
 //  DoneChartViewModelTests.swift
 //  DoneListTests
 //
-//  Created by 김도연 on 2022/08/19.
+//  Created by dudu on 2022/08/19.
 //
 
 @testable import DoneList

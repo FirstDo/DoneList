@@ -31,6 +31,7 @@
 		9422F6DB28AFC76800BD0E0D /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6DA28AFC76700BD0E0D /* CalendarViewModelTests.swift */; };
 		9422F6DD28AFD22200BD0E0D /* DoneChartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6DC28AFD22200BD0E0D /* DoneChartViewModelTests.swift */; };
 		9422F6DF28B0DCA500BD0E0D /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6DE28B0DCA500BD0E0D /* SettingViewModelTests.swift */; };
+		9422F6E128B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6E028B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift */; };
 		94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A28288AA0480010BC10 /* AppDelegate.swift */; };
 		94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A2A288AA0480010BC10 /* SceneDelegate.swift */; };
 		94272A32288AA04A0010BC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94272A31288AA04A0010BC10 /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 		9422F6DA28AFC76700BD0E0D /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		9422F6DC28AFD22200BD0E0D /* DoneChartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModelTests.swift; sourceTree = "<group>"; };
 		9422F6DE28B0DCA500BD0E0D /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
+		9422F6E028B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModelTests.swift; sourceTree = "<group>"; };
 		94272A25288AA0480010BC10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94272A28288AA0480010BC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94272A2A288AA0480010BC10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			children = (
 				9422F6D028AF7E5700BD0E0D /* DoneEditViewModelTests.swift */,
 				9422F6DE28B0DCA500BD0E0D /* SettingViewModelTests.swift */,
+				9422F6E028B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift */,
 				9422F6DC28AFD22200BD0E0D /* DoneChartViewModelTests.swift */,
 				9422F6D828AFBB8500BD0E0D /* DoneCreateViewModelTests.swift */,
 				9422F6DA28AFC76700BD0E0D /* CalendarViewModelTests.swift */,
@@ -987,6 +990,7 @@
 				94EB6B4328AD4F8A005C75B2 /* DoneUseCaseTests.swift in Sources */,
 				94EB6B4628AD4FB9005C75B2 /* MockDoneRepository.swift in Sources */,
 				9422F6D128AF7E5700BD0E0D /* DoneEditViewModelTests.swift in Sources */,
+				9422F6E128B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift in Sources */,
 				9422F6CF28AF6AD400BD0E0D /* DoneDummy.swift in Sources */,
 				9422F6DD28AFD22200BD0E0D /* DoneChartViewModelTests.swift in Sources */,
 			);
