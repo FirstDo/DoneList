@@ -13,7 +13,7 @@ protocol SettingViewModelType: ObservableObject {
     var navigationTitle: String { get }
     var appSettingSectionHeader: String { get }
     var otherSettingSectionHeader: String { get }
-    var otherSettingSectionFootter: String { get }
+    var otherSettingSectionFooter: String { get }
 }
 
 final class SettingViewModel: SettingViewModelType {
@@ -23,5 +23,5 @@ final class SettingViewModel: SettingViewModelType {
     let navigationTitle = "설정"
     let appSettingSectionHeader = "앱 설정"
     let otherSettingSectionHeader = "기타"
-    let otherSettingSectionFootter = "developed by dudu"
+    let otherSettingSectionFooter = "developed by dudu"
 }

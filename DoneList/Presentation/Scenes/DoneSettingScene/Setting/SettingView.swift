@@ -24,7 +24,7 @@ struct SettingView<ViewModel>: View where ViewModel: SettingViewModelType {
                 } header: {
                     Text(viewModel.otherSettingSectionHeader)
                 } footer: {
-                    Text(viewModel.otherSettingSectionFootter)
+                    Text(viewModel.otherSettingSectionFooter)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 }
