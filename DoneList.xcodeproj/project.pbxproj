@@ -32,6 +32,8 @@
 		9422F6DD28AFD22200BD0E0D /* DoneChartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6DC28AFD22200BD0E0D /* DoneChartViewModelTests.swift */; };
 		9422F6DF28B0DCA500BD0E0D /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6DE28B0DCA500BD0E0D /* SettingViewModelTests.swift */; };
 		9422F6E128B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6E028B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift */; };
+		9422F6E428B0E58300BD0E0D /* MockDoneStroage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6E328B0E58300BD0E0D /* MockDoneStroage.swift */; };
+		9422F6E628B0E89300BD0E0D /* DoneRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6E528B0E89300BD0E0D /* DoneRepositoryTests.swift */; };
 		94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A28288AA0480010BC10 /* AppDelegate.swift */; };
 		94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A2A288AA0480010BC10 /* SceneDelegate.swift */; };
 		94272A32288AA04A0010BC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94272A31288AA04A0010BC10 /* Assets.xcassets */; };
@@ -137,6 +139,8 @@
 		9422F6DC28AFD22200BD0E0D /* DoneChartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneChartViewModelTests.swift; sourceTree = "<group>"; };
 		9422F6DE28B0DCA500BD0E0D /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		9422F6E028B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceListViewModelTests.swift; sourceTree = "<group>"; };
+		9422F6E328B0E58300BD0E0D /* MockDoneStroage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDoneStroage.swift; sourceTree = "<group>"; };
+		9422F6E528B0E89300BD0E0D /* DoneRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryTests.swift; sourceTree = "<group>"; };
 		94272A25288AA0480010BC10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94272A28288AA0480010BC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94272A2A288AA0480010BC10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -383,6 +387,22 @@
 				94EB6B4528AD4FB9005C75B2 /* MockDoneRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		9422F6E228B0E57200BD0E0D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				9422F6E328B0E58300BD0E0D /* MockDoneStroage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		9422F6E728B0E89B00BD0E0D /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				9422F6E528B0E89300BD0E0D /* DoneRepositoryTests.swift */,
+			);
+			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
 		94272A1C288AA0480010BC10 = {
@@ -770,6 +790,7 @@
 		94EB6B3828AD4F43005C75B2 /* DoneListTests */ = {
 			isa = PBXGroup;
 			children = (
+				9422F6E728B0E89B00BD0E0D /* RepositoryTests */,
 				9422F6D228AF7E5F00BD0E0D /* UseCaseTests */,
 				9422F6D328AF7E6E00BD0E0D /* ViewModelTests */,
 				9422F6CD28AF6ACC00BD0E0D /* Dummy */,
@@ -781,6 +802,7 @@
 		94EB6B4428AD4FA5005C75B2 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				9422F6E228B0E57200BD0E0D /* Storage */,
 				9422F6D728AF7EE300BD0E0D /* Repository */,
 				9422F6D628AF7EDB00BD0E0D /* UseCase */,
 			);
@@ -988,7 +1010,9 @@
 				9422F6D528AF7ED300BD0E0D /* MockDoneUseCase.swift in Sources */,
 				9422F6DF28B0DCA500BD0E0D /* SettingViewModelTests.swift in Sources */,
 				94EB6B4328AD4F8A005C75B2 /* DoneUseCaseTests.swift in Sources */,
+				9422F6E628B0E89300BD0E0D /* DoneRepositoryTests.swift in Sources */,
 				94EB6B4628AD4FB9005C75B2 /* MockDoneRepository.swift in Sources */,
+				9422F6E428B0E58300BD0E0D /* MockDoneStroage.swift in Sources */,
 				9422F6D128AF7E5700BD0E0D /* DoneEditViewModelTests.swift in Sources */,
 				9422F6E128B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift in Sources */,
 				9422F6CF28AF6AD400BD0E0D /* DoneDummy.swift in Sources */,
