@@ -1,5 +1,5 @@
 //
-//  FetchQueueUseCaseTests.swift
+//  FetchQuotesUseCaseTests.swift
 //  DoneListTests
 //
 //  Created by dudu on 2022/08/22.
@@ -8,7 +8,7 @@
 @testable import DoneList
 import XCTest
 
-class FetchQueueUseCaseTests: XCTestCase {
+class FetchQuotesUseCaseTests: XCTestCase {
     
     var sut: FetchQuoteUseCaseType!
     var mockQuotesRepository: MockQuotesRepository!
