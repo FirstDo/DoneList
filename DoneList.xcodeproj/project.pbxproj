@@ -36,6 +36,8 @@
 		9422F6E628B0E89300BD0E0D /* DoneRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6E528B0E89300BD0E0D /* DoneRepositoryTests.swift */; };
 		9422F6F128B3901D00BD0E0D /* QuotesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6F028B3901D00BD0E0D /* QuotesRepositoryTests.swift */; };
 		9422F6F328B3908700BD0E0D /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6F228B3908700BD0E0D /* MockURLProtocol.swift */; };
+		9422F6F528B3B58500BD0E0D /* FetchQueueUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6F428B3B58500BD0E0D /* FetchQueueUseCaseTests.swift */; };
+		9422F6F728B3B5BD00BD0E0D /* MockQuotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422F6F628B3B5BC00BD0E0D /* MockQuotesRepository.swift */; };
 		94272A29288AA0480010BC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A28288AA0480010BC10 /* AppDelegate.swift */; };
 		94272A2B288AA0480010BC10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94272A2A288AA0480010BC10 /* SceneDelegate.swift */; };
 		94272A32288AA04A0010BC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94272A31288AA04A0010BC10 /* Assets.xcassets */; };
@@ -145,6 +147,8 @@
 		9422F6E528B0E89300BD0E0D /* DoneRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRepositoryTests.swift; sourceTree = "<group>"; };
 		9422F6F028B3901D00BD0E0D /* QuotesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRepositoryTests.swift; sourceTree = "<group>"; };
 		9422F6F228B3908700BD0E0D /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		9422F6F428B3B58500BD0E0D /* FetchQueueUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQueueUseCaseTests.swift; sourceTree = "<group>"; };
+		9422F6F628B3B5BC00BD0E0D /* MockQuotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockQuotesRepository.swift; sourceTree = "<group>"; };
 		94272A25288AA0480010BC10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94272A28288AA0480010BC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94272A2A288AA0480010BC10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				94EB6B4228AD4F8A005C75B2 /* DoneUseCaseTests.swift */,
+				9422F6F428B3B58500BD0E0D /* FetchQueueUseCaseTests.swift */,
 			);
 			path = UseCaseTests;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 			children = (
 				94EB6B4528AD4FB9005C75B2 /* MockDoneRepository.swift */,
 				9422F6F228B3908700BD0E0D /* MockURLProtocol.swift */,
+				9422F6F628B3B5BC00BD0E0D /* MockQuotesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1011,6 +1017,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9422F6F728B3B5BD00BD0E0D /* MockQuotesRepository.swift in Sources */,
 				9422F6D928AFBB8600BD0E0D /* DoneCreateViewModelTests.swift in Sources */,
 				9422F6DB28AFC76800BD0E0D /* CalendarViewModelTests.swift in Sources */,
 				9422F6D528AF7ED300BD0E0D /* MockDoneUseCase.swift in Sources */,
@@ -1022,6 +1029,7 @@
 				94EB6B4628AD4FB9005C75B2 /* MockDoneRepository.swift in Sources */,
 				9422F6E428B0E58300BD0E0D /* MockDoneStroage.swift in Sources */,
 				9422F6D128AF7E5700BD0E0D /* DoneEditViewModelTests.swift in Sources */,
+				9422F6F528B3B58500BD0E0D /* FetchQueueUseCaseTests.swift in Sources */,
 				9422F6E128B0E37E00BD0E0D /* OpenSourceListViewModelTests.swift in Sources */,
 				9422F6CF28AF6AD400BD0E0D /* DoneDummy.swift in Sources */,
 				9422F6DD28AFD22200BD0E0D /* DoneChartViewModelTests.swift in Sources */,
